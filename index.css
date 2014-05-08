@@ -1,0 +1,15 @@
+g.node {
+    font-family: Verdana, Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+}
+circle.node-dot {
+    fill: lightsalmon;
+    stroke: red;
+    stroke-width: 1px;
+}
+
+path.link {
+    fill: none;
+    stroke: gray;
+}
