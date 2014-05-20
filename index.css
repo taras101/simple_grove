@@ -2,14 +2,29 @@ g.node {
     font-family: Verdana, Helvetica;
     font-size: 12px;
     font-weight: bold;
+    cursor: pointer;
 }
 circle.node-dot {
-    fill: lightsalmon;
-    stroke: red;
-    stroke-width: 1px;
+    fill: #00FF49;
+    stroke:#0C7A2C ;
+    stroke-width: 5px;
 }
 
 path.link {
     fill: none;
-    stroke: gray;
+    stroke:#B27012;
+    stroke-width: 5px;
+}
+.oneTree{
+	margin: 20px;
+	padding-top: 30px;
+    padding-left: 30px;
+}
+circle.hover {
+    fill: black;
+}
+path.selected {
+    stroke: black;
+    fill: none;
+    stroke-width: 5px;
 }
