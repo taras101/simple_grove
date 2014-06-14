@@ -283,4 +283,20 @@ function animateParentChain(links)
     $(function(){
         buildTree("#tree-container");
     });
+    soundManager.setup({
+  // where to find flash audio SWFs, as needed
+  url: '/.',
+  onready: function() {
+    // SM2 is ready to play audio!
+
+    var mySound = soundManager.createSound({
+      id: 'aSound', // optional: provide your own unique id
+      url: 'cellosong.mp3'
+      // onload: function() { console.log('sound loaded!', this); }
+      // other options here..
+    });
+
+    // mySound.play();
+  }
+});
 });
