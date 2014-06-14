@@ -108,7 +108,8 @@ function buildTree(containerName, customOptions)
     });
 
     // size of the diagram
-    var size = { width:$(containerName).outerWidth() - 300, height: totalNodes * 15};
+    var padding  = 200;
+    var size = { width:$(containerName).outerWidth() - padding, height: (totalNodes * 15) + 200};
 
     var tree = d3.layout.tree()
         .sort(null)
@@ -145,7 +146,7 @@ function buildTree(containerName, customOptions)
     var link = d3.svg.diagonal()
         .projection(function(d)
         {
-            return [d.x, -d.y +450];
+            return [d.x, -d.y + (padding *3)];
         });
 
     var linkGroup = layoutRoot.append("svg:g");
@@ -175,7 +176,7 @@ function buildTree(containerName, customOptions)
         .attr("class", "node")
         .attr("transform", function(d)
         {
-            return "translate(" + d.x + "," + (-d.y + 450) + ")";
+            return "translate(" + d.x + "," + (-d.y +(padding *3)) + ")";
         });
 
     // Cache the UI elements
@@ -255,7 +256,7 @@ function animateParentChain(links)
     var linkRenderer = d3.svg.diagonal()
         .projection(function(d)
         {
-            return [d.x, -d.y +450];
+            return [d.x, -d.y +600];
         });
 
     // Links
