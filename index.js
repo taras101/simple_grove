@@ -8,18 +8,16 @@ var treeData = {
             {
                 name: "",
                 contents: [
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" }
+                    { name: "2" },
+                    { name: "3" },
+                    { name: "4" }
                 ]
             },
             {
                 name: "",
-                contents: []
+                contents: [
+                    { name: "9" }
+                ]
             },
             {
                 name: "",
@@ -27,43 +25,42 @@ var treeData = {
                     {
                         name: "",
                         contents: [
-                            { name: "" },
-                            { name: "" },
-                            { name: "" },
-                            { name: "" }
+                            { name: "6" },
+                            { name: "7" },
+                            { name: "8" }
                         ]
                     },
                     {
                         name: "",
                         contents: [
-                            { name: "" },
-                            { name: "" },
-                            { name: "" },
-                            { name: "" }
+                            { name: "10" }
                         ]
                     },
                     {
                         name: "",
                         contents: [
-                            { name: "" },
-                            { name: "" },
-                            { name: "" },
-                            { name: "" }
+                            { name: "11"},
+                            {
+                                name: "",
+                                contents: [
+                                { name: "12"},
+                                { name: "13"},
+                                { name: "14"}
+                                ]
+                             }
+                        ]
+                    },
+                    {
+                        name: "",
+                        contents: [
+                            { name: "1" }
                         ]
                     }
                 ]
             },
             {
-                name: "",
+                name: "5",
                 contents: []
-            },
-            {
-                name: "",
-                contents: [
-                    { name: "" },
-                    { name: "" },
-                    { name: "" }
-                ]
             }
         ]
     }
@@ -91,7 +88,7 @@ function buildTree(containerName, customOptions)
 {
     // build the options object
     var options = $.extend({
-        nodeRadius: 6, fontSize: 26
+        nodeRadius: 5, fontSize: 22
     }, customOptions);
 
 
@@ -109,7 +106,7 @@ function buildTree(containerName, customOptions)
 
     // size of the diagram
     var padding  = 200;
-    var size = { width:$(containerName).outerWidth() - padding, height: (totalNodes * 15) + 200};
+    var size = { width:$(containerName).outerWidth() , height: (totalNodes * 17) + 200};
 
     var tree = d3.layout.tree()
         .sort(null)
@@ -139,14 +136,14 @@ function buildTree(containerName, customOptions)
     var layoutRoot = svgRoot
         .append("svg:g")
         .attr("class", "container")
-        .attr("transform", "translate(" + maxLabelLength + ",0)");
+        .attr("transform", "translate(" + maxLabelLength + ",600)");
 
 
     // Edges between nodes as a <path class="link" />
     var link = d3.svg.diagonal()
         .projection(function(d)
         {
-            return [d.x, -d.y + (padding *3)];
+            return [d.x, -d.y ];
         });
 
     var linkGroup = layoutRoot.append("svg:g");
@@ -176,7 +173,7 @@ function buildTree(containerName, customOptions)
         .attr("class", "node")
         .attr("transform", function(d)
         {
-            return "translate(" + d.x + "," + (-d.y +(padding *3)) + ")";
+            return "translate(" + d.x + "," + (-d.y) + ")";
         });
 
     // Cache the UI elements
@@ -256,7 +253,7 @@ function animateParentChain(links)
     var linkRenderer = d3.svg.diagonal()
         .projection(function(d)
         {
-            return [d.x, -d.y +600];
+            return [d.x, -d.y];
         });
 
     // Links
@@ -276,11 +273,11 @@ function animateParentChain(links)
 
     ui.svgRoot.select("#clip-rect")
         .attr("x", overlayBox.x + overlayBox.width)
-        .attr("y", overlayBox.y)
+        .attr("y", overlayBox.y -600)
         .attr("width", 0)
         .attr("height", overlayBox.height)
         .transition().duration(3500)
-        .attr("x", overlayBox.x)
+        .attr("x", overlayBox.x- 20)
         .attr("width", overlayBox.width);
 }
     $(function(){
