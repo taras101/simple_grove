@@ -1,3 +1,6 @@
+body{
+    background: darkslategray;
+}
 g.node {
     font-family: Verdana, Helvetica;
     font-size: 12px;
@@ -7,7 +10,7 @@ g.node {
 circle.node-dot {
     fill: #00FF49;
     stroke:#0C7A2C ;
-    stroke-width: 5px;
+    stroke-width: 2px;
 }
 
 path.link {
@@ -16,9 +19,11 @@ path.link {
     stroke-width: 5px;
 }
 .oneTree{
-	margin: 20px;
 	padding-top: 30px;
-    padding-left: 30px;
+    margin-left: 300px;
+    border: 50px;
+
+
 }
 circle.hover {
     fill: black;
@@ -26,5 +31,5 @@ circle.hover {
 path.selected {
     stroke: black;
     fill: none;
-    stroke-width: 5px;
+    stroke-width: 10px;
 }

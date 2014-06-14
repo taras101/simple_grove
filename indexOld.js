@@ -1,72 +1,68 @@
 $(document).ready(function(){
 
 var treeData = {
-    name: "First Tree",
+    name: "this is a mu",
     contents: [
-        {   name: "",
+        {
+            name: "",
             contents: [
-            {
-                name: "",
-                contents: [
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" },
-                    { name: "" }
-                ]
-            },
-            {
-                name: "",
-                contents: []
-            },
-            {
-                name: "",
-                contents: [
-                    {
-                        name: "",
-                        contents: [
-                            { name: "" },
-                            { name: "" },
-                            { name: "" },
-                            { name: "" }
-                        ]
-                    },
-                    {
-                        name: "",
-                        contents: [
-                            { name: "" },
-                            { name: "" },
-                            { name: "" },
-                            { name: "" }
-                        ]
-                    },
-                    {
-                        name: "",
-                        contents: [
-                            { name: "" },
-                            { name: "" },
-                            { name: "" },
-                            { name: "" }
-                        ]
-                    }
-                ]
-            },
-            {
-                name: "",
-                contents: []
-            },
-            {
-                name: "",
-                contents: [
-                    { name: "" },
-                    { name: "" },
-                    { name: "" }
-                ]
-            }
-        ]
-    }
+                { name: "" },
+                { name: "" },
+                { name: "" },
+                { name: "" },
+                { name: "" },
+                { name: "" },
+                { name: "" }
+            ]
+        },
+        {
+            name: "",
+            contents: []
+        },
+        {
+            name: "",
+            contents: [
+                {
+                    name: "",
+                    contents: [
+                        { name: "" },
+                        { name: "" },
+                        { name: "" },
+                        { name: "" }
+                    ]
+                },
+                {
+                    name: "",
+                    contents: [
+                        { name: "" },
+                        { name: "" },
+                        { name: "" },
+                        { name: "" }
+                    ]
+                },
+                {
+                    name: "",
+                    contents: [
+                        { name: "" },
+                        { name: "" },
+                        { name: "" },
+                        { name: "" }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "",
+            contents: []
+        },
+        {
+            name: "",
+            contents: [
+                { name: "" },
+                { name: "" },
+                { name: "" }
+            ]
+        }
     ]
 };
 
@@ -108,7 +104,7 @@ function buildTree(containerName, customOptions)
     });
 
     // size of the diagram
-    var size = { width:$(containerName).outerWidth() - 300, height: totalNodes * 15};
+    var size = { width:$(containerName).outerWidth() - 200, height: totalNodes * 15};
 
     var tree = d3.layout.tree()
         .sort(null)
@@ -145,7 +141,7 @@ function buildTree(containerName, customOptions)
     var link = d3.svg.diagonal()
         .projection(function(d)
         {
-            return [d.x, -d.y +450];
+            return [d.y, d.x];
         });
 
     var linkGroup = layoutRoot.append("svg:g");
@@ -175,7 +171,7 @@ function buildTree(containerName, customOptions)
         .attr("class", "node")
         .attr("transform", function(d)
         {
-            return "translate(" + d.x + "," + (-d.y + 450) + ")";
+            return "translate(" + d.y + "," + d.x + ")";
         });
 
     // Cache the UI elements
@@ -255,7 +251,7 @@ function animateParentChain(links)
     var linkRenderer = d3.svg.diagonal()
         .projection(function(d)
         {
-            return [d.x, -d.y +450];
+            return [d.y, d.x];
         });
 
     // Links
