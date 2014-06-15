@@ -295,7 +295,14 @@ function animateParentChain(links)
       // onload: function() { console.log('sound loaded!', this); }
       // other options here..
     });
-
+    var playNode = document.getElementsByClassName(".node");
+    console.log(playNode)
+    $(playNode[0]).on("click", function(){
+        mySound.play();
+    })
+    // playNode[0].on("click", function(){
+    //     mySound.play();
+    // })
     // mySound.play();
   }
 });
