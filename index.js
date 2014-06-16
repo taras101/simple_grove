@@ -8,8 +8,8 @@ var treeData = {
             {
                 name: "",
                 contents: [
-                    { name: "2" },
-                    { name: "3" },
+                    { name: "two" },
+                    { name: "three" },
                     { name: "4" }
                 ]
             },
@@ -288,18 +288,23 @@ function animateParentChain(links)
   url: '/.',
   onready: function() {
     // SM2 is ready to play audio!
-
-    var mySound = soundManager.createSound({
-      id: 'aSound', // optional: provide your own unique id
-      url: 'cellosong.mp3'
-      // onload: function() { console.log('sound loaded!', this); }
-      // other options here..
+     soundManager.createSound({
+      id: 'two', // optional: provide your own unique id
+      url: 'PIano Improvs6-first tree2.mp3',
+      multiShot: false
     });
+      soundManager.createSound({
+      id: 'three', // optional: provide your own unique id
+      url: 'PIano Improvs6-first tree3.mp3',
+      multiShot: false
+    });
+
+
     ui.nodeGroup.on("click",click)
     function click(d)
 {
     var track = d.name;
-    mySound.play();
+    soundManager.play(track);
 }
     // $(playNode).on("click", function(){
 
