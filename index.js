@@ -295,11 +295,17 @@ function animateParentChain(links)
       // onload: function() { console.log('sound loaded!', this); }
       // other options here..
     });
-    var playNode = document.getElementsByClassName(".node");
-    console.log(playNode)
-    $(playNode[0]).on("click", function(){
-        mySound.play();
-    })
+    ui.nodeGroup.on("click",click)
+    function click(d)
+{
+    var track = d.name;
+    mySound.play();
+}
+    // $(playNode).on("click", function(){
+
+    //     alert("hi")
+    // })
+
     // playNode[0].on("click", function(){
     //     mySound.play();
     // })
