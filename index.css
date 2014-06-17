@@ -26,7 +26,7 @@ path.link {
 
 }
 circle.hover {
-    fill: black;
+    fill: forestgreen;
 }
 path.selected {
     stroke: black;
