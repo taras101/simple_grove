@@ -227,7 +227,10 @@ $(document).ready(function(){
                     });
                 var last_element = matchedLinks[matchedLinks.length - 1];
                 var track = last_element.target.name;
+
                 soundManager.play(track);
+
+                console.log(soundDuration);
                 animateParentChain(matchedLinks);
             });
         }
@@ -257,11 +260,12 @@ $(document).ready(function(){
             .attr("y", overlayBox.y -600)
             .attr("width", 0)
             .attr("height", overlayBox.height)
-            .transition().duration(3500)
+            .transition().duration(soundDuration)
             .attr("x", overlayBox.x- 20)
             .attr("width", overlayBox.width);
     }
     //Soundmanager
+
     soundManager.setup({
     // where to find flash audio SWFs, as needed
         url: '/.',
@@ -269,20 +273,39 @@ $(document).ready(function(){
          soundManager.createSound({
           id: 'two', // optional: provide your own unique id
           url: 'PIano Improvs6-first tree2.mp3',
-          multiShot: false
+          multiShot: false,
+          onload: function() {
+            if( this.readyState === 3 ) {
+            soundDuration = this.duration;
+            console.log(soundDuration);
+                }
+            }
         });
           soundManager.createSound({
           id: 'three', // optional: provide your own unique id
           url: 'PIano Improvs6-first tree3.mp3',
-          multiShot: false
+          multiShot: false,
+          onload: function() {
+            if( this.readyState === 3 ) {
+            soundDuration = this.duration;
+            console.log(soundDuration);
+                }
+            }
         });
           soundManager.createSound({
           id: 'ten', // optional: provide your own unique id
           url: 'PIano Improvs6-first tree3.mp3',
-          multiShot: false
+          multiShot: false,
+          onload: function() {
+            if( this.readyState === 3 ) {
+            soundDuration = this.duration;
+            console.log(soundDuration);
+                }
+            }
         });
         }
     });
+
     $(function(){
         buildTree("#tree-container");
     });
