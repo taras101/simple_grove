@@ -104,7 +104,6 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var padding  = 200;
         var size = { width:$(containerName).outerWidth() , height: (totalNodes * 17) + 200};
 
         var tree = d3.layout.tree()
@@ -227,11 +226,11 @@ $(document).ready(function(){
                     });
                 var last_element = matchedLinks[matchedLinks.length - 1];
                 var track = last_element.target.name;
-
+                animateParentChain(matchedLinks);
                 soundManager.play(track);
 
-                console.log(soundDuration);
-                animateParentChain(matchedLinks);
+                // console.log(soundDuration);
+
             });
         }
 
@@ -260,7 +259,7 @@ $(document).ready(function(){
             .attr("y", overlayBox.y -600)
             .attr("width", 0)
             .attr("height", overlayBox.height)
-            .transition().duration(soundDuration)
+            .transition().duration(4000)
             .attr("x", overlayBox.x- 20)
             .attr("width", overlayBox.width);
     }
