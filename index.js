@@ -104,11 +104,11 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 17) + 200};
+        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 25) };
 
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.height, size.width - maxLabelLength * options.fontSize])
+            .size([size.width - 200,size.height - 10])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
@@ -117,9 +117,8 @@ $(document).ready(function(){
         var nodes = tree.nodes(treeData);
         var links = tree.links(nodes);
         var svgRoot = d3.select(containerName)
-            .append("svg:svg").attr("width", size.width).attr("height", size.height);
-
-        // Add the clipping path
+            .append("svg:svg").attr("height", size.height+20).attr("width", size.width);
+                 // Add the clipping path
         svgRoot.append("svg:clipPath").attr("id", "clipper")
             .append("svg:rect")
             .attr('id', 'clip-rect');
@@ -127,7 +126,7 @@ $(document).ready(function(){
         var layoutRoot = svgRoot
             .append("svg:g")
             .attr("class", "container")
-            .attr("transform", "translate(" + maxLabelLength + ",600)");
+            .attr("transform", "translate(0," + size.height + ")");
 
         // Edges between nodes as a <path class="link" />
         var link = d3.svg.diagonal()
@@ -156,7 +155,7 @@ $(document).ready(function(){
             .attr("class", "node")
             .attr("transform", function(d)
             {
-                return "translate(" + d.x + "," + (-d.y) + ")";
+                return "translate(" + d.x + "," + -d.y + ")";
             });
 
         // Cache the UI elements
@@ -251,16 +250,17 @@ $(document).ready(function(){
             .attr("class", "selected")
             .attr("d", linkRenderer);
 
+
         // Animate the clipping path
         var overlayBox = ui.svgRoot.node().getBBox();
 
         ui.svgRoot.select("#clip-rect")
             .attr("x", overlayBox.x + overlayBox.width)
-            .attr("y", overlayBox.y -600)
+            .attr("y", overlayBox.y -608)
             .attr("width", 0)
             .attr("height", overlayBox.height)
             .transition().duration(4000)
-            .attr("x", overlayBox.x- 20)
+            .attr("x", overlayBox.x)
             .attr("width", overlayBox.width);
     }
     //Soundmanager
