@@ -1,72 +1,44 @@
 $(document).ready(function(){
     var treeData = {
-        name: "Grove",
+        name: "Second Tree",
         contents: [
-            {name: "First Tree",
-            contents: [
-                {   name: "",
+            {   name: "",
+                contents: [
+                {
+                    name: "",
                     contents: [
-                    {
-                        name: "",
-                        contents: [
-                            { name: "two" },
-                            { name: "three" },
-                            { name: "4" }
-                        ]
-                    },
-                    {
-                        name: "",
-                        contents: [
-                            { name: "9" }
-                        ]
-                    },
-                    {
-                        name: "",
-                        contents: [
-                            {
-                                name: "",
-                                contents: [
-                                    { name: "6" },
-                                    { name: "7" },
-                                    { name: "8" }
-                                ]
-                            },
-                            {
-                                name: "",
-                                contents: [
-                                    { name: "ten" }
-                                ]
-                            },
-                            {
-                                name: "",
-                                contents: [
-                                    { name: "11"},
-                                    {
-                                        name: "",
-                                        contents: [
-                                        { name: "12"},
-                                        { name: "13"},
-                                        { name: "14"}
+                        { name: "2T1" }
+                    ]
+                },
+                {
+                    name: "",
+                    contents: [
+                        { name: "2T2" },
+                        { name: "2T3" }
+                    ]
+                },
+                {
+                    name: "",
+                    contents: [
+                        {
+                            name: "",
+                            contents: [
+                                { name: "2T4" },
+                                { name: "2T5" },
+                                { name: "2T6" },
+                                { name: "2T7" },
+                                { name: "2T8" },
+                                { name: "",
+                                    contents: [
+                                        { name: "2T9"  },
+                                        { name: "2T10" }
                                         ]
-                                     }
-                                ]
-                            },
-                            {
-                                name: "",
-                                contents: [
-                                    { name: "1" }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        name: "5",
-                        contents: []
-                    }
-                ]
-            },
+                                },
+                            ]
+                        },
+                    ]
+                },
             ]
-
         }
         ]
     };
