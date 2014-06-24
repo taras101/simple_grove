@@ -68,22 +68,85 @@ $(document).ready(function(){
             ]
 
         },
+            {
+            name: "Second Tree",
+            contents: [
+                {   name: "",
+                    contents: [
+                    {
+                        name: "",
+                        contents: [
+                            { name: "2T1" }
+                        ]
+                    },
+                    {
+                        name: "",
+                        contents: [
+                            { name: "2T2" },
+                            { name: "2T3" }
+                        ]
+                    },
+                    {
+                        name: "",
+                        contents: [
+                            {
+                                name: "",
+                                contents: [
+                                    { name: "2T4" },
+                                    { name: "2T5" },
+                                    { name: "2T6" },
+                                    { name: "2T7" },
+                                    { name: "2T8" },
+                                    { name: "",
+                                        contents: [
+                                            { name: "2T9"  },
+                                            { name: "2T10" }
+                                            ]
+                                    },
+                                ]
+                            },
+                        ]
+                    },
+                ]
+            }
+            ]
+        },
         {
-        name: "Second Tree",
+        name: "Third Tree",
         contents: [
             {   name: "",
                 contents: [
                 {
                     name: "",
                     contents: [
-                        { name: "2T1" }
+                        {name: "",
+                        contents:[
+                            { name: "3T1" }
+                        ]
+                    },
                     ]
                 },
                 {
                     name: "",
                     contents: [
-                        { name: "2T2" },
-                        { name: "2T3" }
+                        { name: "3T2" },
+                        { name: "3T3" },
+                        { name: "3T4" },
+                        { name: "3T5",
+                            contents: [
+                                { name: "3T12" },
+                                { name: "3T13" },
+                                { name: "3T14" },
+                                { name: "3T15" },
+                                { name: "3T16" }
+                                ]
+                                },
+                        { name: "3T6" },
+                        { name: "3T7" },
+                        { name: "3T8" },
+                        { name: "3T9" },
+                        { name: "3T10" },
+                        { name: "3T11" }
                     ]
                 },
                 {
@@ -94,9 +157,6 @@ $(document).ready(function(){
                             contents: [
                                 { name: "2T4" },
                                 { name: "2T5" },
-                                { name: "2T6" },
-                                { name: "2T7" },
-                                { name: "2T8" },
                                 { name: "",
                                     contents: [
                                         { name: "2T9"  },
@@ -107,11 +167,13 @@ $(document).ready(function(){
                         },
                     ]
                 },
+                ]
+            }
             ]
         }
         ]
-    }
-    ]
+
+
 
     };
 
@@ -153,7 +215,7 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 25) };
+        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 8) };
 
         var tree = d3.layout.tree()
             .sort(null)
