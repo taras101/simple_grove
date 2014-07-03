@@ -300,7 +300,7 @@ $(document).ready(function(){
                 return d.name;
             });
     }// close build tree
-
+    var dur = 0;
     function setupMouseEvents(){
         ui.nodeGroup.on('mouseover', function(d, i)
         {
@@ -336,12 +336,13 @@ $(document).ready(function(){
                     });
                 var last_element = matchedLinks[matchedLinks.length - 1];
                 var track = last_element.target.name;
-                animateParentChain(matchedLinks);
                 soundManager.play(track);
-
-                // console.log(soundDuration);
-
-            });
+                setTimeout(function(){dur = soundManager.getSoundById(track).duration
+                // var dur = soundManager.getSoundById(track).duration;
+                console.log(dur);
+                animateParentChain(matchedLinks,soundManager);
+                },3000);
+           });
         }
 
     function animateParentChain(links){
@@ -370,7 +371,7 @@ $(document).ready(function(){
             .attr("y", overlayBox.y -608)
             .attr("width", 0)
             .attr("height", overlayBox.height)
-            .transition().duration(4000)
+            .transition().duration(dur)
             .attr("x", overlayBox.x)
             .attr("width", overlayBox.width);
     }
