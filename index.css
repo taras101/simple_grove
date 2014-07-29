@@ -22,14 +22,15 @@ path.link {
 	padding-top: 30px;
     margin-left: 300px;
     border: 50px;
-
+   /* -webkit-transform: rotate(270deg);  Chrome, Safari, Opera
+    transform: rotate(90deg);*/
 
 }
 circle.hover {
     fill: forestgreen;
 }
 path.selected {
-    stroke: black;
+    stroke: mintcream;
     fill: none;
-    stroke-width: 10px;
+    stroke-width: 8px;
 }

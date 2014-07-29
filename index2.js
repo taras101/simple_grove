@@ -44,7 +44,7 @@ $(document).ready(function(){
                                     {
                                         name: "",
                                         contents: [
-                                        { name: "12"},
+                                        { name: "two"},
                                         { name: "13"},
                                         { name: "14"}
                                         ]
@@ -198,7 +198,7 @@ $(document).ready(function(){
     {
         // build the options object
         var options = $.extend({
-            nodeRadius: 5, fontSize: 22
+            nodeRadius: 5, fontSize: 12
         }, customOptions);
 
 
@@ -215,11 +215,11 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 8) };
+        var size = { width:$(containerName).outerWidth()-300  , height: (totalNodes * 2)};
 
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width - 200,size.height - 10])
+            .size([size.height-700, size.width-10])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
@@ -228,7 +228,7 @@ $(document).ready(function(){
         var nodes = tree.nodes(treeData);
         var links = tree.links(nodes);
         var svgRoot = d3.select(containerName)
-            .append("svg:svg").attr("height", size.height+20).attr("width", size.width);
+            .append("svg:svg").attr("width", size.width).attr("height", size.height);
                  // Add the clipping path
         svgRoot.append("svg:clipPath").attr("id", "clipper")
             .append("svg:rect")
@@ -237,13 +237,13 @@ $(document).ready(function(){
         var layoutRoot = svgRoot
             .append("svg:g")
             .attr("class", "container")
-            .attr("transform", "translate(0," + size.height + ")");
+            .attr("transform", "translate(0," + maxLabelLength + ")");
 
         // Edges between nodes as a <path class="link" />
         var link = d3.svg.diagonal()
             .projection(function(d)
             {
-                return [d.x, -d.y ];
+                return [d.y , -d.x ];
             });
 
         var linkGroup = layoutRoot.append("svg:g");
@@ -266,7 +266,7 @@ $(document).ready(function(){
             .attr("class", "node")
             .attr("transform", function(d)
             {
-                return "translate(" + d.x + "," + -d.y + ")";
+                return "translate(" + d.y + "," + -d.x + ")";
             });
 
         // Cache the UI elements
@@ -294,7 +294,7 @@ $(document).ready(function(){
                 var gap = 2 * options.nodeRadius;
                 return d.children ? -gap : gap;
             })
-            .attr("dy", 3)
+            .attr("dy", -2)
             .text(function(d)
             {
                 return d.name;
@@ -338,18 +338,18 @@ $(document).ready(function(){
                 var track = last_element.target.name;
                 soundManager.play(track);
                 setTimeout(function(){dur = soundManager.getSoundById(track).duration
-                // var dur = soundManager.getSoundById(track).duration;
                 console.log(dur);
                 animateParentChain(matchedLinks,soundManager);
-                },3000);
+                },2000);
            });
         }
 
     function animateParentChain(links){
-        var linkRenderer = d3.svg.diagonal()
+        var linkRenderer = d3.svg.diagonal(  )
             .projection(function(d){
-                return [d.x, -d.y];
+                return [d.y, d.x ];
             });
+
         // Links
         ui.animGroup.selectAll("path.selected")
             .data([])
@@ -368,10 +368,10 @@ $(document).ready(function(){
 
         ui.svgRoot.select("#clip-rect")
             .attr("x", overlayBox.x + overlayBox.width)
-            .attr("y", overlayBox.y -608)
+            .attr("y", overlayBox.y -568)
             .attr("width", 0)
             .attr("height", overlayBox.height)
-            .transition().duration(dur)
+            .transition().duration(2000)
             .attr("x", overlayBox.x)
             .attr("width", overlayBox.width);
     }
