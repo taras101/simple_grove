@@ -215,11 +215,11 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth()-300  , height: (totalNodes * 2)};
+        var size = { width:$(containerName).outerWidth()-300  , height: (totalNodes * 22) };
 
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.height-700, size.width-10])
+            .size([size.height-10, size.width-10])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
@@ -237,13 +237,13 @@ $(document).ready(function(){
         var layoutRoot = svgRoot
             .append("svg:g")
             .attr("class", "container")
-            .attr("transform", "translate(0," + maxLabelLength + ")");
+            .attr("transform", "translate(1300," + maxLabelLength + ")");
 
         // Edges between nodes as a <path class="link" />
         var link = d3.svg.diagonal()
             .projection(function(d)
             {
-                return [d.y , -d.x ];
+                return [-d.y , d.x ];
             });
 
         var linkGroup = layoutRoot.append("svg:g");
@@ -266,7 +266,7 @@ $(document).ready(function(){
             .attr("class", "node")
             .attr("transform", function(d)
             {
-                return "translate(" + d.y + "," + -d.x + ")";
+                return "translate("+ -d.y +"," + d.x + ")";
             });
 
         // Cache the UI elements
@@ -347,7 +347,7 @@ $(document).ready(function(){
     function animateParentChain(links){
         var linkRenderer = d3.svg.diagonal(  )
             .projection(function(d){
-                return [d.y, d.x ];
+                return [ -d.y, d.x ];
             });
 
         // Links
@@ -368,8 +368,8 @@ $(document).ready(function(){
 
         ui.svgRoot.select("#clip-rect")
             .attr("x", overlayBox.x + overlayBox.width)
-            .attr("y", overlayBox.y -568)
-            .attr("width", 0)
+            .attr("y", overlayBox.y )
+            .attr("width", 100)
             .attr("height", overlayBox.height)
             .transition().duration(2000)
             .attr("x", overlayBox.x)
