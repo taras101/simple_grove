@@ -347,7 +347,7 @@ $(document).ready(function(){
     function animateParentChain(links){
         var linkRenderer = d3.svg.diagonal(  )
             .projection(function(d){
-                return [ -d.y, d.x ];
+                return [ -d.y +40, d.x -20];
             });
 
         // Links
@@ -369,7 +369,7 @@ $(document).ready(function(){
         ui.svgRoot.select("#clip-rect")
             .attr("x", overlayBox.x + overlayBox.width)
             .attr("y", overlayBox.y )
-            .attr("width", 100)
+            .attr("width", 0)
             .attr("height", overlayBox.height)
             .transition().duration(2000)
             .attr("x", overlayBox.x)
