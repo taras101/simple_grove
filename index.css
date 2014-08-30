@@ -10,13 +10,13 @@ g.node {
 circle.node-dot {
     fill: #00FF49;
     stroke:#0C7A2C ;
-    stroke-width: 2px;
+    stroke-width: 1px;
 }
 
 path.link {
     fill: none;
     stroke:#B27012;
-    stroke-width: 5px;
+    stroke-width: 2px;
 }
 .oneTree{
 	padding-top: 30px;

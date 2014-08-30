@@ -3,6 +3,7 @@ $(document).ready(function(){
         name: "Grove",
         contents: [
             {name: "First Tree",
+            value: "12",
             contents: [
                 {   name: "",
                     contents: [
@@ -216,7 +217,6 @@ $(document).ready(function(){
 
         // size of the diagram
         var size = { width:$(containerName).outerWidth() , height: (totalNodes * 8) };
-
         var tree = d3.layout.tree()
             .sort(null)
             .size([size.width - 200,size.height - 10])
@@ -243,7 +243,9 @@ $(document).ready(function(){
         var link = d3.svg.diagonal()
             .projection(function(d)
             {
-                return [d.x, -d.y ];
+                var value = d.value;
+                console.log(d.value);
+                return [d.x , -d.y+ d.value ];
             });
 
         var linkGroup = layoutRoot.append("svg:g");
@@ -337,11 +339,11 @@ $(document).ready(function(){
                 var last_element = matchedLinks[matchedLinks.length - 1];
                 var track = last_element.target.name;
                 soundManager.play(track);
-                setTimeout(function(){dur = soundManager.getSoundById(track).duration
-                // var dur = soundManager.getSoundById(track).duration;
-                console.log(dur);
+                // setTimeout(function(){dur = soundManager.getSoundById(track).duration
+                // // var dur = soundManager.getSoundById(track).duration;
+                // console.log(dur);
                 animateParentChain(matchedLinks,soundManager);
-                },3000);
+                // },3000);
            });
         }
 
@@ -368,10 +370,10 @@ $(document).ready(function(){
 
         ui.svgRoot.select("#clip-rect")
             .attr("x", overlayBox.x + overlayBox.width)
-            .attr("y", overlayBox.y -608)
+            .attr("y", overlayBox.y -540)
             .attr("width", 0)
             .attr("height", overlayBox.height)
-            .transition().duration(dur)
+            .transition().duration(5000)
             .attr("x", overlayBox.x)
             .attr("width", overlayBox.width);
     }
