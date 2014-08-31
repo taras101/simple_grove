@@ -310,9 +310,10 @@ $(document).ready(function(){
         setupMouseEvents();
 
         nodeGroup.append("svg:image")
-            .attr("xlink:href", "20110804001_svg-leaves.svg")
-            .attr("width", 40)
-            .attr("height", 40);
+            .attr("xlink:href", "svg-leave1.svg")
+            .attr("width", 140)
+            .attr("height", 140)
+            .attr("transform", "translate(-35,-20)");
 
         nodeGroup.append("svg:text")
             .attr("text-anchor", function(d)
