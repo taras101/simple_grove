@@ -3,65 +3,89 @@ $(document).ready(function(){
         name: "Grove",
         contents: [
             {name: "First Tree",
-            value: "12",
+            value: 12,
             contents: [
                 {   name: "",
+                    value: 3,
                     contents: [
                     {
                         name: "",
+                        value: 17,
                         contents: [
-                            { name: "two" },
-                            { name: "three" },
-                            { name: "4" }
+                            { name: "two",
+                            value: 4 },
+                            { name: "three",
+                            value: 4 },
+                            { name: "4",
+                            value: 4 }
                         ]
                     },
                     {
                         name: "",
+                        value: 4,
                         contents: [
-                            { name: "9" }
+                            { name: "9" ,
+                            value: 4
+                        }
                         ]
                     },
                     {
                         name: "",
+                        value: 4,
                         contents: [
                             {
                                 name: "",
+                                value: 4,
                                 contents: [
-                                    { name: "6" },
-                                    { name: "7" },
-                                    { name: "8" }
+                                    { name: "6",
+                                    value: 4 },
+                                    { name: "7",
+                                    value: 4 },
+                                    { name: "8",
+                                    value: 4 }
                                 ]
                             },
                             {
                                 name: "",
+                                value: 4,
                                 contents: [
-                                    { name: "ten" }
+                                    { name: "ten",
+                                    value: 4 }
                                 ]
                             },
                             {
                                 name: "",
+                                value: 4,
                                 contents: [
-                                    { name: "11"},
+                                    { name: "11",
+                                    value: 4},
                                     {
                                         name: "",
+                                        value: 4,
                                         contents: [
-                                        { name: "12"},
-                                        { name: "13"},
-                                        { name: "14"}
+                                        { name: 4,
+                                        value: 4},
+                                        { name: "13",
+                                        value: 4},
+                                        { name: "14",
+                                        value: 4}
                                         ]
                                      }
                                 ]
                             },
                             {
                                 name: "",
+                                value: 4,
                                 contents: [
-                                    { name: "1" }
+                                    { name: "1",
+                                    value: 4 }
                                 ]
                             }
                         ]
                     },
                     {
                         name: "5",
+                        value: 4,
                         contents: []
                     }
                 ]
@@ -199,7 +223,7 @@ $(document).ready(function(){
     {
         // build the options object
         var options = $.extend({
-            nodeRadius: 5, fontSize: 22
+            nodeRadius: 4, fontSize: 22
         }, customOptions);
 
 
@@ -242,10 +266,13 @@ $(document).ready(function(){
         // Edges between nodes as a <path class="link" />
         var link = d3.svg.diagonal()
             .projection(function(d)
-            {
-                var value = d.value;
+            { if(d.value !=undefined){
+                return [(d.x - d.value) , (-d.y + d.value) ];
+            }
+            else{
                 console.log(d.value);
-                return [d.x , -d.y+ d.value ];
+                return [d.x , (-d.y ) ];
+            }
             });
 
         var linkGroup = layoutRoot.append("svg:g");
@@ -282,9 +309,10 @@ $(document).ready(function(){
         // Attach the hover and click handlers
         setupMouseEvents();
 
-        nodeGroup.append("svg:circle")
-            .attr("class", "node-dot")
-            .attr("r", options.nodeRadius);
+        nodeGroup.append("svg:image")
+            .attr("xlink:href", "20110804001_svg-leaves.svg")
+            .attr("width", 40)
+            .attr("height", 40);
 
         nodeGroup.append("svg:text")
             .attr("text-anchor", function(d)
@@ -350,7 +378,13 @@ $(document).ready(function(){
     function animateParentChain(links){
         var linkRenderer = d3.svg.diagonal()
             .projection(function(d){
-                return [d.x, -d.y];
+                  if(d.value !=undefined){
+                return [(d.x - d.value) , (-d.y + d.value) ];
+            }
+            else{
+                console.log(d.value);
+                return [d.x , (-d.y ) ];
+            }
             });
         // Links
         ui.animGroup.selectAll("path.selected")
