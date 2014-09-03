@@ -3,21 +3,21 @@ $(document).ready(function(){
         name: "Grove",
         contents: [
             {name: "First Tree",
-            value: 12,
+            value: 1,
             contents: [
                 {   name: "",
-                    value: 3,
+                    value: -23,
                     contents: [
                     {
                         name: "",
-                        value: 17,
+                        value: -17,
                         contents: [
                             { name: "two",
-                            value: 4 },
+                            value: 2 },
                             { name: "three",
-                            value: 4 },
+                            value: -6 },
                             { name: "4",
-                            value: 4 }
+                            value: -16 }
                         ]
                     },
                     {
@@ -295,7 +295,9 @@ $(document).ready(function(){
             .attr("class", "node")
             .attr("transform", function(d)
             {
-                return "translate(" + d.x + "," + -d.y + ")";
+                var transpointx = d.x - d.value;
+                var transpointy = -d.y + d.value;
+                return "translate(" + transpointx + "," + transpointy + ")";
             });
 
         // Cache the UI elements
@@ -313,7 +315,7 @@ $(document).ready(function(){
             .attr("xlink:href", "svg-leave1.svg")
             .attr("width", 140)
             .attr("height", 140)
-            .attr("transform", "translate(-35,-20)");
+            .attr("transform", "translate(-25,-5)");
 
         nodeGroup.append("svg:text")
             .attr("text-anchor", function(d)

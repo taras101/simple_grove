@@ -29,7 +29,8 @@ circle.hover {
     fill: forestgreen;
 }
 path.selected {
-    stroke: black;
+    stroke: silver;
+    stroke-dasharray:3;
     fill: none;
     stroke-width: 3px;
 }
