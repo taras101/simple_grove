@@ -3,59 +3,59 @@ $(document).ready(function(){
         name: "Grove",
         contents: [
             {name: "First Tree",
-            value: 1,
+            value: -6,
             contents: [
                 {   name: "",
-                    value: -23,
+                    value: -13,
                     contents: [
                     {
                         name: "",
                         value: -17,
                         contents: [
                             { name: "two",
-                            value: 2 },
+                            value: 16 },
                             { name: "three",
-                            value: -6 },
+                            value: -16 },
                             { name: "4",
-                            value: -16 }
+                            value: -5 }
                         ]
                     },
                     {
                         name: "",
-                        value: 4,
+                        value: -10,
                         contents: [
                             { name: "9" ,
-                            value: 4
+                            value: -1
                         }
                         ]
                     },
                     {
                         name: "",
-                        value: 4,
+                        value: -1,
                         contents: [
                             {
                                 name: "",
-                                value: 4,
+                                value: 9,
                                 contents: [
                                     { name: "6",
-                                    value: 4 },
+                                    value: 19 },
                                     { name: "7",
-                                    value: 4 },
+                                    value: -55 },
                                     { name: "8",
-                                    value: 4 }
+                                    value: -19 }
                                 ]
                             },
                             {
                                 name: "",
-                                value: 4,
+                                value: 20,
                                 contents: [
                                     { name: "ten",
-                                    value: 4 }
+                                    value: 12 }
                                 ]
                             },
                             {
                                 name: "",
-                                value: 4,
+                                value: -18,
                                 contents: [
                                     { name: "11",
                                     value: 4},
@@ -75,17 +75,17 @@ $(document).ready(function(){
                             },
                             {
                                 name: "",
-                                value: 4,
+                                value: -2,
                                 contents: [
                                     { name: "1",
-                                    value: 4 }
+                                    value: -4 }
                                 ]
                             }
                         ]
                     },
                     {
                         name: "5",
-                        value: 4,
+                        value: -32,
                         contents: []
                     }
                 ]
