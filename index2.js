@@ -406,13 +406,13 @@ $(document).ready(function(){
         var overlayBox = ui.svgRoot.node().getBBox();
 
         ui.svgRoot.select("#clip-rect")
-            .attr("x", overlayBox.x + overlayBox.width)
-            .attr("y", overlayBox.y -540)
-            .attr("width", 0)
-            .attr("height", overlayBox.height)
+            .attr("x", overlayBox.x )
+            .attr("y", 0)
+            .attr("width", overlayBox.width)
+            .attr("height", 0)
             .transition().duration(5000)
-            .attr("x", overlayBox.x)
-            .attr("width", overlayBox.width);
+            .attr("y", overlayBox.y -540)
+            .attr("height", 14);
     }
     //Soundmanager
 
