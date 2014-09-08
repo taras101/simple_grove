@@ -23,10 +23,10 @@ $(document).ready(function(){
                     },
                     {
                         name: "",
-                        value: -10,
+                        value: 7,
                         contents: [
                             { name: "9" ,
-                            value: -1
+                            value: -10
                         }
                         ]
                     },
@@ -36,7 +36,7 @@ $(document).ready(function(){
                         contents: [
                             {
                                 name: "",
-                                value: 9,
+                                value: -18,
                                 contents: [
                                     { name: "6",
                                     value: 19 },
@@ -48,15 +48,15 @@ $(document).ready(function(){
                             },
                             {
                                 name: "",
-                                value: 20,
+                                value: 5,
                                 contents: [
                                     { name: "ten",
-                                    value: 12 }
+                                    value: -12 }
                                 ]
                             },
                             {
                                 name: "",
-                                value: -18,
+                                value: -12,
                                 contents: [
                                     { name: "11",
                                     value: 4},
@@ -76,7 +76,7 @@ $(document).ready(function(){
                             },
                             {
                                 name: "",
-                                value: -2,
+                                value: 3,
                                 contents: [
                                     { name: "1",
                                     value: -4 }
@@ -86,7 +86,7 @@ $(document).ready(function(){
                     },
                     {
                         name: "5",
-                        value: -32,
+                        value: -20,
                         contents: []
                     }
                 ]
@@ -153,10 +153,10 @@ $(document).ready(function(){
                                         contents: [
                                             {
                                                 name: "2T9",
-                                                value: 4  },
+                                                value: -6 },
                                             {
                                                 name: "2T10",
-                                                value: 4 }
+                                                value: 2 }
                                             ]
                                     },
                                 ]
@@ -196,29 +196,29 @@ $(document).ready(function(){
                     contents: [
                         {
                             name: "3T2",
-                            value: 4 },
+                            value: 7 },
                         {
                             name: "3T3",
-                            value: 4 },
+                            value: -4 },
                         {
                             name: "3T4",
                             value: 4 },
                         {
                             name: "3T5",
-                            value: 4,
+                            value: 1,
                             contents: [
                                 {
                                     name: "3T12",
-                                    value: 4 },
+                                    value: -9 },
                                 {
                                     name: "3T13",
-                                    value: 4 },
+                                    value: 12 },
                                 {
                                     name: "3T14",
-                                    value: 4 },
+                                    value: 8 },
                                 {
                                     name: "3T15",
-                                    value: 4 },
+                                    value: -6 },
                                 {
                                     name: "3T16",
                                     value: 4 }
@@ -226,19 +226,19 @@ $(document).ready(function(){
                                 },
                         {
                             name: "3T6",
-                            value: 4 },
+                            value: 2 },
                         {
                             name: "3T7",
-                            value: 4 },
+                            value: -4 },
                         {
                             name: "3T8",
-                            value: 4 },
+                            value: 7 },
                         {
                             name: "3T9",
-                            value: 4 },
+                            value: -3 },
                         {
                             name: "3T10",
-                            value: 4 },
+                            value: 9 },
                         {
                             name: "3T11",
                             value: 4 }
@@ -246,28 +246,28 @@ $(document).ready(function(){
                 },
                 {
                     name: "",
-                    value: 4,
+                    value: 6,
                     contents: [
                         {
                             name: "",
-                            value: 4,
+                            value: -2,
                             contents: [
                                 {
                                     name: "2T4",
-                                    value: 4 },
+                                    value: -3 },
                                 {
                                     name: "2T5",
-                                    value: 4 },
+                                    value: 8 },
                                 {
                                     name: "",
-                                    value: 4,
+                                    value: 12,
                                     contents: [
                                         {
                                             name: "2T9",
-                                            value: 4  },
+                                            value: 11  },
                                         {
                                             name: "2T10",
-                                            value: 4 }
+                                            value: -4 }
                                         ]
                                 },
                             ]
@@ -493,7 +493,7 @@ $(document).ready(function(){
             .attr("width", overlayBox.width)
             .attr("height", 0)
             .transition().duration(5000)
-            .attr("y", overlayBox.y -540)
+            .attr("y", overlayBox.y -560)
             .attr("height", 14);
     }
     //Soundmanager
