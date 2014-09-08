@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var treeData = {
         name: "Grove",
+        value: 1,
         contents: [
             {name: "First Tree",
             value: -6,
@@ -63,12 +64,12 @@ $(document).ready(function(){
                                         name: "",
                                         value: 4,
                                         contents: [
-                                        { name: 4,
+                                        { name: "4",
                                         value: 4},
                                         { name: "13",
-                                        value: 4},
+                                        value: 1},
                                         { name: "14",
-                                        value: 4}
+                                        value: 6}
                                         ]
                                      }
                                 ]
@@ -95,37 +96,67 @@ $(document).ready(function(){
         },
             {
             name: "Second Tree",
+            value: 4,
             contents: [
                 {   name: "",
+                    value: 4,
                     contents: [
                     {
                         name: "",
+                        value: 4,
                         contents: [
-                            { name: "2T1" }
+                            {
+                                name: "2T1",
+                                value: 4
+                             }
                         ]
                     },
                     {
                         name: "",
+                        value: 4,
                         contents: [
-                            { name: "2T2" },
-                            { name: "2T3" }
+                            {
+                                name: "2T2",
+                                value: 4
+                                 },
+                            {
+                                name: "2T3",
+                                value: 4 }
                         ]
                     },
                     {
                         name: "",
+                        value: 4,
                         contents: [
                             {
                                 name: "",
+                                value: 4,
                                 contents: [
-                                    { name: "2T4" },
-                                    { name: "2T5" },
-                                    { name: "2T6" },
-                                    { name: "2T7" },
-                                    { name: "2T8" },
-                                    { name: "",
+                                    {
+                                        name: "2T4",
+                                        value: 2 },
+                                    {
+                                        name: "2T5",
+                                        value: 6 },
+                                    {
+                                        name: "2T6",
+                                        value: -14 },
+                                    {
+                                        name: "2T7",
+                                        value: 6 },
+                                    {
+                                        name: "2T8",
+                                        value: 4 },
+                                    {
+                                        name: "",
+                                        value: 4,
                                         contents: [
-                                            { name: "2T9"  },
-                                            { name: "2T10" }
+                                            {
+                                                name: "2T9",
+                                                value: 4  },
+                                            {
+                                                name: "2T10",
+                                                value: 4 }
                                             ]
                                     },
                                 ]
@@ -138,54 +169,105 @@ $(document).ready(function(){
         },
         {
         name: "Third Tree",
+        value: 4,
         contents: [
-            {   name: "",
+            {
+                name: "",
+                value: 4,
                 contents: [
                 {
                     name: "",
+                    value: 4,
                     contents: [
-                        {name: "",
+                        {
+                        name: "",
+                        value: 4,
                         contents:[
-                            { name: "3T1" }
+                            {
+                                name: "3T1",
+                                value: -4 }
                         ]
                     },
                     ]
                 },
                 {
                     name: "",
+                    value: 4,
                     contents: [
-                        { name: "3T2" },
-                        { name: "3T3" },
-                        { name: "3T4" },
-                        { name: "3T5",
+                        {
+                            name: "3T2",
+                            value: 4 },
+                        {
+                            name: "3T3",
+                            value: 4 },
+                        {
+                            name: "3T4",
+                            value: 4 },
+                        {
+                            name: "3T5",
+                            value: 4,
                             contents: [
-                                { name: "3T12" },
-                                { name: "3T13" },
-                                { name: "3T14" },
-                                { name: "3T15" },
-                                { name: "3T16" }
+                                {
+                                    name: "3T12",
+                                    value: 4 },
+                                {
+                                    name: "3T13",
+                                    value: 4 },
+                                {
+                                    name: "3T14",
+                                    value: 4 },
+                                {
+                                    name: "3T15",
+                                    value: 4 },
+                                {
+                                    name: "3T16",
+                                    value: 4 }
                                 ]
                                 },
-                        { name: "3T6" },
-                        { name: "3T7" },
-                        { name: "3T8" },
-                        { name: "3T9" },
-                        { name: "3T10" },
-                        { name: "3T11" }
+                        {
+                            name: "3T6",
+                            value: 4 },
+                        {
+                            name: "3T7",
+                            value: 4 },
+                        {
+                            name: "3T8",
+                            value: 4 },
+                        {
+                            name: "3T9",
+                            value: 4 },
+                        {
+                            name: "3T10",
+                            value: 4 },
+                        {
+                            name: "3T11",
+                            value: 4 }
                     ]
                 },
                 {
                     name: "",
+                    value: 4,
                     contents: [
                         {
                             name: "",
+                            value: 4,
                             contents: [
-                                { name: "2T4" },
-                                { name: "2T5" },
-                                { name: "",
+                                {
+                                    name: "2T4",
+                                    value: 4 },
+                                {
+                                    name: "2T5",
+                                    value: 4 },
+                                {
+                                    name: "",
+                                    value: 4,
                                     contents: [
-                                        { name: "2T9"  },
-                                        { name: "2T10" }
+                                        {
+                                            name: "2T9",
+                                            value: 4  },
+                                        {
+                                            name: "2T10",
+                                            value: 4 }
                                         ]
                                 },
                             ]
