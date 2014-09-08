@@ -113,11 +113,11 @@ $(document).ready(function(){
                     },
                     {
                         name: "",
-                        value: 4,
+                        value: 6,
                         contents: [
                             {
                                 name: "2T2",
-                                value: 4
+                                value: 14
                                  },
                             {
                                 name: "2T3",
@@ -394,10 +394,10 @@ $(document).ready(function(){
         setupMouseEvents();
 
         nodeGroup.append("svg:image")
-            .attr("xlink:href", "svg-leave1.svg")
-            .attr("width", 140)
-            .attr("height", 140)
-            .attr("transform", "translate(-25,-5)");
+            .attr("xlink:href", "svg-leave2.svg")
+            .attr("width", 18)
+            .attr("height", 18)
+            .attr("transform", "translate(-9,-5)");
 
         nodeGroup.append("svg:text")
             .attr("text-anchor", function(d)
