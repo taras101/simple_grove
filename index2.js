@@ -343,7 +343,7 @@ $(document).ready(function(){
         var layoutRoot = svgRoot
             .append("svg:g")
             .attr("class", "container")
-            .attr("transform", "translate(0," + size.height + ")");
+            .attr("transform", "translate(5," + size.height + ")");
 
         // Edges between nodes as a <path class="link" />
         var link = d3.svg.diagonal()
