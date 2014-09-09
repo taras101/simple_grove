@@ -491,10 +491,11 @@ $(document).ready(function(){
             .attr("x", overlayBox.x )
             .attr("y", 0)
             .attr("width", overlayBox.width)
-            .attr("height", 0)
-            .transition().duration(5000)
-            .attr("y", overlayBox.y -560)
-            .attr("height", 14);
+            .attr("height", 50)
+            .transition().duration(15000)
+            .ease("linear")
+            .attr("y", overlayBox.y -640)
+            .attr("height", 50);
     }
     //Soundmanager
 
