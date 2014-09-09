@@ -1,5 +1,5 @@
 body{
-    background: darkslategray;
+    background: cream;
 }
 g.node {
     font-family: Verdana, Helvetica;
@@ -29,7 +29,7 @@ circle.hover {
     fill: forestgreen;
 }
 path.selected {
-    stroke: silver;
+    stroke: #260D02;
     stroke-dasharray:3;
     fill: none;
     stroke-width: 7px;
