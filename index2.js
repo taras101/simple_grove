@@ -395,8 +395,8 @@ $(document).ready(function(){
 
         nodeGroup.append("svg:image")
             .attr("xlink:href", "svg-leave2.svg")
-            .attr("width", 18)
-            .attr("height", 18)
+            .attr("width", 20)
+            .attr("height", 20)
             .attr("transform", "translate(-9,-5)");
 
         nodeGroup.append("svg:text")

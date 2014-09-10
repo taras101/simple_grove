@@ -30,7 +30,8 @@ circle.hover {
 }
 path.selected {
     stroke: #260D02;
-    stroke-dasharray:3;
+    stroke-dasharray:3,5;
     fill: none;
     stroke-width: 7px;
+    stroke-opacity:0.8;
 }
