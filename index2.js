@@ -352,7 +352,6 @@ $(document).ready(function(){
                 return [(d.x - d.value) , (-d.y + d.value) ];
             }
             else{
-                console.log(d.value);
                 return [d.x , (-d.y ) ];
             }
             });
@@ -392,6 +391,11 @@ $(document).ready(function(){
 
         // Attach the hover and click handlers
         setupMouseEvents();
+        // var svg = document.getElementById("svg3148");
+        // var svgDoc = svg.contentDocument;
+        // var leaf = svgDoc.getElementById("path3127");
+        // console.log(svgDoc);
+        // leaf.setAttributeNS(null, "cx", 200);
 
         nodeGroup.append("svg:image")
             .attr("xlink:href", "svg-leave2.svg")
@@ -467,7 +471,6 @@ $(document).ready(function(){
                 return [(d.x - d.value) , (-d.y + d.value) ];
             }
             else{
-                console.log(d.value);
                 return [d.x , (-d.y ) ];
             }
             });
