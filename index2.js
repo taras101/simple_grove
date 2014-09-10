@@ -325,7 +325,7 @@ $(document).ready(function(){
         var size = { width:$(containerName).outerWidth() , height: (totalNodes * 8) };
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width - 200,size.height - 10])
+            .size([size.width - 200,size.height - 20])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
@@ -401,7 +401,7 @@ $(document).ready(function(){
             .attr("xlink:href", "svg-leave2.svg")
             .attr("width", 20)
             .attr("height", 20)
-            .attr("transform", "translate(-9,-5)");
+            .attr("transform", "translate(-9,-15)");
 
         nodeGroup.append("svg:text")
             .attr("text-anchor", function(d)
