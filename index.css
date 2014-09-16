@@ -22,9 +22,12 @@ path.link {
 	padding-top: 30px;
     margin-left: 300px;
     border: 50px;
-
-
 }
+#leaf{
+    fill:purple;
+    stroke:purple;
+}
+
 circle.hover {
     fill: forestgreen;
 }
@@ -34,4 +37,8 @@ path.selected {
     fill: none;
     stroke-width: 7px;
     stroke-opacity:0.8;
+}
+#leaf:hover path {
+    transition: 1s;
+    fill: red;
 }

@@ -391,17 +391,49 @@ $(document).ready(function(){
 
         // Attach the hover and click handlers
         setupMouseEvents();
-        // var svg = document.getElementById("svg3148");
-        // var svgDoc = svg.contentDocument;
-        // var leaf = svgDoc.getElementById("path3127");
-        // console.log(svgDoc);
-        // leaf.setAttributeNS(null, "cx", 200);
+        // var leaf = document.getElementById("leaf");
+        // var svgDoc = leaf.contentDocument;
+        // var svgItem = svgDoc.getElementById("leaf1");
+        // svgItem.setAttribute("fill", "purple");
 
-        nodeGroup.append("svg:image")
-            .attr("xlink:href", "svg-leave2.svg")
+        jQuery("img.svg").each(function(){
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+                console.log($svg);
+            }, 'xml');
+
+        });
+        nodeGroup.append("svg:path")
             .attr("width", 20)
             .attr("height", 20)
-            .attr("transform", "translate(-9,-15)");
+            .style("stroke", "black")  // colour the line
+            .attr("d","m 31.508736,1032.8152 c 0.114788,-0.7208 -0.509927,-3.54 -0.677201,-4.1167 -0.168553,-0.5771 -1.391953,-2.6968 -1.391953,-2.6968 l 0.009,-0.065 c -0.50566,-2.179 -1.627074,-2.9144 -1.627074,-2.9144 -0.921711,-2.2609 -3.017748,-5.7708 -3.153444,-6.5926 -0.136123,-0.8214 -0.593138,-0.8185 -0.593138,-0.8185 -1.156832,5.5741 -7.352773,9.4127 -7.352773,9.4127 -2.270139,1.5325 -4.366603,3.5925 -4.366603,3.5925 -0.625568,1.0536 -2.235574,2.192 -2.7681177,2.5424 -0.5333972,0.3499 -0.7625446,0.7082 -1.183715,1.1321 -0.4207437,0.4239 -0.8542889,1.1739 -1.0761821,1.7117 -0.2231734,0.5383 -0.8939736,1.543 -0.8939736,1.543 -0.078516,0.1349 -0.1369764,0.2702 -0.1805016,0.413 -0.1600192,0.5241 -0.1280153,1.1476 -0.2026909,2.2 -0.094305,1.3388 0.2573108,2.3757 0.2573108,2.3757 1.162379,7.8516 7.1214921,5.7394 7.1214921,5.7394 1.100505,-0.6552 2.717338,-0.294 2.717338,-0.294 0.159166,1.5698 -3.449159,5.5649 -3.449159,5.5649 0.377219,0.5241 0.832953,0.1566 0.832953,0.1566 1.319838,-1.7113 3.410755,-5.3506 3.800348,-5.5402 0.390447,-0.1892 0.958835,0.1202 0.958835,0.1202 1.758077,2.8422 3.252016,2.8213 4.150257,2.9337 0.898667,0.1131 1.659932,-0.1195 2.187781,-0.2017 0.528277,-0.082 1.792642,-0.6686 2.389193,-1.0403 0.596551,-0.3716 0.853009,-0.9354 1.217852,-1.396 0.364844,-0.461 0.704511,-1.2749 0.704511,-1.2749 1.867744,-2.3273 1.883959,-4.1526 1.883959,-4.1526 -0.184342,-0.9166 0.128442,-2.367 0.128442,-2.367 1.095385,-4.0331 0.442933,-5.2471 0.557293,-5.9674 z")
+            .attr("fill", "yellow")
+            .attr("transform", "translate(-9,-15)")
+            .attr("id", "leaf");
+
 
         nodeGroup.append("svg:text")
             .attr("text-anchor", function(d)
