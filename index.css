@@ -24,13 +24,10 @@ path.link {
     border: 50px;
 }
 #leaf{
-    fill:purple;
+    fill:forestgreen;
     stroke:purple;
 }
 
-circle.hover {
-    fill: forestgreen;
-}
 path.selected {
     stroke: #260D02;
     stroke-dasharray:3,5;
@@ -38,7 +35,7 @@ path.selected {
     stroke-width: 7px;
     stroke-opacity:0.8;
 }
-#leaf:hover path {
+#leaf:hover {
     transition: 1s;
     fill: red;
 }
