@@ -459,7 +459,10 @@ $(document).ready(function(){
                 return d.name;
             });
     }// close build tree
+
     var dur = 0;
+    var matchedLinks = [];
+
     function setupMouseEvents(){
         ui.nodeGroup.on('mouseover', function(d, i)
         {
@@ -480,7 +483,6 @@ $(document).ready(function(){
                 };
 
                 // Get the matched links
-                var matchedLinks = [];
                 ui.linkGroup.selectAll('path.link')
                     .filter(function(d, i)
                     {
@@ -494,13 +496,14 @@ $(document).ready(function(){
                         matchedLinks.push(d);
                     });
                 var last_element = matchedLinks[matchedLinks.length - 1];
+
+                SC.initialize({
+                    client_id: "d99a29c1a7bd281b1ef4a833d3ab6dad"
+                    //client secret e2e93639e0df982ea9aed3b69a7492f5
+                });
                 var track = last_element.target.name;
                 soundManager.play(track);
-                // setTimeout(function(){dur = soundManager.getSoundById(track).duration
-                // // var dur = soundManager.getSoundById(track).duration;
-                // console.log(dur);
-                animateParentChain(matchedLinks,soundManager);
-                // },3000);
+
            });
         }
 
@@ -535,18 +538,16 @@ $(document).ready(function(){
             .attr("y", 0)
             .attr("width", overlayBox.width)
             .attr("height", 50)
-            .transition().duration(15000)
+            .transition().duration(soundDuration)
             .ease("linear")
             .attr("y", overlayBox.y -640)
             .attr("height", 50);
     }
     //Soundmanager
-    SC.initialize({
-        client_id: "d99a29c1a7bd281b1ef4a833d3ab6dad"
-        //client secret e2e93639e0df982ea9aed3b69a7492f5
-    });
-    soundManager.setup({
+    //set client id for soundcloud
+    var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
 
+    soundManager.setup({
     // where to find flash audio SWFs, as needed
         url: '/.',
         onready: function() {
@@ -555,9 +556,15 @@ $(document).ready(function(){
           url: 'PIano Improvs6-first tree2.mp3',
           multiShot: false,
           onload: function() {
-            if( this.readyState === 3 ) {
+            if( this.readyState === 2 ) {
             soundDuration = this.duration;
-            console.log(soundDuration);
+            // console.log(soundDuration);
+            setTimeout(function(){
+            //     dur = soundManager.getSoundById(track).duration
+            // var dur = soundManager.getSoundById(track).duration;
+            //     console.log(dur);
+            animateParentChain(matchedLinks,soundManager);
+                },8000);
                 }
             }
         });
@@ -574,13 +581,19 @@ $(document).ready(function(){
         });
           soundManager.createSound({
           id: 'ten', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad',
+          url: 'http://api.soundcloud.com/tracks/155037359' + sid,
           multiShot: false,
           onload: function() {
             if( this.readyState === 3 ) {
-            soundDuration = this.duration;
-            console.log(soundDuration);
+            soundDuration = this.duration +1000;
+            setTimeout(function(){
+            //     dur = soundManager.getSoundById(track).duration
+            // var dur = soundManager.getSoundById(track).duration;
+            //     console.log(dur);
+            animateParentChain(matchedLinks,soundManager);
+                },2500);
                 }
+            console.log(soundDuration);
             }
         });
         }
