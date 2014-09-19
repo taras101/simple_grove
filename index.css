@@ -45,9 +45,9 @@ path.selected {
     height:100px;
     width:100px;
 }
-.leaf hovers {
+ .hovers {
     transition:2500ms;
     fill: orange;
-    height:10px;
-    width:10px;
+    height:1000px;
+    width:1000px;
 }
