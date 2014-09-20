@@ -281,8 +281,6 @@ $(document).ready(function(){
         }
         ]
 
-
-
     };
 
     function visit(parent, visitFn, childrenFn)
@@ -537,7 +535,6 @@ $(document).ready(function(){
             .attr("class", "selected")
             .attr("d", linkRenderer);
 
-
         // Animate the clipping path
         var overlayBox = ui.svgRoot.node().getBBox();
 
@@ -591,22 +588,21 @@ $(document).ready(function(){
           id: 'ten', // optional: provide your own unique id
           url: 'http://api.soundcloud.com/tracks/155037359' + sid,
           multiShot: false,
-          onload: function() {
-            if( this.readyState === 3 ) {
-            soundDuration = this.duration +1000;
-            setTimeout(function(){
-            //     dur = soundManager.getSoundById(track).duration
-            // var dur = soundManager.getSoundById(track).duration;
-            //     console.log(dur);
-            animateParentChain(matchedLinks,soundManager);
-                },2500);
-                }
-            console.log(soundDuration);
+            onload: function() {
+              if( this.readyState === 3 ) {
+                soundDuration = this.duration -1000 ;
+                    // setTimeout(function(){
+                    //     dur = soundManager.getSoundById(track).duration
+                    // var dur = soundManager.getSoundById(track).duration;
+                    //     console.log(dur);
+                    animateParentChain(matchedLinks,soundManager);
+                    // },2500);
+              }
+          console.log(soundDuration);
             }
-        });
-        }
-    });
-//<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155037359&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          });
+        }//close onreay
+    });//close soundmanager setup
 
     $(function(){
         buildTree("#tree-container");
