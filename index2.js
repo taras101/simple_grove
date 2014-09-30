@@ -321,7 +321,7 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 10) };
+        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 9) };
         var tree = d3.layout.tree()
             .sort(null)
             .size([size.width - 20, size.height - 40])
@@ -590,7 +590,7 @@ $(document).ready(function(){
           multiShot: false,
             onload: function() {
               if( this.readyState === 3 ) {
-                soundDuration = this.duration -1000 ;
+                soundDuration = this.duration + 1000;
                     // setTimeout(function(){
                     //     dur = soundManager.getSoundById(track).duration
                     // var dur = soundManager.getSoundById(track).duration;
