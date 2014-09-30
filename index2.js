@@ -27,13 +27,15 @@ $(document).ready(function(){
                         value: 7,
                         contents: [
                             { name: "9" ,
-                            value: -10
-                        }
+                            value: 19
+                        },
+                        { name: "15" ,
+                            value: -5}
                         ]
                     },
                     {
                         name: "",
-                        value: -1,
+                        value: 1,
                         contents: [
                             {
                                 name: "",
@@ -91,10 +93,10 @@ $(document).ready(function(){
                         contents: []
                     }
                 ]
-            },
-            ]
+                },
+                ]
 
-        },
+            },
             {
             name: "Second Tree",
             value: 4,
@@ -157,9 +159,29 @@ $(document).ready(function(){
                                                 value: -6 },
                                             {
                                                 name: "2T10",
-                                                value: 2 }
+                                                value: 2,
+                                                contents: [
+                                                    {
+                                                        name: "2T11",
+                                                        value: 18
+                                                    },
+                                                    {
+                                                        name: "2T12",
+                                                        value: 15
+                                                    },
+                                                ]
+                                            },
                                             ]
                                     },
+                                    {
+                                        name: "2T13",
+                                        value: 4 },
+                                    {
+                                        name: "2T14",
+                                        value: 4 },
+                                    {
+                                        name: "2T15",
+                                        value: 4 },
                                 ]
                             },
                         ]
@@ -441,21 +463,21 @@ $(document).ready(function(){
 
         // nodeGroup.select(".leaf").style("height", 5, "important").style("width", 5, "important").style("stroke", "orange", "important");
 
-        // nodeGroup.append("svg:text")
-        //     .attr("text-anchor", function(d)
-        //     {
-        //         return d.children ? "end" : "start";
-        //     })
-        //     .attr("dx", function(d)
-        //     {
-        //         var gap = 2 * options.nodeRadius;
-        //         return d.children ? -gap : gap;
-        //     })
-        //     .attr("dy", 3)
-        //     .text(function(d)
-        //     {
-        //         return d.name;
-        //     });
+        nodeGroup.append("svg:text")
+            .attr("text-anchor", function(d)
+            {
+                return d.children ? "end" : "start";
+            })
+            .attr("dx", function(d)
+            {
+                var gap = 2 * options.nodeRadius;
+                return d.children ? -gap : gap;
+            })
+            .attr("dy", 3)
+            .text(function(d)
+            {
+                return d.name;
+            });
     }// close build tree
 
     var dur = 0;
