@@ -281,8 +281,6 @@ $(document).ready(function(){
         }
         ]
 
-
-
     };
 
     function visit(parent, visitFn, childrenFn)
@@ -323,10 +321,10 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 8) };
+        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 9) };
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width - 200,size.height - 20])
+            .size([size.width - 20, size.height - 40])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
@@ -433,31 +431,31 @@ $(document).ready(function(){
         //     .attr("transform", "translate(-25,-5)");
 
         var leaf = nodeGroup.append("svg:path")
-            .attr("height", "10%")
-            .attr("width", '10%')
             .attr("class", "leaf")
-            .attr("d","m 31.508736,1032.8152 c 0.114788,-0.7208 -0.509927,-3.54 -0.677201,-4.1167 -0.168553,-0.5771 -1.391953,-2.6968 -1.391953,-2.6968 l 0.009,-0.065 c -0.50566,-2.179 -1.627074,-2.9144 -1.627074,-2.9144 -0.921711,-2.2609 -3.017748,-5.7708 -3.153444,-6.5926 -0.136123,-0.8214 -0.593138,-0.8185 -0.593138,-0.8185 -1.156832,5.5741 -7.352773,9.4127 -7.352773,9.4127 -2.270139,1.5325 -4.366603,3.5925 -4.366603,3.5925 -0.625568,1.0536 -2.235574,2.192 -2.7681177,2.5424 -0.5333972,0.3499 -0.7625446,0.7082 -1.183715,1.1321 -0.4207437,0.4239 -0.8542889,1.1739 -1.0761821,1.7117 -0.2231734,0.5383 -0.8939736,1.543 -0.8939736,1.543 -0.078516,0.1349 -0.1369764,0.2702 -0.1805016,0.413 -0.1600192,0.5241 -0.1280153,1.1476 -0.2026909,2.2 -0.094305,1.3388 0.2573108,2.3757 0.2573108,2.3757 1.162379,7.8516 7.1214921,5.7394 7.1214921,5.7394 1.100505,-0.6552 2.717338,-0.294 2.717338,-0.294 0.159166,1.5698 -3.449159,5.5649 -3.449159,5.5649 0.377219,0.5241 0.832953,0.1566 0.832953,0.1566 1.319838,-1.7113 3.410755,-5.3506 3.800348,-5.5402 0.390447,-0.1892 0.958835,0.1202 0.958835,0.1202 1.758077,2.8422 3.252016,2.8213 4.150257,2.9337 0.898667,0.1131 1.659932,-0.1195 2.187781,-0.2017 0.528277,-0.082 1.792642,-0.6686 2.389193,-1.0403 0.596551,-0.3716 0.853009,-0.9354 1.217852,-1.396 0.364844,-0.461 0.704511,-1.2749 0.704511,-1.2749 1.867744,-2.3273 1.883959,-4.1526 1.883959,-4.1526 -0.184342,-0.9166 0.128442,-2.367 0.128442,-2.367 1.095385,-4.0331 0.442933,-5.2471 0.557293,-5.9674 z")
-            .attr("transform", "translate(-11,-1047.3622)")
-            .attr("preserveAspectRatio", "none");
+            .attr("d","m 15, 0 c 0.114788,-0.7208 -0.509927,-3.54 -0.677201,-4.1167 -0.168553,-0.5771 -1.391953,-2.6968 -1.391953,-2.6968 l 0.009,-0.065 c -0.50566,-2.179 -1.627074,-2.9144 -1.627074,-2.9144 -0.921711,-2.2609 -3.017748,-5.7708 -3.153444,-6.5926 -0.136123,-0.8214 -0.593138,-0.8185 -0.593138,-0.8185 -1.156832,5.5741 -7.352773,9.4127 -7.352773,9.4127 -2.270139,1.5325 -4.366603,3.5925 -4.366603,3.5925 -0.625568,1.0536 -2.235574,2.192 -2.7681177,2.5424 -0.5333972,0.3499 -0.7625446,0.7082 -1.183715,1.1321 -0.4207437,0.4239 -0.8542889,1.1739 -1.0761821,1.7117 -0.2231734,0.5383 -0.8939736,1.543 -0.8939736,1.543 -0.078516,0.1349 -0.1369764,0.2702 -0.1805016,0.413 -0.1600192,0.5241 -0.1280153,1.1476 -0.2026909,2.2 -0.094305,1.3388 0.2573108,2.3757 0.2573108,2.3757 1.162379,7.8516 7.1214921,5.7394 7.1214921,5.7394 1.100505,-0.6552 2.717338,-0.294 2.717338,-0.294 0.159166,1.5698 -3.449159,5.5649 -3.449159,5.5649 0.377219,0.5241 0.832953,0.1566 0.832953,0.1566 1.319838,-1.7113 3.410755,-5.3506 3.800348,-5.5402 0.390447,-0.1892 0.958835,0.1202 0.958835,0.1202 1.758077,2.8422 3.252016,2.8213 4.150257,2.9337 0.898667,0.1131 1.659932,-0.1195 2.187781,-0.2017 0.528277,-0.082 1.792642,-0.6686 2.389193,-1.0403 0.596551,-0.3716 0.853009,-0.9354 1.217852,-1.396 0.364844,-0.461 0.704511,-1.2749 0.704511,-1.2749 1.867744,-2.3273 1.883959,-4.1526 1.883959,-4.1526 -0.184342,-0.9166 0.128442,-2.367 0.128442,-2.367 1.095385,-4.0331 0.442933,-5.2471 0.557293,-5.9674 z")
+            .attr("transform", "scale(.5)")
+            .style("width", " 5")
+            .style("height", "5")
+            .attr("transform", "translate(0,-14)");
 
 
         // nodeGroup.select(".leaf").style("height", 5, "important").style("width", 5, "important").style("stroke", "orange", "important");
 
-        nodeGroup.append("svg:text")
-            .attr("text-anchor", function(d)
-            {
-                return d.children ? "end" : "start";
-            })
-            .attr("dx", function(d)
-            {
-                var gap = 2 * options.nodeRadius;
-                return d.children ? -gap : gap;
-            })
-            .attr("dy", 3)
-            .text(function(d)
-            {
-                return d.name;
-            });
+        // nodeGroup.append("svg:text")
+        //     .attr("text-anchor", function(d)
+        //     {
+        //         return d.children ? "end" : "start";
+        //     })
+        //     .attr("dx", function(d)
+        //     {
+        //         var gap = 2 * options.nodeRadius;
+        //         return d.children ? -gap : gap;
+        //     })
+        //     .attr("dy", 3)
+        //     .text(function(d)
+        //     {
+        //         return d.name;
+        //     });
     }// close build tree
 
     var dur = 0;
@@ -466,14 +464,22 @@ $(document).ready(function(){
     function setupMouseEvents(){
         ui.nodeGroup.on('mouseover', function(d, i)
         {
-            d3.select(this).select(".leaf").classed("hovers", true);
+            d3.select(this).classed("hovers", true);
         })
             .on('mouseout', function(d, i)
             {
-                d3.select(this).select(".leaf").classed("hovers", false);
+                d3.select(this).classed("hovers", false);
             })
             .on('click', function(nd, i)
             {
+                 d3.select(this).select("path")
+            .attr("transform", "rotate(30)")
+            .style("fill", "orange");
+                //.append("svg:image")
+                // .attr("xlink:href", "svg-leave2.svg")
+                // .attr("width", 22)
+                // .attr("height", 22)
+                // .attr("transform", "translate(0,-25)");
                 // Walk parent chain
                 var ancestors = [];
                 var parent = nd;
@@ -497,10 +503,10 @@ $(document).ready(function(){
                     });
                 var last_element = matchedLinks[matchedLinks.length - 1];
 
-                SC.initialize({
-                    client_id: "d99a29c1a7bd281b1ef4a833d3ab6dad"
-                    //client secret e2e93639e0df982ea9aed3b69a7492f5
-                });
+                // SC.initialize({
+                //     client_id: "d99a29c1a7bd281b1ef4a833d3ab6dad"
+                //     //client secret e2e93639e0df982ea9aed3b69a7492f5
+                // });
                 var track = last_element.target.name;
                 soundManager.play(track);
 
@@ -528,7 +534,6 @@ $(document).ready(function(){
             .enter().append("svg:path")
             .attr("class", "selected")
             .attr("d", linkRenderer);
-
 
         // Animate the clipping path
         var overlayBox = ui.svgRoot.node().getBBox();
@@ -564,7 +569,7 @@ $(document).ready(function(){
             // var dur = soundManager.getSoundById(track).duration;
             //     console.log(dur);
             animateParentChain(matchedLinks,soundManager);
-                },8000);
+                },2500);
                 }
             }
         });
@@ -583,22 +588,21 @@ $(document).ready(function(){
           id: 'ten', // optional: provide your own unique id
           url: 'http://api.soundcloud.com/tracks/155037359' + sid,
           multiShot: false,
-          onload: function() {
-            if( this.readyState === 3 ) {
-            soundDuration = this.duration +1000;
-            setTimeout(function(){
-            //     dur = soundManager.getSoundById(track).duration
-            // var dur = soundManager.getSoundById(track).duration;
-            //     console.log(dur);
-            animateParentChain(matchedLinks,soundManager);
-                },2500);
-                }
-            console.log(soundDuration);
+            onload: function() {
+              if( this.readyState === 3 ) {
+                soundDuration = this.duration + 1000;
+                    // setTimeout(function(){
+                    //     dur = soundManager.getSoundById(track).duration
+                    // var dur = soundManager.getSoundById(track).duration;
+                    //     console.log(dur);
+                    animateParentChain(matchedLinks,soundManager);
+                    // },2500);
+              }
+          console.log(soundDuration);
             }
-        });
-        }
-    });
-//<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155037359&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          });
+        }//close onreay
+    });//close soundmanager setup
 
     $(function(){
         buildTree("#tree-container");

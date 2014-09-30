@@ -6,6 +6,7 @@ g.node {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+
 }
 /*circle.node-dot {
     fill: #00FF49;
@@ -20,7 +21,7 @@ path.link {
 }
 .oneTree{
 	padding-top: 30px;
-    margin-left: 300px;
+    margin-left: 50px;
     border: 50px;
 }
 
@@ -45,9 +46,9 @@ path.selected {
     height:100px;
     width:100px;
 }
-.leaf hovers {
+ .hovers {
     transition:2500ms;
     fill: orange;
-    height:10px;
-    width:10px;
+    height:1px;
+    width:1px;
 }
