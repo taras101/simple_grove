@@ -132,71 +132,74 @@ $(document).ready(function(){
                         value: 4,
                         contents: [
                             {
+                                name: "2T4",
+                                value: 2 },
+                            {
+                                name: "2T5",
+                                value: 6 },
+                            {
+                                name: "2T6",
+                                value: -14 },
+                            {
+                                name: "2T7",
+                                value: 6 },
+                            {
+                                name: "2T8",
+                                value: 4 },
+                            {
                                 name: "",
                                 value: 4,
                                 contents: [
                                     {
-                                        name: "2T4",
-                                        value: 2 },
+                                        name: "2T9",
+                                        value: -6 },
                                     {
-                                        name: "2T5",
-                                        value: 6 },
-                                    {
-                                        name: "2T6",
-                                        value: -14 },
-                                    {
-                                        name: "2T7",
-                                        value: 6 },
-                                    {
-                                        name: "2T8",
-                                        value: 4 },
-                                    {
-                                        name: "",
-                                        value: 4,
+                                        name: "2T10",
+                                        value: 2,
                                         contents: [
                                             {
-                                                name: "2T9",
-                                                value: -6 },
-                                            {
-                                                name: "2T10",
-                                                value: 2,
-                                                contents: [
-                                                    {
-                                                        name: "2T11",
-                                                        value: 18
-                                                    },
-                                                    {
-                                                        name: "2T12",
-                                                        value: 15
-                                                    },
-                                                ]
+                                                name: "2T11",
+                                                value: 18
                                             },
-                                            ]
+                                            {
+                                                name: "2T12",
+                                                value: 15
+                                            },
+                                        ]
                                     },
+                                    ]
+                            },
+                            {
+                                name: "",
+                                value: 2,
+                                contents: [
                                     {
                                         name: "2T13",
-                                        value: 4 },
+                                        value: 15 },
                                     {
                                         name: "2T14",
-                                        value: 4 },
+                                        value: -6 },
                                     {
                                         name: "2T15",
-                                        value: 4 },
-                                ]
+                                        value: 4
+                                    }
+                                    ]
                             },
                         ]
                     },
+
+
                 ]
             }
             ]
         },
         {
         name: "Third Tree",
-        value: 4,
+        value: 6,
         contents: [
             {
                 name: "",
-                value: 4,
+                value: 14,
                 contents: [
                 {
                     name: "",
@@ -269,27 +272,27 @@ $(document).ready(function(){
                 },
                 {
                     name: "",
-                    value: 6,
+                    value: -6,
                     contents: [
                         {
                             name: "",
                             value: -2,
                             contents: [
                                 {
-                                    name: "2T4",
+                                    name: "3T17",
                                     value: -3 },
                                 {
-                                    name: "2T5",
+                                    name: "3T18",
                                     value: 8 },
                                 {
                                     name: "",
                                     value: 12,
                                     contents: [
                                         {
-                                            name: "2T9",
+                                            name: "3T19",
                                             value: 11  },
                                         {
-                                            name: "2T10",
+                                            name: "3T20",
                                             value: -4 }
                                         ]
                                 },
@@ -297,6 +300,141 @@ $(document).ready(function(){
                         },
                     ]
                 },
+                {
+                    name: "",
+                    value: 2,
+                    contents: [
+                        {
+                            name: "",
+                            value: -2,
+                            contents: [
+                                {
+                                    name: "3T21",
+                                    value: 8 },
+                                {
+                                    name: "3T22",
+                                    value: -2 },
+                                {
+                                    name: "",
+                                    value: -12,
+                                    contents: [
+                                        {
+                                            name: "3T24",
+                                            value: 11  },
+                                        {
+                                            name: "3T25",
+                                            value: -4 }
+                                        ]
+                                },
+                                {
+                                    name: "",
+                                    value: 2,
+                                    contents: [
+                                        {
+                                            name: "3T23",
+                                            value: -4 }
+                                        ]
+                                },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: "",
+                    value: -8,
+                    contents: [
+                        {
+                            name: "",
+                            value: -10,
+                            contents: [
+                            {
+                                    name: "3T26",
+                                    value: 12  },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: "",
+                    value: 6,
+                    contents: [
+                    {
+                            name: "",
+                            value: 10,
+                            contents: [
+                            {
+                                    name: "3T27",
+                                    value: 1  },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: "",
+                    value: 4,
+                    contents: [
+                    {
+                            name: "",
+                            value: -4,
+                            contents: [
+                            {
+                                    name: "3T28",
+                                    value: 12  },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: "",
+                    value: 3,
+                    contents: [
+                    {
+                            name: "",
+                            value: -18,
+                            contents: [
+                            {
+                                    name: "3T29",
+                                    value: 7  },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: "",
+                    value: 12,
+                    contents: [
+                    {
+                            name: "",
+                            value: 6,
+                            contents: [
+                            {
+                                    name: "",
+                                    value: 7,
+                                    contents: [
+                                    {
+                                            name: "3T30",
+                                            value: 12  },
+                                    ]
+                                },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: "",
+                    value: 6,
+                    contents: [
+                    {
+                            name: "",
+                            value: -10,
+                            contents: [
+                            {
+                                    name: "3T31",
+                                    value: 12  },
+                            ]
+                        },
+                    ]
+                }
                 ]
             }
             ]
