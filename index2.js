@@ -478,7 +478,7 @@ $(document).ready(function(){
                                 contents: [
                             {
                                     name: "4T4",
-                                    value: 13  }
+                                    value: 6  }
                                 ]
                             },
                         ]
@@ -505,22 +505,66 @@ $(document).ready(function(){
                         value: -10,
                         contents: [
                         {
-                                name: "4T2",
+                                name: "4T6",
                                 value: 13  },
-                        {
-                                name: "4T3",
-                                value: 2  },
                         {
                                 name: "",
                                 value: -12,
                                 contents: [
                             {
-                                    name: "4T4",
-                                    value: 13  }
+                                    name: "4T7",
+                                    value: 19 }
                                 ]
                             },
+                            {
+                            name: "",
+                            value: 2,
+                            contents: [
+                                {
+                                        name: "4T8",
+                                        value: -5  }
+                                    ]
+                            },
+                            {
+                            name: "",
+                            value: -2,
+                            contents: [
+                                {
+                                        name: "",
+                                        value: 8 ,
+                                        contents: [
+                                    {
+                                            name: "4T9",
+                                            value: -7  }
+                                        ]
+                                        },
+                                    ]
+                            },
+                            {
+                            name: "",
+                            value: 4,
+                            contents: [
+                                {
+                                        name: "4T10",
+                                        value: 6,
+                                        contents: [
+                                    {
+                                            name: "4T9",
+                                            value: 13  }
+                                        ]  }
+                                    ]
+                            },
+                            {
+                            name: "",
+                            value: 2,
+                            contents: [
+                                {
+                                        name: "4T11",
+                                        value: 17 }
+                                    ]
+                            },
                         ]
-                    }
+                    },
                     ]
                 },
 
@@ -568,10 +612,10 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 9) };
+        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 5) };
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width - 20, size.height - 40])
+            .size([size.width - 200, size.height - 40])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;

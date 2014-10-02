@@ -58,7 +58,7 @@ path.selected {
 }
 .grass{
     z-index: 2;
-    height:300px;
+    height:100px;
     width: 3000px;
     background:green;
     position: absolute;
