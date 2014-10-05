@@ -3,7 +3,7 @@ body{
 }
 #tree-container{
     height: 750px;
-    width: 2000px;
+
 }
 g.node {
     font-family: Verdana, Helvetica;
@@ -24,9 +24,9 @@ path.link {
     stroke-width: 2px;
 }
 .oneTree{
-	padding-top: 30px;
-    margin-left: 50px;
-    border: 50px;
+	padding-top: 15px;
+    margin-left: 30px;
+
 }
 
 path.selected {
@@ -59,7 +59,8 @@ path.selected {
 .grass{
     z-index: 2;
     height:100px;
-    width: 3000px;
+    width: 100%;
+    top: 900px;
     background:green;
     position: absolute;
 }

@@ -15,7 +15,7 @@ $(document).ready(function(){
                         value: -17,
                         contents: [
                             { name: "two",
-                            value: 16 },
+                            value: 6 },
                             { name: "three",
                             value: -16 },
                             { name: "4",
@@ -560,8 +560,8 @@ $(document).ready(function(){
                     ]
                 },
                 ]
-            },
-            {
+        },
+        {
         name: "Fifth Tree",
         value: 6,
         contents: [
@@ -678,8 +678,8 @@ $(document).ready(function(){
                     ]
                 }
                 ]
-            },
-            {
+         },
+        {
         name: "Sixth Tree",
         value: 16,
         contents: [
@@ -869,6 +869,266 @@ $(document).ready(function(){
                         ]
                     }
                 ]
+            },
+            {
+        name: "Seventh Tree",
+        value: 10,
+        contents: [
+            {
+                 name: "",
+                value: 4,
+                    contents: [
+                    {
+                            name: "7T1",
+                            value: 4
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 6,
+                    contents: [
+                    {
+                            name: "7T2",
+                            value: -10
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "7T3",
+                            value: 14,
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 16,
+                    contents: [
+                    {
+                            name: "7T4",
+                            value: 10
+                        },
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "7T5",
+                            value: -23,
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 10,
+                    contents: [
+                    {
+                            name: "7T6",
+                            value: 34,
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "",
+                            value: -3,
+                            contents: [
+                            {
+                                    name: "7T7",
+                                    value: 12
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "",
+                            value: -8,
+                            contents: [
+                            {
+                                    name: "7T8",
+                                    value: 6
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "",
+                            value: -9,
+                            contents: [
+                            {
+                                    name: "7T9",
+                                    value: -13
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 1,
+                    contents: [
+                    {
+                            name: "",
+                            value: 5,
+                            contents: [
+                            {
+                                    name: "7T10",
+                                    value: -13
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "",
+                            value: -15,
+                            contents: [
+                            {
+                                    name: "7T11",
+                                    value: -13
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 16,
+                    contents: [
+                    {
+                            name: "",
+                            value: -45,
+                            contents: [
+                            {
+                                    name: "7T12",
+                                    value: -13
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 11,
+                    contents: [
+                    {
+                            name: "7T13",
+                            value: -15
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 14,
+                    contents: [
+                    {
+                            name: "7T14",
+                            value: -25
+
+                    },
+                    {
+                            name: "7T15",
+                            value: 4
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 6,
+                    contents: [
+                    {
+                            name: "7T16",
+                            value: -10
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "7T17",
+                            value: 14,
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 16,
+                    contents: [
+                    {
+                            name: "7T18",
+                            value: 10
+                        },
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "7T19",
+                            value: -23,
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: 10,
+                    contents: [
+                    {
+                            name: "7T20",
+                            value: 34,
+
+                        }
+                        ]
+                    },
+                    {
+                     name: "",
+                    value: -4,
+                    contents: [
+                    {
+                            name: "",
+                            value: -3,
+                            contents: [
+                            {
+                                    name: "7T21",
+                                    value: 21
+                            }
+                            ]
+                        }
+                        ]
+                    }
+                ]
             }
         ]
     };
@@ -911,10 +1171,10 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 5) };
+        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 4) };
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width - 200, size.height - 40])
+            .size([size.width -60, size.height - 40])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
