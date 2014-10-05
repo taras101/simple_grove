@@ -104,10 +104,6 @@ $(document).ready(function(){
                 {   name: "",
                     value: 4,
                     contents: [
-                    {
-                        name: "",
-                        value: 4,
-                        contents: [
                             {
                                 name: "2T1",
                                 value: 4
@@ -133,7 +129,7 @@ $(document).ready(function(){
                         contents: [
                             {
                                 name: "2T4",
-                                value: 2 },
+                                value: -39 },
                             {
                                 name: "2T5",
                                 value: 6 },
@@ -145,7 +141,7 @@ $(document).ready(function(){
                                 value: 6 },
                             {
                                 name: "2T8",
-                                value: 4 },
+                                value: 60 },
                             {
                                 name: "",
                                 value: 4,
@@ -186,11 +182,7 @@ $(document).ready(function(){
                                     ]
                             },
                         ]
-                    },
-
-
-                ]
-            }
+                }
             ]
         },
         {
@@ -695,117 +687,189 @@ $(document).ready(function(){
                  name: "",
                 value: 4,
                 contents: [
-                {
-                        name: "5T1",
-                        value: 4
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: 6,
-                contents: [
-                {
-                        name: "5T2",
-                        value: -10
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: -4,
-                contents: [
-                {
-                        name: "5T3",
-                        value: 14,
-
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: 16,
-                contents: [
-                {
-                        name: "",
-                        value: 10,
+                    {
+                         name: "",
+                        value: 4,
                         contents: [
-                        {
-                                name: "5T6",
-                                value: 13  }
+                            {
+                                 name: "",
+                                value: 4,
+                                contents: [
+                                {
+                                        name: "6T1",
+                                        value: 4
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 6,
+                                contents: [
+                                {
+                                        name: "6T2",
+                                        value: -10
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: -4,
+                                contents: [
+                                {
+                                        name: "6T3",
+                                        value: 14,
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 16,
+                                contents: [
+                                {
+                                        name: "6T6",
+                                        value: 10
+                                    },
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: -4,
+                                contents: [
+                                {
+                                        name: "6T4",
+                                        value: -23,
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 10,
+                                contents: [
+                                {
+                                        name: "6T5",
+                                        value: 34,
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: -4,
+                                contents: [
+                                {
+                                        name: "",
+                                        value: -3,
+                                        contents: [
+                                        {
+                                                name: "6T12",
+                                                value: 21
+                                        }
+                                        ]
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: -4,
+                                contents: [
+                                {
+                                        name: "",
+                                        value: -8,
+                                        contents: [
+                                        {
+                                                name: "",
+                                                value: 6,
+                                                contents: [
+                                                {
+                                                    name: "6T14",
+                                                    value: 6,
+
+                                                }
+                                                ]
+                                        }
+                                        ]
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: -4,
+                                contents: [
+                                {
+                                        name: "",
+                                        value: -9,
+                                        contents: [
+                                        {
+                                                name: "6T13",
+                                                value: -21
+                                        }
+                                        ]
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 1,
+                                contents: [
+                                {
+                                        name: "6T10",
+                                        value: 5
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: -4,
+                                contents: [
+                                {
+                                        name: "6T11",
+                                        value: -15
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 16,
+                                contents: [
+                                {
+                                        name: "6T7",
+                                        value: -45
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 11,
+                                contents: [
+                                {
+                                        name: "6T9",
+                                        value: -15
+
+                                    }
+                                    ]
+                                },
+                                {
+                                 name: "",
+                                value: 14,
+                                contents: [
+                                {
+                                        name: "6T8",
+                                        value: -25
+
+                                    }
+                                    ]
+                                }
+                                ]
+                            }
                         ]
-                    },
-                    ]
-                },
-                {
-                 name: "",
-                value: -4,
-                contents: [
-                {
-                        name: "5T4",
-                        value: 14,
-
                     }
-                    ]
-                },
-                {
-                 name: "",
-                value: 10,
-                contents: [
-                {
-                        name: "5T5",
-                        value: -14,
-
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: -4,
-                contents: [
-                {
-                        name: "5T7",
-                        value: -33,
-
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: -4,
-                contents: [
-                {
-                        name: "5T8",
-                        value: -69,
-
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: 4,
-                contents: [
-                {
-                        name: "5T9",
-                        value: 19,
-
-                    }
-                    ]
-                },
-                {
-                 name: "",
-                value: 14,
-                contents: [
-                {
-                        name: "5T10",
-                        value: 5
-
-                    }
-                    ]
-                }
                 ]
             }
-
         ]
     };
 
