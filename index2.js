@@ -255,13 +255,13 @@ $(document).ready(function(){
                             value: 2 },
                         {
                             name: "3T7",
-                            value: -4 },
+                            value: -44 },
                         {
                             name: "3T8",
                             value: 7 },
                         {
                             name: "3T9",
-                            value: -3 },
+                            value: -23 },
                         {
                             name: "3T10",
                             value: 9 },
@@ -341,7 +341,7 @@ $(document).ready(function(){
                 },
                 {
                     name: "",
-                    value: -8,
+                    value: 28,
                     contents: [
                         {
                             name: "",
@@ -349,7 +349,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T26",
-                                    value: 12  },
+                                    value: -42  },
                             ]
                         },
                     ]
@@ -394,7 +394,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T29",
-                                    value: 7  },
+                                    value: -15  },
                             ]
                         },
                     ]
@@ -578,13 +578,8 @@ $(document).ready(function(){
                 value: 4,
                 contents: [
                 {
-                        name: "",
-                        value: 4,
-                        contents: [
-                        {
-                                name: "5T1",
-                                value: 4 },
-                        ]
+                        name: "5T1",
+                        value: 4
                     }
                     ]
                 },
@@ -593,25 +588,8 @@ $(document).ready(function(){
                 value: 6,
                 contents: [
                 {
-                        name: "",
-                        value: -10,
-                        contents: [
-                        {
-                                name: "5T2",
-                                value: 13  },
-                        {
-                                name: "5T3",
-                                value: 2  },
-                        {
-                                name: "",
-                                value: -12,
-                                contents: [
-                            {
-                                    name: "5T4",
-                                    value: 6  }
-                                ]
-                            },
-                        ]
+                        name: "5T2",
+                        value: -10
                     }
                     ]
                 },
@@ -620,9 +598,106 @@ $(document).ready(function(){
                 value: -4,
                 contents: [
                 {
-                        name: "5T5",
+                        name: "5T3",
                         value: 14,
 
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 16,
+                contents: [
+                {
+                        name: "",
+                        value: 10,
+                        contents: [
+                        {
+                                name: "5T6",
+                                value: 13  }
+                        ]
+                    },
+                    ]
+                },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T4",
+                        value: 14,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 10,
+                contents: [
+                {
+                        name: "5T5",
+                        value: -14,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T7",
+                        value: -33,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T8",
+                        value: -69,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 4,
+                contents: [
+                {
+                        name: "5T9",
+                        value: 19,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 14,
+                contents: [
+                {
+                        name: "5T10",
+                        value: 5
+
+                    }
+                    ]
+                }
+                ]
+            },
+            {
+        name: "Sixth Tree",
+        value: 16,
+        contents: [
+            {
+                 name: "",
+                value: 4,
+                contents: [
+                {
+                        name: "5T1",
+                        value: 4
                     }
                     ]
                 },
@@ -631,20 +706,103 @@ $(document).ready(function(){
                 value: 6,
                 contents: [
                 {
+                        name: "5T2",
+                        value: -10
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T3",
+                        value: 14,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 16,
+                contents: [
+                {
                         name: "",
-                        value: -10,
+                        value: 10,
                         contents: [
                         {
                                 name: "5T6",
-                                value: 13  },
-                        {
-                                name: "",
-                                value: -12,
-                            },
+                                value: 13  }
                         ]
                     },
                     ]
                 },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T4",
+                        value: 14,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 10,
+                contents: [
+                {
+                        name: "5T5",
+                        value: -14,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T7",
+                        value: -33,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: -4,
+                contents: [
+                {
+                        name: "5T8",
+                        value: -69,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 4,
+                contents: [
+                {
+                        name: "5T9",
+                        value: 19,
+
+                    }
+                    ]
+                },
+                {
+                 name: "",
+                value: 14,
+                contents: [
+                {
+                        name: "5T10",
+                        value: 5
+
+                    }
+                    ]
+                }
                 ]
             }
 
