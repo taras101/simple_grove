@@ -776,7 +776,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "",
-                                        value: -8,
+                                        value: -2,
                                         contents: [
                                         {
                                                 name: "",
@@ -784,7 +784,7 @@ $(document).ready(function(){
                                                 contents: [
                                                 {
                                                     name: "6T14",
-                                                    value: 6,
+                                                    value: 126,
 
                                                 }
                                                 ]
@@ -880,7 +880,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T1",
-                            value: 4
+                            value: 14
                         }
                         ]
                     },
@@ -890,7 +890,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T2",
-                            value: -10
+                            value: -1
                         }
                         ]
                     },
@@ -900,7 +900,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T3",
-                            value: 14,
+                            value: 44,
 
                         }
                         ]
@@ -911,7 +911,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T4",
-                            value: 10
+                            value: 13
                         },
                         ]
                     },
@@ -921,7 +921,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T5",
-                            value: -23,
+                            value: 3,
 
                         }
                         ]
@@ -932,7 +932,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T6",
-                            value: 34,
+                            value: 11,
 
                         }
                         ]
@@ -943,11 +943,11 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "",
-                            value: -3,
+                            value: 9,
                             contents: [
                             {
                                     name: "7T7",
-                                    value: 12
+                                    value:-66
                             }
                             ]
                         }
@@ -963,7 +963,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T8",
-                                    value: 6
+                                    value: 16
                             }
                             ]
                         }
@@ -971,7 +971,7 @@ $(document).ready(function(){
                     },
                     {
                      name: "",
-                    value: -4,
+                    value: 4,
                     contents: [
                     {
                             name: "",
@@ -995,7 +995,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T10",
-                                    value: -13
+                                    value: 5
                             }
                             ]
                         }
@@ -1007,11 +1007,11 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "",
-                            value: -15,
+                            value: 0,
                             contents: [
                             {
                                     name: "7T11",
-                                    value: -13
+                                    value: -19
                             }
                             ]
                         }
@@ -1023,7 +1023,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "",
-                            value: -45,
+                            value: -5,
                             contents: [
                             {
                                     name: "7T12",
@@ -1174,7 +1174,7 @@ $(document).ready(function(){
         var size = { width:$(containerName).outerWidth() , height: (totalNodes * 4) };
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width -60, size.height - 40])
+            .size([size.width -15, size.height - 40])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
@@ -1291,21 +1291,21 @@ $(document).ready(function(){
 
         // nodeGroup.select(".leaf").style("height", 5, "important").style("width", 5, "important").style("stroke", "orange", "important");
 
-        nodeGroup.append("svg:text")
-            .attr("text-anchor", function(d)
-            {
-                return d.children ? "end" : "start";
-            })
-            .attr("dx", function(d)
-            {
-                var gap = 2 * options.nodeRadius;
-                return d.children ? -gap : gap;
-            })
-            .attr("dy", 3)
-            .text(function(d)
-            {
-                return d.name;
-            });
+        // nodeGroup.append("svg:text")
+        //     .attr("text-anchor", function(d)
+        //     {
+        //         return d.children ? "end" : "start";
+        //     })
+        //     .attr("dx", function(d)
+        //     {
+        //         var gap = 2 * options.nodeRadius;
+        //         return d.children ? -gap : gap;
+        //     })
+        //     .attr("dy", 3)
+        //     .text(function(d)
+        //     {
+        //         return d.name;
+        //     });
     }// close build tree
 
     var dur = 0;
