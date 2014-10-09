@@ -57,9 +57,32 @@ path.selected {
 }
 .grass{
     z-index: 2;
-    height:150px;
+    height:300px;
     width: 100%;
     top: 870px;
-    background:green;
+    background-image: url('grass-sm1.png');
+    background-size: 400px;
+
+   /* background:green;*/
+    position: absolute;
+}
+.grass1{
+    z-index: -1;
+    height:300px;
+    width: 100%;
+    top: 840px;
+    background-image: url('grass-sm2.png');
+    background-size: 300px;
+   /* background:green;*/
+    position: absolute;
+}
+.grass2{
+    z-index: -2;
+    height:300px;
+    width: 100%;
+    top: 880px;
+   /* background-image: url('grass-sm1.png');
+    background-size: 300px;*/
+    background:lightgreen;
     position: absolute;
 }
