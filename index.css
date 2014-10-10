@@ -1,5 +1,6 @@
 body{
-    background: #FF540D;
+   /* background: #FF540D;*/
+   background: linear-gradient(#FF540D,#E8AA00)
 }
 #tree-container{
 
@@ -31,7 +32,7 @@ path.link {
 }
 
 path.selected {
-    stroke: silver;
+    stroke: whitesmoke;
     stroke-dasharray:3,5;
     fill: none;
     stroke-width: 7px;

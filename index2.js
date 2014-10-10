@@ -1373,7 +1373,7 @@ $(document).ready(function(){
                 .attr("xlink:href", "svg-leave4.svg")
                 .attr("width", 22)
                 .attr("height", 22)
-                .attr("transform", "translate(-9,-11)");
+                .attr("transform", "translate(-11,-11)");
 
                 // Walk parent chain
                 var ancestors = [];
