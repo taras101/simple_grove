@@ -1277,36 +1277,37 @@ $(document).ready(function(){
             .attr("height", 20)
             .attr("transform", "translate(-8,-10)");
 
-         jQuery('img.svg').each(function(){
-            var $img = jQuery(this);
-            var imgID = $img.attr('id');
-            var imgClass = $img.attr('class');
-            var imgURL = $img.attr('src');
-
-            jQuery.get(imgURL, function(data) {
-                // Get the SVG tag, ignore the rest
-                var $svg = jQuery(data).find('svg');
-
-                // Add replaced image's ID to the new SVG
-                if(typeof imgID !== 'undefined') {
-                    $svg = $svg.attr('id', imgID);
-                }
-                // Add replaced image's classes to the new SVG
-                if(typeof imgClass !== 'undefined') {
-                    $svg = $svg.attr('class', imgClass+' replaced-svg');
-                }
-
-                // Remove any invalid XML tags as per http://validator.w3.org
-                $svg = $svg.removeAttr('xmlns:a');
-
-                // Replace image with new SVG
-                $img.replaceWith($svg);
-
-            }, 'xml');
-
-        });
 
         // var leaf = document.getElementById("leaf");
+        //  $('img.svg').each(function(){
+        //     var $img = jQuery(this);
+        //     var imgID = $img.attr('id');
+        //     var imgClass = $img.attr('class');
+        //     var imgURL = $img.attr('src');
+
+        //     jQuery.get(imgURL, function(data) {
+        //         // Get the SVG tag, ignore the rest
+        //         var $svg = jQuery(data).find('svg');
+
+        //         // Add replaced image's ID to the new SVG
+        //         if(typeof imgID !== 'undefined') {
+        //             $svg = $svg.attr('id', imgID);
+        //         }
+        //         // Add replaced image's classes to the new SVG
+        //         if(typeof imgClass !== 'undefined') {
+        //             $svg = $svg.attr('class', imgClass+' replaced-svg');
+        //         }
+
+        //         // Remove any invalid XML tags as per http://validator.w3.org
+        //         $svg = $svg.removeAttr('xmlns:a');
+        //         console.log($svg);
+        //         // Replace image with new SVG
+        //         $img.replaceWith($svg);
+
+        //     }, 'xml');
+
+        // });
+
         // var svgDoc = leaf.contentDocument;
         // console.log(leaf);
         // var svgItem = svgDoc.getElementById("leaf");
@@ -1347,24 +1348,30 @@ $(document).ready(function(){
     var matchedLinks = [];
 
     function setupMouseEvents(){
+
         ui.nodeGroup.on('mouseover', function(d, i)
         {
-            d3.select(this).classed("hovers", true);
+            d3.select(this).select("image")
+            .attr('href','svg-leave4.svg')
+            .classed("hovers", true);
+
         })
             .on('mouseout', function(d, i)
             {
-                d3.select(this).classed("hovers", false);
+            d3.select(this).select("image")
+            .attr('href','svg-leave3.svg')
+            .classed("hovers", false);
             })
             .on('click', function(nd, i)
             {
-                 d3.select(this).select("path")
-            .attr("transform", "rotate(30)")
-            .style("fill", "orange");
+                 d3.select(this).select("image")
+                 .attr('href','svg-leave4.svg')
                 //.append("svg:image")
                 // .attr("xlink:href", "svg-leave2.svg")
                 // .attr("width", 22)
                 // .attr("height", 22)
                 // .attr("transform", "translate(0,-25)");
+
                 // Walk parent chain
                 var ancestors = [];
                 var parent = nd;
