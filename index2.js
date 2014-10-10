@@ -1275,7 +1275,7 @@ $(document).ready(function(){
             .attr("xlink:href", "svg-leave3.svg")
             .attr("width", 20)
             .attr("height", 20)
-            .attr("transform", "translate(-8,-10)");
+            .attr("transform", "translate(-10,-10)");
 
 
         // var leaf = document.getElementById("leaf");
@@ -1353,6 +1353,8 @@ $(document).ready(function(){
         {
             d3.select(this).select("image")
             .attr('href','svg-leave4.svg')
+            .attr("height", "30px")
+            .attr("width", "30px")
             .classed("hovers", true);
 
         })
@@ -1360,17 +1362,18 @@ $(document).ready(function(){
             {
             d3.select(this).select("image")
             .attr('href','svg-leave3.svg')
+            .attr("height", "20px")
+            .attr("width", "20px")
             .classed("hovers", false);
             })
             .on('click', function(nd, i)
             {
-                 d3.select(this).select("image")
-                 .attr('href','svg-leave4.svg')
-                //.append("svg:image")
-                // .attr("xlink:href", "svg-leave2.svg")
-                // .attr("width", 22)
-                // .attr("height", 22)
-                // .attr("transform", "translate(0,-25)");
+                 d3.select(this)
+                .append("svg:image")
+                .attr("xlink:href", "svg-leave4.svg")
+                .attr("width", 22)
+                .attr("height", 22)
+                .attr("transform", "translate(-9,-11)");
 
                 // Walk parent chain
                 var ancestors = [];
