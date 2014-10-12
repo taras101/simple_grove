@@ -1348,26 +1348,26 @@ $(document).ready(function(){
     var matchedLinks = [];
 
     function setupMouseEvents(){
-
         ui.nodeGroup.on('mouseover', function(d, i)
-        {
-            d3.select(this).select("image")
-            .attr('href','svg-leave4.svg')
-            .attr("height", "30px")
-            .attr("width", "30px")
-            .classed("hovers", true);
-
-        })
+            {if(d.name != ""){
+                    d3.select(this).select("image")
+                    .attr('href','svg-leave4.svg')
+                    .attr("height", "26px")
+                    .attr("width", "26px")
+                    .classed("hovers", true);
+                    }
+            })
             .on('mouseout', function(d, i)
-            {
-            d3.select(this).select("image")
-            .attr('href','svg-leave3.svg')
-            .attr("height", "20px")
-            .attr("width", "20px")
-            .classed("hovers", false);
+            {if(d.name != ""){
+                    d3.select(this).select("image")
+                    .attr('href','svg-leave3.svg')
+                    .attr("height", "20px")
+                    .attr("width", "20px")
+                    .classed("hovers", false);
+                    }
             })
             .on('click', function(nd, i)
-            {
+            {if(nd.name != ""){
                  d3.select(this)
                 .append("svg:image")
                 .attr("xlink:href", "svg-leave4.svg")
@@ -1404,7 +1404,7 @@ $(document).ready(function(){
                 // });
                 var track = last_element.target.name;
                 soundManager.play(track);
-
+            }
            });
         }
 
