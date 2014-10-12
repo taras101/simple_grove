@@ -1352,8 +1352,8 @@ $(document).ready(function(){
             {if(d.name != ""){
                     d3.select(this).select("image")
                     .attr('href','svg-leave4.svg')
-                    .attr("height", "26px")
-                    .attr("width", "26px")
+                    .attr("height", "24px")
+                    .attr("width", "24px")
                     .classed("hovers", true);
                     }
             })
