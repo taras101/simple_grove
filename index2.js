@@ -1368,12 +1368,10 @@ $(document).ready(function(){
             })
             .on('click', function(nd, i)
             {if(nd.name != ""){
-                 d3.select(this)
-                .append("svg:image")
-                .attr("xlink:href", "svg-leave4.svg")
-                .attr("width", 22)
-                .attr("height", 22)
-                .attr("transform", "translate(-11,-11)");
+                 d3.select(this).select("image")
+                    .attr('href','svg-leave4.svg')
+                    .attr("height", "20px")
+                    .attr("width", "20px");
 
                 // Walk parent chain
                 var ancestors = [];
@@ -1404,6 +1402,7 @@ $(document).ready(function(){
                 // });
                 var track = last_element.target.name;
                 soundManager.play(track);
+                nd.name ="";
             }
            });
         }
