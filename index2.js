@@ -1346,7 +1346,6 @@ $(document).ready(function(){
 
     var dur = 0;
     var matchedLinks = [];
-    // var randx = ();
 
     function setupMouseEvents(){
         ui.nodeGroup.on('mouseover', function(d, i)
@@ -1417,27 +1416,27 @@ $(document).ready(function(){
                     .transition()
                     .attr("transform", "translate(-45,535) rotate(75)")
                     .duration(1600)
-                    .delay(13200)
+                    .delay(12800)
                     .transition()
                     .attr("transform", "translate(35,585) rotate(25)")
                     .duration(1600)
-                    .delay(14400)
+                    .delay(14000)
                     .transition()
                     .attr("transform", "translate(-45,635) rotate(75)")
                     .duration(1600)
-                    .delay(16600)
+                    .delay(15200)
                     .transition()
                     .attr("transform", "translate(35,685) rotate(25)")
                     .duration(1600)
-                    .delay(17800)
+                    .delay(16400)
                     .transition()
                     .attr("transform", "translate(-45,735) rotate(75)")
                     .duration(1600)
-                    .delay(19000)
+                    .delay(17600)
                     .transition()
                     .attr("transform", "translate(35,785) rotate(25)")
                     .duration(1600)
-                    .delay(20200)
+                    .delay(18800)
                     .remove();
 
                 // Walk parent chain
