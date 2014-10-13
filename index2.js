@@ -14,11 +14,11 @@ $(document).ready(function(){
                         name: "",
                         value: -17,
                         contents: [
-                            { name: "two",
+                            { name: "1T2",
                             value: 6 },
-                            { name: "three",
+                            { name: "1T3",
                             value: -16 },
-                            { name: "4",
+                            { name: "1T4",
                             value: -5 }
                         ]
                     },
@@ -26,13 +26,13 @@ $(document).ready(function(){
                         name: "",
                         value: 7,
                         contents: [
-                            { name: "9" ,
+                            { name: "1T9" ,
                             value: 19
+                            },
+                            { name: "1T15" ,
+                                value: -5}
+                            ]
                         },
-                        { name: "15" ,
-                            value: -5}
-                        ]
-                    },
                     {
                         name: "",
                         value: 1,
@@ -41,11 +41,11 @@ $(document).ready(function(){
                                 name: "",
                                 value: -18,
                                 contents: [
-                                    { name: "6",
+                                    { name: "1T6",
                                     value: 19 },
-                                    { name: "7",
+                                    { name: "1T7",
                                     value: -55 },
-                                    { name: "8",
+                                    { name: "1T8",
                                     value: -19 }
                                 ]
                             },
@@ -53,7 +53,7 @@ $(document).ready(function(){
                                 name: "",
                                 value: 5,
                                 contents: [
-                                    { name: "ten",
+                                    { name: "1T10",
                                     value: -12 }
                                 ]
                             },
@@ -61,17 +61,17 @@ $(document).ready(function(){
                                 name: "",
                                 value: -12,
                                 contents: [
-                                    { name: "11",
+                                    { name: "1T11",
                                     value: 4},
                                     {
                                         name: "",
                                         value: 4,
                                         contents: [
-                                        { name: "4",
+                                        { name: "1T12",
                                         value: 4},
-                                        { name: "13",
+                                        { name: "1T13",
                                         value: 1},
-                                        { name: "14",
+                                        { name: "1T14",
                                         value: 6}
                                         ]
                                      }
@@ -81,16 +81,15 @@ $(document).ready(function(){
                                 name: "",
                                 value: 3,
                                 contents: [
-                                    { name: "1",
+                                    { name: "1T1",
                                     value: -4 }
                                 ]
                             }
                         ]
                     },
                     {
-                        name: "5",
-                        value: -20,
-                        contents: []
+                        name: "1T5",
+                        value: -20
                     }
                 ]
                 },
@@ -1475,6 +1474,24 @@ $(document).ready(function(){
         });
           soundManager.createSound({
           id: 'ten', // optional: provide your own unique id
+          url: 'http://api.soundcloud.com/tracks/155037359' + sid,
+          multiShot: false,
+            onload: function() {
+              if( this.readyState ===3 ) {
+                soundDuration = this.duration ;
+                    // setTimeout(function(){
+                    //     dur = soundManager.getSoundById(track).duration
+                    // var dur = soundManager.getSoundById(track).duration;
+                    //     console.log(dur);
+                    animateParentChain(matchedLinks);
+                    //animateParentChain(matchedLinks,soundManager);
+                    // },2500);
+              }
+          console.log(soundDuration);
+            }
+          });
+          soundManager.createSound({
+          id: '1T5', // optional: provide your own unique id
           url: 'http://api.soundcloud.com/tracks/155037359' + sid,
           multiShot: false,
             onload: function() {
