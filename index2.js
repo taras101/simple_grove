@@ -1381,16 +1381,17 @@ $(document).ready(function(){
             }
            });
         }
-
+        var nodeVPosition=0;
     function animateParentChain(links){
         var linkRenderer = d3.svg.diagonal()
             .projection(function(d){
-                  if(d.value !=undefined){
-                return [(d.x - d.value) , (-d.y + d.value) ];
-            }
-            else{
-                return [d.x , (-d.y ) ];
-                }
+                if(d.value !=undefined){
+                    nodeVPosition = d.y;
+                    return [(d.x - d.value) , (-d.y + d.value) ];
+                    }
+                else{
+                    return [d.x , (-d.y ) ];
+                    }
             });
         // Links
         ui.animGroup.selectAll("path.selected")
@@ -1414,7 +1415,7 @@ $(document).ready(function(){
             .attr("height", 50)
             .transition().duration(soundDuration)
             .ease("linear")
-            .attr("y", overlayBox.y -940)
+            .attr("y", overlayBox.y -(115 + nodeVPosition))
             .attr("height", 50);
     }
     //Soundmanager
@@ -1430,13 +1431,14 @@ $(document).ready(function(){
           url: 'PIano Improvs6-first tree2.mp3',
           multiShot: false,
           onload: function() {
-            if( this.readyState === 2 ) {
+            if( this.readyState ===3 ) {
             soundDuration = this.duration;
             // console.log(soundDuration);
             //setTimeout(function(){
             //     dur = soundManager.getSoundById(track).duration
             // var dur = soundManager.getSoundById(track).duration;
             //     console.log(dur);
+            console.log(soundDuration);
             animateParentChain(matchedLinks,soundManager);
             //    },2500);
                 }
@@ -1447,9 +1449,27 @@ $(document).ready(function(){
           url: 'PIano Improvs6-first tree3.mp3',
           multiShot: false,
           onload: function() {
-            if( this.readyState === 3 ) {
+            if( this.readyState ===3 ) {
             soundDuration = this.duration;
             console.log(soundDuration);
+                }
+            }
+        });
+          soundManager.createSound({
+          id: '6T1', // optional: provide your own unique id
+          url: 'PIano Improvs6-first tree2.mp3',
+          multiShot: false,
+          onload: function() {
+            if( this.readyState ===3 ) {
+            soundDuration = this.duration;
+            // console.log(soundDuration);
+            //setTimeout(function(){
+            //     dur = soundManager.getSoundById(track).duration
+            // var dur = soundManager.getSoundById(track).duration;
+            //     console.log(dur);
+            console.log(soundDuration);
+            animateParentChain(matchedLinks,soundManager);
+            //    },2500);
                 }
             }
         });
@@ -1458,13 +1478,14 @@ $(document).ready(function(){
           url: 'http://api.soundcloud.com/tracks/155037359' + sid,
           multiShot: false,
             onload: function() {
-              if( this.readyState === 3 ) {
-                soundDuration = this.duration + 1000;
+              if( this.readyState ===3 ) {
+                soundDuration = this.duration ;
                     // setTimeout(function(){
                     //     dur = soundManager.getSoundById(track).duration
                     // var dur = soundManager.getSoundById(track).duration;
                     //     console.log(dur);
-                    animateParentChain(matchedLinks,soundManager);
+                    animateParentChain(matchedLinks);
+                    //animateParentChain(matchedLinks,soundManager);
                     // },2500);
               }
           console.log(soundDuration);
