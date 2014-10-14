@@ -1426,25 +1426,19 @@ $(document).ready(function(){
         url: '/.',
         onready: function() {
          soundManager.createSound({
-          id: 'two', // optional: provide your own unique id
+          id: '1T2', // optional: provide your own unique id
           url: 'PIano Improvs6-first tree2.mp3',
           multiShot: false,
           onload: function() {
             if( this.readyState ===3 ) {
             soundDuration = this.duration;
-            // console.log(soundDuration);
-            //setTimeout(function(){
-            //     dur = soundManager.getSoundById(track).duration
-            // var dur = soundManager.getSoundById(track).duration;
-            //     console.log(dur);
             console.log(soundDuration);
             animateParentChain(matchedLinks,soundManager);
-            //    },2500);
                 }
             }
         });
           soundManager.createSound({
-          id: 'three', // optional: provide your own unique id
+          id: '1T3', // optional: provide your own unique id
           url: 'PIano Improvs6-first tree3.mp3',
           multiShot: false,
           onload: function() {
@@ -1461,31 +1455,19 @@ $(document).ready(function(){
           onload: function() {
             if( this.readyState ===3 ) {
             soundDuration = this.duration;
-            // console.log(soundDuration);
-            //setTimeout(function(){
-            //     dur = soundManager.getSoundById(track).duration
-            // var dur = soundManager.getSoundById(track).duration;
-            //     console.log(dur);
-            console.log(soundDuration);
             animateParentChain(matchedLinks,soundManager);
-            //    },2500);
                 }
             }
         });
           soundManager.createSound({
-          id: 'ten', // optional: provide your own unique id
+          id: '1T10', // optional: provide your own unique id
           url: 'http://api.soundcloud.com/tracks/155037359' + sid,
           multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                 soundDuration = this.duration ;
-                    // setTimeout(function(){
-                    //     dur = soundManager.getSoundById(track).duration
-                    // var dur = soundManager.getSoundById(track).duration;
-                    //     console.log(dur);
                     animateParentChain(matchedLinks);
                     //animateParentChain(matchedLinks,soundManager);
-                    // },2500);
               }
           console.log(soundDuration);
             }
@@ -1497,15 +1479,8 @@ $(document).ready(function(){
             onload: function() {
               if( this.readyState ===3 ) {
                 soundDuration = this.duration ;
-                    // setTimeout(function(){
-                    //     dur = soundManager.getSoundById(track).duration
-                    // var dur = soundManager.getSoundById(track).duration;
-                    //     console.log(dur);
                     animateParentChain(matchedLinks);
-                    //animateParentChain(matchedLinks,soundManager);
-                    // },2500);
               }
-          console.log(soundDuration);
             }
           });
         }//close onready
