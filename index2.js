@@ -1728,7 +1728,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '3T1', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid, multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172322142' + sid + "&secret_token=s-x3Plg", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
