@@ -2248,7 +2248,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T1', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172596224' + sid + "&secret_token=s-zzr6B", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2258,7 +2258,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T2', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172619875' + sid + "&secret_token=s-e8uwu", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2268,7 +2268,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T3', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172620152' + sid + "&secret_token=s-hcNkS", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2278,7 +2278,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T4', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172620481' + sid + "&secret_token=s-hQhjo", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2288,7 +2288,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T5', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172620962' + sid + "&secret_token=s-yRmoa", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2298,7 +2298,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T6', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172621119' + sid + "&secret_token=s-wFacX", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2308,7 +2308,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T7', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172621387' + sid + "&secret_token=s-94GYR", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2318,7 +2318,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T8', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172621844' + sid + "&secret_token=s-ZLGSv", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2328,7 +2328,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T9', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172622233' + sid + "&secret_token=s-xVAka", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2338,7 +2338,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T10', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172622988' + sid + "&secret_token=s-V3bPa", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2348,7 +2348,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T11', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172623484' + sid + "&secret_token=s-Z5BS1", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2358,7 +2358,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T12', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172623764' + sid + "&secret_token=s-BHQR0", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2368,7 +2368,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T13', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172624411' + sid + "&secret_token=s-DAhAW", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
@@ -2378,7 +2378,7 @@ $(document).ready(function(){
           });
           soundManager.createSound({
           id: '6T14', // optional: provide your own unique id
-          url: 'http://api.soundcloud.com/tracks/155037359' + sid + "&secret_token=s-7IDka", multiShot: false,
+          url: 'http://api.soundcloud.com/tracks/172625083' + sid + "&secret_token=s-Rly14", multiShot: false,
             onload: function() {
               if( this.readyState ===3 ) {
                   soundDuration = this.duration ;
