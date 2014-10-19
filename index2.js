@@ -1372,7 +1372,7 @@ $(document).ready(function(){
                 // Get the matched links
                 ui.linkGroup.selectAll('path.link')
                     .filter(function(d, i)
-                    {
+                    {   matchedLinks = [];
                         return _.any(ancestors, function(p)
                         {
                             return p === d.target;
@@ -1393,6 +1393,7 @@ $(document).ready(function(){
                 soundManager.play(track);
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
+
             }
            });
         }
