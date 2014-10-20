@@ -1267,7 +1267,6 @@ $(document).ready(function(){
 
     var dur = 0;
     var matchedLinks = [];
-    var track="";
 
     function setupMouseEvents(){
         ui.nodeGroup.on('mouseover', function(d, i)
@@ -1394,11 +1393,11 @@ $(document).ready(function(){
                 soundManager.play(track);
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
-                $('#pause').click(function(){soundManager.pause(track);
+                $('#pause').click(function(){soundManager.togglePause(track);
                 });
                 $('#stop').click(function(){soundManager.stop(track);
                 });
-                $('#reset').click(function(){soundManager.reset(track);
+                $('#reset').click(function(){location.reload();
                 });
             }
            });
