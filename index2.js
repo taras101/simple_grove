@@ -1394,10 +1394,13 @@ $(document).ready(function(){
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
                 //show controls
-                $(".controls").fadeIn(2000);
-                $('#pause').click(function(){soundManager.togglePause(track);
+                $(".buttons").fadeIn(2000);
+                $('#pause').click(function(){
+                    $(this).find('img').toggle();
+                    soundManager.togglePause(track);
                 });
-                $('#stop').click(function(){soundManager.stop(track);
+                $('#stop').click(function(){
+                    soundManager.stop(track);
                 });
             }
            });
