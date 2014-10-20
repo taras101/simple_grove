@@ -1189,7 +1189,7 @@ $(document).ready(function(){
         var size = { width:$(containerName).outerWidth() , height: (totalNodes * 4) };
         var tree = d3.layout.tree()
             .sort(null)
-            .size([size.width -15, size.height - 40])
+            .size([size.width -25, size.height])
             .children(function(d)
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;

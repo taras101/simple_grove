@@ -39,8 +39,7 @@ path.link {
 }
 #reset{
     margin-left: 10px;
-    height:60%;
-    width:60%;
+
     /*position: absolute;
     margin-left: 96%;
     margin-top: 6%;*/
@@ -88,7 +87,7 @@ path.selected {
 }
 .grass2{
     z-index: -2;
-    height:130px;
+    height:120px;
     width: 100%;
     top: 880px;
    /* background-image: url('grass-sm1.png');
