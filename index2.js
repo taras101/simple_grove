@@ -1393,15 +1393,17 @@ $(document).ready(function(){
                 soundManager.play(track);
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
+                //show controls
+                $(".controls").fadeIn(2000);
                 $('#pause').click(function(){soundManager.togglePause(track);
                 });
                 $('#stop').click(function(){soundManager.stop(track);
                 });
-                $('#reset').click(function(){location.reload();
-                });
             }
            });
         }
+         $('#reset').click(function(){location.reload();
+        });
         var nodeVPosition=0;
     function animateParentChain(links){
         var linkRenderer = d3.svg.diagonal()
