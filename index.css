@@ -33,8 +33,8 @@ path.link {
 }
 .buttons{
     margin:10px;
-    height:70%;
-    width:70%;
+    height:60%;
+    width:60%;
 
 }
 
@@ -42,7 +42,7 @@ path.selected {
     stroke: whitesmoke;
     stroke-dasharray:3,5;
     fill: none;
-    stroke-width: 7px;
+    stroke-width: 5px;
     stroke-opacity:0.8;
 }
 
@@ -53,12 +53,6 @@ path.selected {
     width:10px;
 }
 
-.replaced-svg {
-    transition:500ms;
-    fill: red;
-    height:100px;
-    width:100px;
-}
  .hovers {
     cursor: cell;
 }
