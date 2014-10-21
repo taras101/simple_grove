@@ -1392,20 +1392,24 @@ $(document).ready(function(){
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
                 //show controls
-                // $(".buttons").fadeIn(2000);
+                $(".buttons").fadeIn(2000);
                 // $('#pause').click(function(){
                 //     $(this).find('img').toggle();
                 //     soundManager.togglePause(track);
                 // });
-                // $('#stop').click(function(){
-                //     soundManager.stop(track);
-                // });
+                $('#stop').click(function(){
+                    soundManager.stop(track);
+                });
             }
-           });
-        }
-         $('#reset').click(function(){location.reload();
-        });
-        var nodeVPosition=0;
+       });
+    }
+
+    $('#reset').click(function(){location.reload();
+    });
+
+    //creats var for knowing length of caterpillar animation
+    var nodeVPosition=0;
+
     function animateParentChain(links){
         var linkRenderer = d3.svg.diagonal()
             .projection(function(d){
