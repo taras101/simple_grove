@@ -1361,6 +1361,7 @@ $(document).ready(function(){
                     .delay(18800)
                     .remove();
 
+                soundManager.stopAll();
                 // Walk parent chain
                 var ancestors = [];
                 var parent = nd;
@@ -1384,24 +1385,21 @@ $(document).ready(function(){
                     });
                 var last_element = matchedLinks[matchedLinks.length - 1];
 
-                // SC.initialize({
-                //     client_id: "d99a29c1a7bd281b1ef4a833d3ab6dad"
-                //     //client secret e2e93639e0df982ea9aed3b69a7492f5
-                // });
+
                 var track = last_element.target.name;
                 //play track
                 soundManager.play(track);
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
                 //show controls
-                $(".buttons").fadeIn(2000);
-                $('#pause').click(function(){
-                    $(this).find('img').toggle();
-                    soundManager.togglePause(track);
-                });
-                $('#stop').click(function(){
-                    soundManager.stop(track);
-                });
+                // $(".buttons").fadeIn(2000);
+                // $('#pause').click(function(){
+                //     $(this).find('img').toggle();
+                //     soundManager.togglePause(track);
+                // });
+                // $('#stop').click(function(){
+                //     soundManager.stop(track);
+                // });
             }
            });
         }
