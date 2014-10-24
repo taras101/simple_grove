@@ -1267,6 +1267,7 @@ $(document).ready(function(){
 
     var dur = 0;
     var matchedLinks = [];
+    var track ="";
 
     function setupMouseEvents(){
         ui.nodeGroup.on('mouseover', function(d, i)
@@ -1360,8 +1361,8 @@ $(document).ready(function(){
                     .duration(1600)
                     .delay(18800)
                     .remove();
-
-                soundManager.stopAll();
+                console.log(track);
+                soundManager.stop(track);
                 // Walk parent chain
                 var ancestors = [];
                 var parent = nd;
@@ -1386,17 +1387,17 @@ $(document).ready(function(){
                 var last_element = matchedLinks[matchedLinks.length - 1];
 
 
-                var track = last_element.target.name;
+                track = last_element.target.name;
                 //play track
                 soundManager.play(track);
                 //set node to empty name so mouseout does not happen
                 nd.name ="";
                 //show controls
                 $(".buttons").fadeIn(2000);
-                // $('#pause').click(function(){
-                //     $(this).find('img').toggle();
-                //     soundManager.togglePause(track);
-                // });
+                $('#pause').click(function(){
+                    $(this).find('img').toggle();
+                    soundManager.togglePause(track);
+                });
                 $('#stop').click(function(){
                     soundManager.stop(track);
                 });
