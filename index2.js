@@ -1450,28 +1450,26 @@ $(document).ready(function(){
     //Soundmanager
     //set client id for soundcloud
     var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
-
+    //setup soundManager
     function smSetup(){
-        var selall = ui.nodeGroup.data();
-        console.log(selall);
-        $(selall).each(function(){
-        if(this.name != ""){
-            console.log(this.name);
-            var tId = this.name
-            soundManager.setup({
+        var allNodes = ui.nodeGroup.data();
+        $(allNodes).each(function(){
+            if(this.name != ""){
+                var trackId = this.name;
+                soundManager.setup({
             // where to find flash audio SWFs, as needed
                 url: '/.',
                 onready: function() {
                   soundManager.createSound({
-                    id: tId, // optional: provide your own unique id
+                    id: trackId, // optional: provide your own unique id
                     url: 'http://api.soundcloud.com/tracks/172116974' + sid + "&secret_token=s-CYxGt", multiShot: false,
                     onload: function() {
                       if( this.readyState ===3 ) {
                           soundDuration = this.duration;
+                          console.log(soundDuration);
                           animateParentChain(matchedLinks);
                           //animateParentChain(matchedLinks,soundManager);
                           }
-
                     }
                   })
                 }//close onready
