@@ -1450,17 +1450,20 @@ $(document).ready(function(){
     //Soundmanager
     //set client id for soundcloud
     var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
+
     function smSetup(){
-        var selall = ui.nodeGroup.selectAll();
-    console.log(selall);
-    ui.nodeGroup.selectAll().select(function(d){
-        if(d.name != ""){
+        var selall = ui.nodeGroup.data();
+        console.log(selall);
+        $(selall).each(function(){
+        if(this.name != ""){
+            console.log(this.name);
+            var tId = this.name
             soundManager.setup({
             // where to find flash audio SWFs, as needed
                 url: '/.',
                 onready: function() {
                   soundManager.createSound({
-                    id: d.name, // optional: provide your own unique id
+                    id: tId, // optional: provide your own unique id
                     url: 'http://api.soundcloud.com/tracks/172116974' + sid + "&secret_token=s-CYxGt", multiShot: false,
                     onload: function() {
                       if( this.readyState ===3 ) {
