@@ -15,18 +15,11 @@ $(document).ready(function(){
                         value: -17,
                         contents: [
                             { name: "1T2",
-                            value: 6,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
-                            },
+                            value: 6 },
                             { name: "1T3",
-                            value: -16,
-                            url: 'http://api.soundcloud.com/tracks/172117721',
-                            token:"&secret_token=s-qzcMJ" },
+                            value: -16 },
                             { name: "1T4",
-                            value: -5,
-                            url: 'http://api.soundcloud.com/tracks/172119138',
-                            token:"&secret_token=s-lwzOl" }
+                            value: -5 }
                         ]
                     },
                     {
@@ -34,14 +27,10 @@ $(document).ready(function(){
                         value: 7,
                         contents: [
                             { name: "1T9" ,
-                            value: 19,
-                            url: 'http://api.soundcloud.com/tracks/172120469',
-                            token:"&secret_token=s-nV7U4"
+                            value: 19
                             },
                             { name: "1T15" ,
-                                value: -5,
-                            url: 'http://api.soundcloud.com/tracks/172122372',
-                            token:"&secret_token=s-HDAgE"}
+                                value: -5}
                             ]
                         },
                     {
@@ -53,17 +42,11 @@ $(document).ready(function(){
                                 value: -18,
                                 contents: [
                                     { name: "1T6",
-                                    value: 19,
-                                    url: 'http://api.soundcloud.com/tracks/172118665',
-                                    token:"&secret_token=s-MTWmf" },
+                                    value: 19 },
                                     { name: "1T7",
-                                    value: -55,
-                                    url: 'http://api.soundcloud.com/tracks/172118772',
-                                    token:"&secret_token=s-VKzZY" },
+                                    value: -55 },
                                     { name: "1T8",
-                                    value: -19,
-                                    url: 'http://api.soundcloud.com/tracks/172119433',
-                                    token:"&secret_token=s-WEo5Q" }
+                                    value: -19 }
                                 ]
                             },
                             {
@@ -71,9 +54,7 @@ $(document).ready(function(){
                                 value: 5,
                                 contents: [
                                     { name: "1T10",
-                                    value: -12,
-                                    url: 'http://api.soundcloud.com/tracks/172120103',
-                                    token:"&secret_token=s-77h8w" }
+                                    value: -12 }
                                 ]
                             },
                             {
@@ -81,25 +62,17 @@ $(document).ready(function(){
                                 value: -12,
                                 contents: [
                                     { name: "1T11",
-                                    value: 4,
-                                    url: 'http://api.soundcloud.com/tracks/172121977',
-                                    token:"&secret_token=s-zji5n"},
+                                    value: 4},
                                     {
                                         name: "",
                                         value: 4,
                                         contents: [
                                         { name: "1T12",
-                                        value: 4,
-                                        url: 'http://api.soundcloud.com/tracks/172122199',
-                                        token:"&secret_token=s-ymPae"},
+                                        value: 4},
                                         { name: "1T13",
-                                        value: 1,
-                                        url: 'http://api.soundcloud.com/tracks/172121753',
-                                        token:"&secret_token=s-IKMb3"},
+                                        value: 1},
                                         { name: "1T14",
-                                        value: 6,
-                                        url: 'http://api.soundcloud.com/tracks/172122959',
-                                        token:"&secret_token=s-0QnY4"}
+                                        value: 6}
                                         ]
                                      }
                                 ]
@@ -109,18 +82,14 @@ $(document).ready(function(){
                                 value: 3,
                                 contents: [
                                     { name: "1T1",
-                                    value: -4,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" }
+                                    value: -4 }
                                 ]
                             }
                         ]
                     },
                     {
                         name: "1T5",
-                        value: -20,
-                        url: 'http://api.soundcloud.com/tracks/172119225',
-                        token:"&secret_token=s-cpQ68"
+                        value: -20
                     }
                 ]
                 },
@@ -136,9 +105,7 @@ $(document).ready(function(){
                     contents: [
                             {
                                 name: "2T1",
-                                value: 4,
-                                url: 'http://api.soundcloud.com/tracks/172305171',
-                                token:"&secret_token=s-RwJvB"
+                                value: 4
                              }
                         ]
                     },
@@ -148,15 +115,11 @@ $(document).ready(function(){
                         contents: [
                             {
                                 name: "2T2",
-                                value: 14,
-                                url: 'http://api.soundcloud.com/tracks/172311943',
-                                token:"&secret_token=s-c4m6L"
+                                value: 14
                                  },
                             {
                                 name: "2T3",
-                                value: 4,
-                                url: 'http://api.soundcloud.com/tracks/172313481',
-                                token:"&secret_token=s-qcVGw" }
+                                value: 4 }
                         ]
                     },
                     {
@@ -165,59 +128,37 @@ $(document).ready(function(){
                         contents: [
                             {
                                 name: "2T4",
-                                value: -39,
-                                url: 'http://api.soundcloud.com/tracks/172314174',
-                                token:"&secret_token=s-iHBC7" },
+                                value: -39 },
                             {
                                 name: "2T5",
-                                value: 6,
-                                url: 'http://api.soundcloud.com/tracks/172314583',
-                                token:"&secret_token=s-Qs05v" },
+                                value: 6 },
                             {
                                 name: "2T6",
-                                value: -14,
-                                url: 'http://api.soundcloud.com/tracks/172314947',
-                                token:"&secret_token=s-Ar6Tw" },
+                                value: -14 },
                             {
                                 name: "2T7",
-                                value: 6,
-                                url: 'http://api.soundcloud.com/tracks/172315678',
-                                token:"&secret_token=s-uPKDC" },
+                                value: 6 },
                             {
                                 name: "2T8",
-                                value: 60,
-                                url: 'http://api.soundcloud.com/tracks/172317069',
-                                token:"&secret_token=s-U9now" },
+                                value: 60 },
                             {
                                 name: "",
                                 value: 4,
                                 contents: [
                                     {
                                         name: "2T9",
-                                        value: -6,
-                                        url: 'http://api.soundcloud.com/tracks/172318026',
-                                        token:"&secret_token=s-HYM5t" },
+                                        value: -6 },
                                     {
-                                        name: "",
+                                        name: "2T10",
                                         value: 2,
                                         contents: [
                                             {
-                                                name: "2T10",
-                                                value: 1,
-                                                url: 'http://api.soundcloud.com/tracks/172319028',
-                                                token:"&secret_token=s-NrWhz"
-                                            },
-                                            {
                                                 name: "2T11",
-                                                value: 18,
-                                                url: 'http://api.soundcloud.com/tracks/172320171',
-                                                token:"&secret_token=s-L8cXc"
+                                                value: 18
                                             },
                                             {
                                                 name: "2T12",
-                                                value: 15,
-                                                url: 'http://api.soundcloud.com/tracks/172321274',
-                                                token:"&secret_token=s-Z7GYo"
+                                                value: 15
                                             },
                                         ]
                                     },
@@ -229,19 +170,13 @@ $(document).ready(function(){
                                 contents: [
                                     {
                                         name: "2T13",
-                                        value: 15,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy" },
+                                        value: 15 },
                                     {
                                         name: "2T14",
-                                        value: -6,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy" },
+                                        value: -6 },
                                     {
                                         name: "2T15",
-                                        value: 4,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: 4
                                     }
                                     ]
                             },
@@ -267,9 +202,7 @@ $(document).ready(function(){
                         contents:[
                             {
                                 name: "3T1",
-                                value: -4,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy" }
+                                value: -4 }
                         ]
                     },
                     ]
@@ -280,82 +213,52 @@ $(document).ready(function(){
                     contents: [
                         {
                             name: "3T2",
-                            value: 7,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: 7 },
                         {
                             name: "3T3",
-                            value: -4,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: -4 },
                         {
                             name: "3T4",
-                            value: 4,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: 4 },
                         {
                             name: "3T5",
                             value: 1,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy",
                             contents: [
                                 {
                                     name: "3T12",
-                                    value: -9,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: -9 },
                                 {
                                     name: "3T13",
-                                    value: 12,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: 12 },
                                 {
                                     name: "3T14",
-                                    value: 8,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: 8 },
                                 {
                                     name: "3T15",
-                                    value: -6,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: -6 },
                                 {
                                     name: "3T16",
-                                    value: 4,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" }
+                                    value: 4 }
                                 ]
                                 },
                         {
                             name: "3T6",
-                            value: 2,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: 2 },
                         {
                             name: "3T7",
-                            value: -44,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: -44 },
                         {
                             name: "3T8",
-                            value: 7,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: 7 },
                         {
                             name: "3T9",
-                            value: -23,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: -23 },
                         {
                             name: "3T10",
-                            value: 9,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" },
+                            value: 9 },
                         {
                             name: "3T11",
-                            value: 4,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy" }
+                            value: 4 }
                     ]
                 },
                 {
@@ -368,28 +271,20 @@ $(document).ready(function(){
                             contents: [
                                 {
                                     name: "3T17",
-                                    value: -3,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: -3 },
                                 {
                                     name: "3T18",
-                                    value: 8,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: 8 },
                                 {
                                     name: "",
                                     value: 12,
                                     contents: [
                                         {
                                             name: "3T19",
-                                            value: 11,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy"  },
+                                            value: 11  },
                                         {
                                             name: "3T20",
-                                            value: -4,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy" }
+                                            value: -4 }
                                         ]
                                 },
                             ]
@@ -406,28 +301,20 @@ $(document).ready(function(){
                             contents: [
                                 {
                                     name: "3T21",
-                                    value: 8,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: 8 },
                                 {
                                     name: "3T22",
-                                    value: -2,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" },
+                                    value: -2 },
                                 {
                                     name: "",
                                     value: -12,
                                     contents: [
                                         {
                                             name: "3T24",
-                                            value: 11,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy"  },
+                                            value: 11  },
                                         {
                                             name: "3T25",
-                                            value: -4,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy" }
+                                            value: -4 }
                                         ]
                                 },
                                 {
@@ -436,9 +323,7 @@ $(document).ready(function(){
                                     contents: [
                                         {
                                             name: "3T23",
-                                            value: -4,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy" }
+                                            value: -4 }
                                         ]
                                 },
                             ]
@@ -455,9 +340,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T26",
-                                    value: -42,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"  },
+                                    value: -42  },
                             ]
                         },
                     ]
@@ -472,9 +355,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T27",
-                                    value: 1,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"  },
+                                    value: 1  },
                             ]
                         },
                     ]
@@ -489,9 +370,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T28",
-                                    value: 12,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"  },
+                                    value: 12  },
                             ]
                         },
                     ]
@@ -506,9 +385,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T29",
-                                    value: -15,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"  },
+                                    value: -15  },
                             ]
                         },
                     ]
@@ -527,9 +404,7 @@ $(document).ready(function(){
                                     contents: [
                                     {
                                             name: "3T30",
-                                            value: 12,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy"  },
+                                            value: 12  },
                                     ]
                                 },
                             ]
@@ -546,9 +421,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "3T31",
-                                    value: 12,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"  },
+                                    value: 12  },
                             ]
                         },
                     ]
@@ -571,9 +444,7 @@ $(document).ready(function(){
                         contents: [
                         {
                                 name: "4T1",
-                                value: 4,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy" },
+                                value: 4 },
                         ]
                     }
                     ]
@@ -588,23 +459,17 @@ $(document).ready(function(){
                         contents: [
                         {
                                 name: "4T2",
-                                value: 13,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy"  },
+                                value: 13  },
                         {
                                 name: "4T3",
-                                value: 2,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy"  },
+                                value: 2  },
                         {
                                 name: "",
                                 value: -12,
                                 contents: [
                             {
                                     name: "4T4",
-                                    value: 6,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy"  }
+                                    value: 6  }
                                 ]
                             },
                         ]
@@ -618,8 +483,6 @@ $(document).ready(function(){
                 {
                         name: "4T5",
                         value: 14,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
 
                     }
                     ]
@@ -634,18 +497,14 @@ $(document).ready(function(){
                         contents: [
                         {
                                 name: "4T6",
-                                value: 13,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy"  },
+                                value: 13  },
                         {
                                 name: "",
                                 value: -12,
                                 contents: [
                             {
                                     name: "4T7",
-                                    value: 19,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy" }
+                                    value: 19 }
                                 ]
                             },
                             {
@@ -654,9 +513,7 @@ $(document).ready(function(){
                             contents: [
                                 {
                                         name: "4T8",
-                                        value: -5,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"  }
+                                        value: -5  }
                                     ]
                             },
                             {
@@ -669,9 +526,7 @@ $(document).ready(function(){
                                         contents: [
                                     {
                                             name: "4T9",
-                                            value: -7,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy"  }
+                                            value: -7  }
                                         ]
                                         },
                                     ]
@@ -683,14 +538,10 @@ $(document).ready(function(){
                                 {
                                         name: "4T10",
                                         value: 6,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy",
                                         contents: [
                                     {
                                             name: "4T9",
-                                            value: 13,
-                                            url: 'http://api.soundcloud.com/tracks/172116956',
-                                            token:"&secret_token=s-9HnGy"  }
+                                            value: 13  }
                                         ]  }
                                     ]
                             },
@@ -700,9 +551,7 @@ $(document).ready(function(){
                             contents: [
                                 {
                                         name: "4T11",
-                                        value: 17,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy" }
+                                        value: 17 }
                                     ]
                             },
                         ]
@@ -721,9 +570,7 @@ $(document).ready(function(){
                 contents: [
                 {
                         name: "5T1",
-                        value: 4,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
+                        value: 4
                     }
                     ]
                 },
@@ -733,9 +580,7 @@ $(document).ready(function(){
                 contents: [
                 {
                         name: "5T2",
-                        value: -10,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
+                        value: -10
                     }
                     ]
                 },
@@ -746,8 +591,6 @@ $(document).ready(function(){
                 {
                         name: "5T3",
                         value: 14,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
 
                     }
                     ]
@@ -762,9 +605,7 @@ $(document).ready(function(){
                         contents: [
                         {
                                 name: "5T6",
-                                value: 13,
-                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                token:"&secret_token=s-9HnGy"  }
+                                value: 13  }
                         ]
                     },
                     ]
@@ -776,8 +617,6 @@ $(document).ready(function(){
                 {
                         name: "5T4",
                         value: 14,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
 
                     }
                     ]
@@ -789,8 +628,6 @@ $(document).ready(function(){
                 {
                         name: "5T5",
                         value: -14,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
 
                     }
                     ]
@@ -802,8 +639,6 @@ $(document).ready(function(){
                 {
                         name: "5T7",
                         value: -33,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
 
                     }
                     ]
@@ -815,8 +650,6 @@ $(document).ready(function(){
                 {
                         name: "5T8",
                         value: -69,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
 
                     }
                     ]
@@ -828,8 +661,7 @@ $(document).ready(function(){
                 {
                         name: "5T9",
                         value: 19,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
+
                     }
                     ]
                 },
@@ -839,9 +671,7 @@ $(document).ready(function(){
                 contents: [
                 {
                         name: "5T10",
-                        value: 5,
-                        url: 'http://api.soundcloud.com/tracks/172116956',
-                        token:"&secret_token=s-9HnGy"
+                        value: 5
 
                     }
                     ]
@@ -866,9 +696,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T1",
-                                        value: 4,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: 4
                                     }
                                     ]
                                 },
@@ -878,9 +706,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T2",
-                                        value: -10,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: -10
                                     }
                                     ]
                                 },
@@ -891,8 +717,6 @@ $(document).ready(function(){
                                 {
                                         name: "6T3",
                                         value: 14,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
 
                                     }
                                     ]
@@ -903,9 +727,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T6",
-                                        value: 10,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: 10
                                     },
                                     ]
                                 },
@@ -916,8 +738,6 @@ $(document).ready(function(){
                                 {
                                         name: "6T4",
                                         value: -23,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
 
                                     }
                                     ]
@@ -929,8 +749,6 @@ $(document).ready(function(){
                                 {
                                         name: "6T5",
                                         value: 34,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
 
                                     }
                                     ]
@@ -945,9 +763,7 @@ $(document).ready(function(){
                                         contents: [
                                         {
                                                 name: "6T12",
-                                                value: 21,
-                                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                                token:"&secret_token=s-9HnGy"
+                                                value: 21
                                         }
                                         ]
                                     }
@@ -968,8 +784,6 @@ $(document).ready(function(){
                                                 {
                                                     name: "6T14",
                                                     value: 16,
-                                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                                    token:"&secret_token=s-9HnGy"
 
                                                 }
                                                 ]
@@ -988,9 +802,7 @@ $(document).ready(function(){
                                         contents: [
                                         {
                                                 name: "6T13",
-                                                value: -21,
-                                                url: 'http://api.soundcloud.com/tracks/172116956',
-                                                token:"&secret_token=s-9HnGy"
+                                                value: -21
                                         }
                                         ]
                                     }
@@ -1002,9 +814,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T10",
-                                        value: 5,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: 5
 
                                     }
                                     ]
@@ -1015,9 +825,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T11",
-                                        value: -15,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: -15
 
                                     }
                                     ]
@@ -1028,9 +836,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T7",
-                                        value: -45,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: -45
 
                                     }
                                     ]
@@ -1041,9 +847,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T9",
-                                        value: -15,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: -15
 
                                     }
                                     ]
@@ -1054,9 +858,7 @@ $(document).ready(function(){
                                 contents: [
                                 {
                                         name: "6T8",
-                                        value: -25,
-                                        url: 'http://api.soundcloud.com/tracks/172116956',
-                                        token:"&secret_token=s-9HnGy"
+                                        value: -25
 
                                     }
                                     ]
@@ -1077,9 +879,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T1",
-                            value: 14,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: 14
                         }
                         ]
                     },
@@ -1089,9 +889,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T2",
-                            value: -1,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: -1
                         }
                         ]
                     },
@@ -1102,8 +900,6 @@ $(document).ready(function(){
                     {
                             name: "7T3",
                             value: 44,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
 
                         }
                         ]
@@ -1114,9 +910,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T4",
-                            value: 13,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: 13
                         },
                         ]
                     },
@@ -1127,8 +921,6 @@ $(document).ready(function(){
                     {
                             name: "7T5",
                             value: 3,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
 
                         }
                         ]
@@ -1140,8 +932,6 @@ $(document).ready(function(){
                     {
                             name: "7T6",
                             value: 11,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
 
                         }
                         ]
@@ -1156,9 +946,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T7",
-                                    value: -66,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value:-66
                             }
                             ]
                         }
@@ -1174,9 +962,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T8",
-                                    value: 16,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: 16
                             }
                             ]
                         }
@@ -1192,9 +978,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T9",
-                                    value: -13,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: -13
                             }
                             ]
                         }
@@ -1210,9 +994,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T10",
-                                    value: 5,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: 5
                             }
                             ]
                         }
@@ -1228,9 +1010,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T11",
-                                    value: -19,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: -19
                             }
                             ]
                         }
@@ -1246,9 +1026,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T12",
-                                    value: -13,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: -13
                             }
                             ]
                         }
@@ -1260,9 +1038,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T13",
-                            value: -15,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: -15
 
                         }
                         ]
@@ -1273,16 +1049,12 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T14",
-                            value: -25,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: -25
 
                     },
                     {
                             name: "7T15",
-                            value: 4,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: 4
                         }
                         ]
                     },
@@ -1292,9 +1064,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T16",
-                            value: -10,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: -10
                         }
                         ]
                     },
@@ -1305,8 +1075,6 @@ $(document).ready(function(){
                     {
                             name: "7T17",
                             value: 14,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
 
                         }
                         ]
@@ -1317,9 +1085,7 @@ $(document).ready(function(){
                     contents: [
                     {
                             name: "7T18",
-                            value: 10,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
+                            value: 10
                         },
                         ]
                     },
@@ -1330,8 +1096,6 @@ $(document).ready(function(){
                     {
                             name: "7T19",
                             value: -23,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
 
                         }
                         ]
@@ -1343,8 +1107,6 @@ $(document).ready(function(){
                     {
                             name: "7T20",
                             value: 34,
-                            url: 'http://api.soundcloud.com/tracks/172116956',
-                            token:"&secret_token=s-9HnGy"
 
                         }
                         ]
@@ -1359,9 +1121,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T21",
-                                    value: 21,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: 21
                             }
                             ]
                         }
@@ -1377,9 +1137,7 @@ $(document).ready(function(){
                             contents: [
                             {
                                     name: "7T22",
-                                    value: 81,
-                                    url: 'http://api.soundcloud.com/tracks/172116956',
-                                    token:"&secret_token=s-9HnGy"
+                                    value: 81
                             }
                             ]
                         }
@@ -1698,15 +1456,13 @@ $(document).ready(function(){
         $(allNodes).each(function(){
             if(this.name != ""){
                 var trackId = this.name;
-                var url = this.url;
-                var token = this.token;
                 soundManager.setup({
             // where to find flash audio SWFs, as needed
                 url: '/.',
                 onready: function() {
                   soundManager.createSound({
                     id: trackId, // optional: provide your own unique id
-                    url: url + sid + token, multiShot: false,
+                    url: 'http://api.soundcloud.com/tracks/172116974' + sid + "&secret_token=s-CYxGt", multiShot: false,
                     onload: function() {
                       if( this.readyState ===3 ) {
                           soundDuration = this.duration;
