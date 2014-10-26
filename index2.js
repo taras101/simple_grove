@@ -1621,9 +1621,9 @@ $(document).ready(function(){
                     {
                         matchedLinks.push(d);
                     });
+
+                //Find the end leaf
                 var last_element = matchedLinks[matchedLinks.length - 1];
-
-
                 track = last_element.target.name;
                 //play track
                 soundManager.play(track);
