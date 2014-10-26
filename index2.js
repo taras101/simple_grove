@@ -1521,18 +1521,17 @@ $(document).ready(function(){
                     .attr("height", "24px")
                     .attr("width", "24px");
                 //animate leaf falling
-                var i, lDur, lDel, lY;
-                for (i=0, lDel=800, lY=35; i<=15; i++, lDel+=2400, lY+=50){
+                var i, lDur, lDel, lY , lZ;
+                for (i=0, lDel=800, lY=35, lZ= 65; i<=17; i++, lDel+=2400, lY+=50, lZ+=50){
                     d3.select(this).select("image")
                     .transition()
-                    .attr("transform", "translate(-39," + lY + ") rotate(75)")
-                    .duration(2000)
+                    .attr("transform", "translate(-45," + lY + ") rotate(75)")
+                    .duration(1200)
                     .delay(lDel)
                     .transition()
-                    .attr("transform", "translate(45," + lY + ") rotate(25)")
+                    .attr("transform", "translate(45," + lZ + ") rotate(25)")
                     .duration(1600)
                     .delay(lDel + 1200);
-                    console.log(lDel);
                 };
                 // d3.select(this).select("image")
                 //     .transition()
