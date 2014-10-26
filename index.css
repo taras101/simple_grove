@@ -15,12 +15,6 @@ g.node {
     font-weight: bold;
 
 }
-/*circle.node-dot {
-    fill: #00FF49;
-    stroke:#0C7A2C ;
-    stroke-width: 1px;
-}*/
-
 path.link {
     fill: none;
     stroke:#6E450B;
@@ -30,15 +24,33 @@ path.link {
 	padding-top: 15px;
     margin-left: 30px;
 }
-.hide{
-    display:none;
+.controls{
+    position: absolute;
+    margin-left: 94%;
+    margin-top: 2%;
+    /*border: 5px solid red;*/
+    /*display: block;*/
+}
+.buttons{
+    display: none;
+    margin:10px;
+    height:60%;
+    width:60%;
+}
+#reset{
+    margin-left: 10px;
+
+    /*position: absolute;
+    margin-left: 96%;
+    margin-top: 6%;*/
+  /*  border: 5px solid red;*/
 }
 
 path.selected {
     stroke: whitesmoke;
     stroke-dasharray:3,5;
     fill: none;
-    stroke-width: 7px;
+    stroke-width: 5px;
     stroke-opacity:0.8;
 }
 
@@ -49,12 +61,6 @@ path.selected {
     width:10px;
 }
 
-.replaced-svg {
-    transition:500ms;
-    fill: red;
-    height:100px;
-    width:100px;
-}
  .hovers {
     cursor: cell;
 }
@@ -81,7 +87,7 @@ path.selected {
 }
 .grass2{
     z-index: -2;
-    height:130px;
+    height:120px;
     width: 100%;
     top: 880px;
    /* background-image: url('grass-sm1.png');
