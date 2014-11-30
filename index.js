@@ -1372,7 +1372,7 @@ $(document).ready(function(){
             }
         ]
     };
-
+    var screenHeight = window.innerHeight;
     function visit(parent, visitFn, childrenFn)
     {
         if (!parent) return;
@@ -1411,7 +1411,7 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 4) };
+        var size = { width:$(containerName).outerWidth() , height: screenHeight-30 };
         var tree = d3.layout.tree()
             .sort(null)
             .size([size.width -25, size.height])
@@ -1419,7 +1419,7 @@ $(document).ready(function(){
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
             });
-
+        
         var nodes = tree.nodes(treeData);
         var links = tree.links(nodes);
         var svgRoot = d3.select(containerName)
@@ -1488,7 +1488,7 @@ $(document).ready(function(){
                 .attr("width", 20)
                 .attr("height", 20)
                 .attr("transform", "translate(-10,-10)");
-
+            
     }// close build tree
 
     var dur = 0;
@@ -1684,6 +1684,7 @@ $(document).ready(function(){
             .attr("y", overlayBox.y -(115 + nodeVPosition))
             .attr("height", 50);
     }
+    window.addEventListener('resize', resize);
     //Soundmanager
     //set client id for soundcloud
     var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
@@ -1715,8 +1716,14 @@ $(document).ready(function(){
         }
     });
     }
+    
 
     $(function(){
         buildTree("#tree-container");
     });
+function resize() {
+            width = window.innerWidth, height = window.innerHeight;
+            svg.attr("width", width).attr("height", height);
+            // force.size([width, height]).resume();
+        }    
 });
