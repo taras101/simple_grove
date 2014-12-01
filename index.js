@@ -1372,7 +1372,7 @@ $(document).ready(function(){
             }
         ]
     };
-
+    var screenHeight = window.innerHeight;
     function visit(parent, visitFn, childrenFn)
     {
         if (!parent) return;
@@ -1411,7 +1411,7 @@ $(document).ready(function(){
         });
 
         // size of the diagram
-        var size = { width:$(containerName).outerWidth() , height: (totalNodes * 4) };
+        var size = { width:$(containerName).outerWidth() , height: screenHeight-30 };
         var tree = d3.layout.tree()
             .sort(null)
             .size([size.width -25, size.height])
@@ -1419,7 +1419,7 @@ $(document).ready(function(){
             {
                 return (!d.contents || d.contents.length === 0) ? null : d.contents;
             });
-
+        
         var nodes = tree.nodes(treeData);
         var links = tree.links(nodes);
         var svgRoot = d3.select(containerName)
@@ -1488,7 +1488,7 @@ $(document).ready(function(){
                 .attr("width", 20)
                 .attr("height", 20)
                 .attr("transform", "translate(-10,-10)");
-
+            
     }// close build tree
 
     var dur = 0;
@@ -1533,72 +1533,7 @@ $(document).ready(function(){
                     .duration(1600)
                     .delay(lDel + 1200);
                 };
-                // d3.select(this).select("image")
-                //     .transition()
-                //     .attr("transform", "translate(-25,35) rotate(75)")
-                //     .duration(1600)
-                //     .delay(800)
-                //     .transition()
-                //     .attr("transform", "translate(15,80) rotate(25)")
-                //     .duration(1600)
-                //     .delay(2000)
-                //     .transition()
-                //     .attr("transform", "translate(-25,135) rotate(75)")
-                //     .duration(1600)
-                //     .delay(3200)
-                //     .transition()
-                //     .attr("transform", "translate(35,185) rotate(25)")
-                //     .duration(1600)
-                //     .delay(4400)
-                //     .transition()
-                //     .attr("transform", "translate(-45,235) rotate(75)")
-                //     .duration(1600)
-                //     .delay(5600)
-                //     .transition()
-                //     .attr("transform", "translate(35,285) rotate(25)")
-                //     .duration(1600)
-                //     .delay(6800)
-                //     .transition()
-                //     .attr("transform", "translate(-45,335) rotate(75)")
-                //     .duration(1600)
-                //     .delay(8000)
-                //     .transition()
-                //     .attr("transform", "translate(35,385) rotate(25)")
-                //     .duration(1600)
-                //     .delay(9200)
-                //     .transition()
-                //     .attr("transform", "translate(-45,435) rotate(75)")
-                //     .duration(1600)
-                //     .delay(10400)
-                //     .transition()
-                //     .attr("transform", "translate(35,485) rotate(25)")
-                //     .duration(1600)
-                //     .delay(11600)
-                //     .transition()
-                //     .attr("transform", "translate(-45,535) rotate(75)")
-                //     .duration(1600)
-                //     .delay(12800)
-                //     .transition()
-                //     .attr("transform", "translate(35,585) rotate(25)")
-                //     .duration(1600)
-                //     .delay(14000)
-                //     .transition()
-                //     .attr("transform", "translate(-45,635) rotate(75)")
-                //     .duration(1600)
-                //     .delay(15200)
-                //     .transition()
-                //     .attr("transform", "translate(35,685) rotate(25)")
-                //     .duration(1600)
-                //     .delay(16400)
-                //     .transition()
-                //     .attr("transform", "translate(-45,735) rotate(75)")
-                //     .duration(1600)
-                //     .delay(17600)
-                //     .transition()
-                //     .attr("transform", "translate(35,785) rotate(25)")
-                //     .duration(1600)
-                //     .delay(18800)
-                //     .remove();
+               
                 soundManager.stop(track);
                 // Walk parent chain
                 var ancestors = [];
@@ -1715,6 +1650,7 @@ $(document).ready(function(){
         }
     });
     }
+    
 
     $(function(){
         buildTree("#tree-container");
