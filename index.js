@@ -1533,72 +1533,7 @@ $(document).ready(function(){
                     .duration(1600)
                     .delay(lDel + 1200);
                 };
-                // d3.select(this).select("image")
-                //     .transition()
-                //     .attr("transform", "translate(-25,35) rotate(75)")
-                //     .duration(1600)
-                //     .delay(800)
-                //     .transition()
-                //     .attr("transform", "translate(15,80) rotate(25)")
-                //     .duration(1600)
-                //     .delay(2000)
-                //     .transition()
-                //     .attr("transform", "translate(-25,135) rotate(75)")
-                //     .duration(1600)
-                //     .delay(3200)
-                //     .transition()
-                //     .attr("transform", "translate(35,185) rotate(25)")
-                //     .duration(1600)
-                //     .delay(4400)
-                //     .transition()
-                //     .attr("transform", "translate(-45,235) rotate(75)")
-                //     .duration(1600)
-                //     .delay(5600)
-                //     .transition()
-                //     .attr("transform", "translate(35,285) rotate(25)")
-                //     .duration(1600)
-                //     .delay(6800)
-                //     .transition()
-                //     .attr("transform", "translate(-45,335) rotate(75)")
-                //     .duration(1600)
-                //     .delay(8000)
-                //     .transition()
-                //     .attr("transform", "translate(35,385) rotate(25)")
-                //     .duration(1600)
-                //     .delay(9200)
-                //     .transition()
-                //     .attr("transform", "translate(-45,435) rotate(75)")
-                //     .duration(1600)
-                //     .delay(10400)
-                //     .transition()
-                //     .attr("transform", "translate(35,485) rotate(25)")
-                //     .duration(1600)
-                //     .delay(11600)
-                //     .transition()
-                //     .attr("transform", "translate(-45,535) rotate(75)")
-                //     .duration(1600)
-                //     .delay(12800)
-                //     .transition()
-                //     .attr("transform", "translate(35,585) rotate(25)")
-                //     .duration(1600)
-                //     .delay(14000)
-                //     .transition()
-                //     .attr("transform", "translate(-45,635) rotate(75)")
-                //     .duration(1600)
-                //     .delay(15200)
-                //     .transition()
-                //     .attr("transform", "translate(35,685) rotate(25)")
-                //     .duration(1600)
-                //     .delay(16400)
-                //     .transition()
-                //     .attr("transform", "translate(-45,735) rotate(75)")
-                //     .duration(1600)
-                //     .delay(17600)
-                //     .transition()
-                //     .attr("transform", "translate(35,785) rotate(25)")
-                //     .duration(1600)
-                //     .delay(18800)
-                //     .remove();
+               
                 soundManager.stop(track);
                 // Walk parent chain
                 var ancestors = [];
@@ -1684,7 +1619,6 @@ $(document).ready(function(){
             .attr("y", overlayBox.y -(115 + nodeVPosition))
             .attr("height", 50);
     }
-    window.addEventListener('resize', resize);
     //Soundmanager
     //set client id for soundcloud
     var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
@@ -1721,9 +1655,4 @@ $(document).ready(function(){
     $(function(){
         buildTree("#tree-container");
     });
-function resize() {
-            width = window.innerWidth, height = window.innerHeight;
-            svg.attr("width", width).attr("height", height);
-            // force.size([width, height]).resume();
-        }    
 });
