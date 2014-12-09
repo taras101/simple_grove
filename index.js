@@ -94,28 +94,6 @@ $(document).ready(function(){
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
                 
-                var nodeGroup1 = layoutRoot.selectAll("g.node")
-                .data(nodes
-                .filter(function(d){
-                    if(d.token = undefined){
-                    return d;}
-                    })
-                )
-                .enter()
-                .append("svg:g")
-                .attr("class", "node")
-                .attr("transform", function(d)
-                {
-                    var transpointx = d.x - d.value;
-                    var transpointy = -d.y + d.value;
-                    return "translate(" + transpointx + "," + transpointy + ")";
-                })
-                .append("svg:image")
-                    .attr("id", "leaf")
-                    .attr("xlink:href", "svg-leave1.svg")
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("transform", "translate(-10,-10)");
                 console.log(nodeGroup);
 
             // Cache the UI elements
