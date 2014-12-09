@@ -7,7 +7,6 @@ $(document).ready(function(){
     d3.json("treeData.json", function(json) {
     treeData = json[0];
     
-        console.log(treeData);
         var screenHeight = window.innerHeight;
         function visit(parent, visitFn, childrenFn)
         {
@@ -26,23 +25,9 @@ $(document).ready(function(){
 
         function buildTree(containerName, customOptions)
         {
-            // build the options object
-            var options = $.extend({
-                nodeRadius: 4, fontSize: 12
-            }, customOptions);
-
             // Calculate total nodes, max label length
             var totalNodes = 0;
             var maxLabelLength = 0;
-            visit(treeData, function(d)
-            {
-                totalNodes++;
-                maxLabelLength = Math.max(d.name.length, maxLabelLength);
-            }, function(d)
-            {
-                return d.contents && d.contents.length > 0 ? d.contents : null;
-            });
-      
 
             // size of the diagram
             var size = { width:$(containerName).outerWidth() , height: screenHeight-30 };
@@ -93,7 +78,12 @@ $(document).ready(function(){
                 .attr("clip-path", "url(#clipper)");
 
             var nodeGroup = layoutRoot.selectAll("g.node")
-                .data(nodes)
+                .data(nodes
+                .filter(function(d){
+                    if(d.token != undefined){
+                    return d;}
+                    })
+                )
                 .enter()
                 .append("svg:g")
                 .attr("class", "node")
@@ -103,6 +93,30 @@ $(document).ready(function(){
                     var transpointy = -d.y + d.value;
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
+                
+                var nodeGroup1 = layoutRoot.selectAll("g.node")
+                .data(nodes
+                .filter(function(d){
+                    if(d.token = undefined){
+                    return d;}
+                    })
+                )
+                .enter()
+                .append("svg:g")
+                .attr("class", "node")
+                .attr("transform", function(d)
+                {
+                    var transpointx = d.x - d.value;
+                    var transpointy = -d.y + d.value;
+                    return "translate(" + transpointx + "," + transpointy + ")";
+                })
+                .append("svg:image")
+                    .attr("id", "leaf")
+                    .attr("xlink:href", "svg-leave1.svg")
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("transform", "translate(-10,-10)");
+                console.log(nodeGroup);
 
             // Cache the UI elements
             ui = {
