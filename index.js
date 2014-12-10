@@ -82,6 +82,8 @@ $(document).ready(function(){
                 .filter(function(d){
                     if(d.token != undefined){
                     return d;}
+                    else{d.token =null;
+                    return d;}
                     })
                 )
                 .enter()
@@ -93,8 +95,8 @@ $(document).ready(function(){
                     var transpointy = -d.y + d.value;
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
-                
-                console.log(nodeGroup);
+
+              
 
             // Cache the UI elements
             ui = {
@@ -108,13 +110,12 @@ $(document).ready(function(){
             setupMouseEvents();
             smSetup();
 
-                nodeGroup.append("svg:image")
-                    .attr("id", "leaf")
-                    .attr("xlink:href", "svg-leave3.svg")
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("transform", "translate(-10,-10)");
-                
+            nodeGroup.append("svg:image")
+                        .attr("id", "leaf")
+                        .attr("xlink:href", "svg-leave3.svg")
+                        .attr("width", 20)
+                        .attr("height", 20)
+                        .attr("transform", "translate(-10,-10)");
         }// close build tree
 
         var dur = 0;
