@@ -82,8 +82,6 @@ $(document).ready(function(){
                 .filter(function(d){
                     if(d.token != undefined){
                     return d;}
-                    else{d.token =null;
-                    return d;}
                     })
                 )
                 .enter()
@@ -116,6 +114,7 @@ $(document).ready(function(){
                         .attr("width", 20)
                         .attr("height", 20)
                         .attr("transform", "translate(-10,-10)");
+                        console.log(nodeGroup);
         }// close build tree
 
         var dur = 0;
@@ -124,13 +123,13 @@ $(document).ready(function(){
 
         function setupMouseEvents(){
             ui.nodeGroup.on('mouseover', function(d, i)
-                {if(d.name != ""){
+                {
                         d3.select(this).select("image")
                         .attr('href','svg-leave4.svg')
                         .attr("height", "24px")
                         .attr("width", "24px")
                         .classed("hovers", true);
-                        }
+                        
                 })
                 .on('mouseout', function(d, i)
                 {if(d.name != ""){
