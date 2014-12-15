@@ -69,7 +69,7 @@ path.selected {
 }
 .grass{
     z-index: 1;
-    height:156px;
+    height:15.5%;
     width: 100%;
     bottom:-10px;
     background-image: url('grass-sm1.png');
@@ -78,7 +78,7 @@ path.selected {
 }
 .grass1{
     z-index: 2;
-    height:123px;
+    height:13%;
     width: 100%;
     left: 1px;
     bottom: -9px;
@@ -88,7 +88,7 @@ path.selected {
 }
 .grass2{
     z-index: 0;
-    height:141px;
+    height:14%;
     width: 100%;
     bottom: -10px;
     background: linear-gradient(#EE9603 1%,rgb(2, 69, 0)99%);
@@ -99,7 +99,7 @@ path.selected {
 }
 .grass3{
     z-index: 1;
-    height:155px;
+    height:16%;
     width: 100%;
     left: 2px;
     bottom: -10px;
@@ -113,6 +113,49 @@ path.selected {
     bottom: 765px;
     left: 250px;
     position: absolute;
+}
+.trunk{
+    position: absolute;
+    stroke:#6E450B;
+    stroke-width: 5px;
+}
+.trunk1{
+    bottom: 6%;
+    left: 7%;
+}
+.trunk2{
+     z-index: 2;
+    bottom: 7%;
+    left: 14.7%;
+    stroke-width: 7px;
+}
+.trunk3{
+     z-index: 1;
+    bottom: 6%;
+    left: 33.5%;
+    stroke-width: 8px;
+}
+.trunk4{
+     z-index: 0;
+    bottom: 6%;
+    left: 49.3%;
+}
+.trunk5{
+     z-index: 2;
+    bottom: 6%;
+    left: 60.2%;
+    stroke-width: 10px;
+}
+.trunk6{
+     z-index: 0;
+    bottom: 8%;
+    left: 67.6%;
+}
+.trunk7{
+     z-index: 1;
+    bottom: 3%;
+    left: 83.9%;
+    stroke-width: 15px;
 }
 
 
