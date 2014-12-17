@@ -108,10 +108,10 @@ path.selected {
     position: absolute;
     position: absolute;
 }
-.stem{
+.star{
     z-index: 1;
-    bottom: 765px;
-    left: 250px;
+    bottom: 77%;
+    left: 19%;
     position: absolute;
 }
 .trunk{

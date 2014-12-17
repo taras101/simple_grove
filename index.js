@@ -115,6 +115,26 @@ $(document).ready(function(){
                         .attr("height", 20)
                         .attr("transform", "translate(-10,-10)");
                         console.log(nodeGroup);
+
+                   var jsonStars=[
+        {"name":"star1", "x": 300,"y":-600, "url":"http://api.soundcloud.com/tracks/172116956",
+                            "token":"&secret_token=s-9HnGy"}]
+        var sky = d3.select("body")
+                    .append("svg")
+                    .attr("width",20)
+                    .attr("height",40);
+
+        var stars = sky.selectAll("star")
+                            .data(jsonStars)
+                            .enter()
+                            .append("svg:image")
+                            .attr("xlink:href", "star1.png")
+                            .attr("x", function(d){return d.x})
+                            .attr("y", function(d){return d.y})
+                            .attr("width",20)
+                    .attr("height",40);
+;
+        
         }// close build tree
 
         var dur = 0;
@@ -276,7 +296,7 @@ $(document).ready(function(){
             }
         });
         }
-        
+ 
 
         $(function(){
             buildTree("#tree-container");
