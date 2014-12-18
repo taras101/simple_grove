@@ -116,23 +116,26 @@ $(document).ready(function(){
                         .attr("transform", "translate(-10,-10)");
                         console.log(nodeGroup);
 
-                   var jsonStars=[
-        {"name":"star1", "x": 300,"y":-600, "url":"http://api.soundcloud.com/tracks/172116956",
+            var jsonStars=[
+            {"name":"star1", "x":300,"y":600, "url":"http://api.soundcloud.com/tracks/172116956",
+                            "token":"&secret_token=s-9HnGy"},
+            {"name":"star2", "x":400,"y":700, "url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"}]
-        var sky = d3.select("body")
+            var sky = d3.select(".box")
+                    .selectAll("star")
+                    .data(jsonStars)
+                    .enter()
                     .append("svg")
-                    .attr("width",20)
-                    .attr("height",40);
+                    .attr("class","star")
+                    .style("position", "absolute")
+                    .style("bottom", function(d){return d.x})
+                    .style("left", function(d){return d.y});
 
-        var stars = sky.selectAll("star")
-                            .data(jsonStars)
-                            .enter()
-                            .append("svg:image")
-                            .attr("xlink:href", "star1.png")
-                            .attr("x", function(d){return d.x})
-                            .attr("y", function(d){return d.y})
-                            .attr("width",20)
-                    .attr("height",40);
+            var stars = sky
+                    .append("svg:image")
+                    .attr("xlink:href", "star1.png")
+                    .attr("width",37)
+                    .attr("height",70);
 ;
         
         }// close build tree

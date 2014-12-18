@@ -106,12 +106,11 @@ path.selected {
     background-image: url('grass-dark.png');
     background-size: 400px;
     position: absolute;
-    position: absolute;
 }
 .star{
     z-index: 1;
-    bottom: 77%;
-    left: 19%;
+/*    bottom: 77%;
+    left: 19%;*/
     position: absolute;
 }
 .trunk{
