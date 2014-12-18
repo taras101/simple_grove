@@ -93,63 +93,38 @@ $(document).ready(function(){
                     var transpointy = -d.y + d.value;
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
-
-              
-
-            // Cache the UI elements
-            ui = {
-                svgRoot: svgRoot,
-                nodeGroup: nodeGroup,
-                linkGroup: linkGroup,
-                animGroup: animGroup
-            };
-
-            // Attach the hover and click handlers
-            setupMouseEvents();
-            smSetup();
-
-            nodeGroup.append("svg:image")
-                        .attr("id", "leaf")
-                        .attr("xlink:href", "svg-leave3.svg")
-                        .attr("width", 20)
-                        .attr("height", 20)
-                        .attr("transform", "translate(-10,-10)");
-                        console.log(nodeGroup);
-
-            var jsonStars=[
-            {"name":"star3", "x":"5%","y":"79%", "w":18 ,"url":"http://api.soundcloud.com/tracks/172116956",
+                        var jsonStars=[
+            {"name":"star1", "x":"5%","y":"79%", "w":18 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star12", "x":"13%","y":"75%", "w":30 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star2", "x":"13%","y":"75%", "w":29 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star2", "x":"16%","y":"94%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star3", "x":"16%","y":"94%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star1", "x":"19%","y":"30%", "w":15 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star4", "x":"19%","y":"30%", "w":15 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star10", "x":"22%","y":"80%", "w":22 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star5", "x":"22%","y":"80%", "w":22 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star4", "x":"33%","y":"40%", "w":12 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star6", "x":"33%","y":"40%", "w":12 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star5", "x":"38%","y":"78%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star7", "x":"38%","y":"78%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star16", "x":"42%","y":"24%", "w":14 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star8", "x":"42%","y":"24%", "w":14 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},  
-            {"name":"star6", "x":"45%","y":"59%", "w":28 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star9", "x":"45%","y":"59%", "w":28 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star7", "x":"51%","y":"39%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star10", "x":"51%","y":"39%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star8", "x":"60%","y":"34%", "w":16 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star11", "x":"60%","y":"34%", "w":16 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star8", "x":"62%","y":"78%", "w":30 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star12", "x":"62%","y":"78%", "w":30 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star9", "x":"67%","y":"59%", "w":17 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star13", "x":"67%","y":"59%", "w":17 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star11", "x":"72%","y":"72%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star14", "x":"72%","y":"72%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star13", "x":"77%","y":"43%", "w":14 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star15", "x":"77%","y":"43%", "w":14 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
-            {"name":"star14", "x":"83%","y":"90%", "w":30 ,"url":"http://api.soundcloud.com/tracks/172116956",
-                            "token":"&secret_token=s-9HnGy"},
-            {"name":"star15", "x":"85%","y":"30%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
+            {"name":"star16", "x":"85%","y":"85%", "w":20 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
             {"name":"star17", "x":"91%","y":"57%", "w":17 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},              
@@ -166,13 +141,37 @@ $(document).ready(function(){
                     .style("left", function(d){return d.x})
                     .attr("width",30)
                     .attr("height",50);
+              
 
-            var stars = sky
-                    .append("svg:image")
-                    .attr("xlink:href", "star1.png")
+            // Cache the UI elements
+            ui = {
+                svgRoot: svgRoot,
+                nodeGroup: nodeGroup,
+                linkGroup: linkGroup,
+                animGroup: animGroup,
+                sky: sky
+            };
+
+
+            // Attach the hover and click handlers
+            setupMouseEvents();
+            smSetup();
+
+            nodeGroup.append("svg:image")
+                        .attr("id", "leaf")
+                        .attr("xlink:href", "svg-leave3.svg")
+                        .attr("width", 20)
+                        .attr("height", 20)
+                        .attr("transform", "translate(-10,-10)");
+                        console.log(nodeGroup);
+
+
+
+            sky.append("svg:image")
+                    .attr("xlink:href", "star2yellow.png")
                     .attr("width",function(d){return d.w})
                     .attr("height",50);
-;
+
         
         }// close build tree
 
@@ -181,6 +180,41 @@ $(document).ready(function(){
         var track ="";
 
         function setupMouseEvents(){
+            ui.sky.on('mouseover', function(d)
+            {
+                d3.select(this).select("image")
+                .attr('href','star2.png')
+                .attr("height", "60px")
+                .attr("width", "30px")
+                .classed("hovers", true);
+
+            })
+            .on("mouseout", function(d)
+            {
+                d3.select(this).select("image")
+                .attr('href','star2yellow.png')
+                .attr("width",function(d){return d.w})
+                .attr("height",50)
+                .classed("hovers", false);
+            })
+            .on('click', function(d)
+            {
+                d3.select(this).select("image")
+                        .attr('href','star2.png')
+                        .attr("height", "60px")
+                        .attr("width", "30px")
+                        .transition()
+                        .attr("transform","rotate(15,15,15)")
+                        .duration(1800);
+                
+                soundManager.stop(track);
+                track = d3.select(this).select("image")
+                        .attr("name",function(d){return d.name});
+                soundManager.play(track);
+            })
+
+
+
             ui.nodeGroup.on('mouseover', function(d, i)
                 {
                         d3.select(this).select("image")
@@ -309,7 +343,7 @@ $(document).ready(function(){
         var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
         //setup soundManager
         function smSetup(){
-            var allNodes = ui.nodeGroup.data();
+            var allNodes = [ui.nodeGroup.data() , ui.sky.data()];
             $(allNodes).each(function(){
                 if(this.name != ""){
                     var trackId = this.name;
