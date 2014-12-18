@@ -108,7 +108,7 @@ path.selected {
     position: absolute;
 }
 .star{
-    z-index: 1;
+    z-index: -1;
 /*    bottom: 77%;
     left: 19%;*/
     position: absolute;
