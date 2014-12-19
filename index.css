@@ -23,14 +23,14 @@ path.link {
 .oneTree{
 	padding-top: 15px;
     margin-left: 30px;
-    z-index: 0;
+    z-index: 1;
     position: relative;
 }
 .controls{
     position: absolute;
     margin-left: 94%;
     margin-top: 2%; 
-    z-index: 1;
+    z-index: 2;
     /*border: 5px solid red;*/
     /*display: block;*/
 }
@@ -108,7 +108,7 @@ path.selected {
     position: absolute;
 }
 .star{
-    z-index: 0;
+    z-index: 1;
 /*    bottom: 77%;
     left: 19%;*/
     position: absolute;

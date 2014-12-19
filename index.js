@@ -78,12 +78,7 @@ $(document).ready(function(){
                 .attr("clip-path", "url(#clipper)");
 
             var nodeGroup = layoutRoot.selectAll("g.node")
-                .data(nodes
-                .filter(function(d){
-                    if(d.token != undefined){
-                    return d;}
-                    })
-                )
+                .data(nodes)
                 .enter()
                 .append("svg:g")
                 .attr("class", "node")
@@ -93,7 +88,7 @@ $(document).ready(function(){
                     var transpointy = -d.y + d.value;
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
-                        var jsonStars=[
+            var jsonStars=[
             {"name":"star1", "x":"5%","y":"79%", "w":18 ,"url":"http://api.soundcloud.com/tracks/172116956",
                             "token":"&secret_token=s-9HnGy"},
             {"name":"star2", "x":"13%","y":"75%", "w":29 ,"url":"http://api.soundcloud.com/tracks/172116956",
@@ -168,7 +163,7 @@ $(document).ready(function(){
 
 
             sky.append("svg:image")
-                    .attr("xlink:href", "star2yellow.png")
+                    .attr("xlink:href", "star2.png")
                     .attr("width",function(d){return d.w})
                     .attr("height",50);
 
@@ -183,7 +178,7 @@ $(document).ready(function(){
             ui.sky.on('mouseover', function(d)
             {
                 d3.select(this).select("image")
-                .attr('href','star2.png')
+                .attr('href','star2yellow.png')
                 .attr("height", "60px")
                 .attr("width", "30px")
                 .classed("hovers", true);
@@ -192,7 +187,7 @@ $(document).ready(function(){
             .on("mouseout", function(d)
             {
                 d3.select(this).select("image")
-                .attr('href','star2yellow.png')
+                .attr('href','star2.png')
                 .attr("width",function(d){return d.w})
                 .attr("height",50)
                 .classed("hovers", false);
@@ -207,22 +202,23 @@ $(document).ready(function(){
                         .attr("transform","rotate(15,15,15)")
                         .duration(1800);
                 
-                soundManager.stop(track);
-                track = d3.select(this).select("image")
-                        .attr("name",function(d){return d.name});
-                soundManager.play(track);
+                // soundManager.stop(track);
+                // track = d3.select(this).select("image")
+                // .data(function(d){return d.name});
+                //         console.log(track);
+                // soundManager.play(track);
             })
 
 
 
             ui.nodeGroup.on('mouseover', function(d, i)
-                {
+                {if(d.name != ""){
                         d3.select(this).select("image")
                         .attr('href','svg-leave4.svg')
                         .attr("height", "24px")
                         .attr("width", "24px")
                         .classed("hovers", true);
-                        
+                    }
                 })
                 .on('mouseout', function(d, i)
                 {if(d.name != ""){
@@ -343,7 +339,8 @@ $(document).ready(function(){
         var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
         //setup soundManager
         function smSetup(){
-            var allNodes = [ui.nodeGroup.data() , ui.sky.data()];
+            // var allNodes = [ui.nodeGroup.data(), ui.sky.data()];
+            var allNodes = ui.nodeGroup.data();
             $(allNodes).each(function(){
                 if(this.name != ""){
                     var trackId = this.name;
