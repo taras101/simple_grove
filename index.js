@@ -176,24 +176,25 @@ $(document).ready(function(){
 
         function setupMouseEvents(){
             ui.sky.on('mouseover', function(d)
-            {
+            {if(d.name != ""){
                 d3.select(this).select("image")
                 .attr('href','star2yellow.png')
                 .attr("height", "60px")
                 .attr("width", "30px")
                 .classed("hovers", true);
-
+                }
             })
             .on("mouseout", function(d)
-            {
+            {if(d.name != ""){
                 d3.select(this).select("image")
                 .attr('href','star2.png')
                 .attr("width",function(d){return d.w})
                 .attr("height",50)
                 .classed("hovers", false);
+                }
             })
-            .on('click', function(d)
-            {
+            .on('click', function(nd, i)
+            {if(nd.name != ""){
                 d3.select(this).select("image")
                         .attr('href','star2.png')
                         .attr("height", "60px")
@@ -202,11 +203,22 @@ $(document).ready(function(){
                         .attr("transform","rotate(15,15,15)")
                         .duration(1800);
                 
-                // soundManager.stop(track);
-                // track = d3.select(this).select("image")
-                // .data(function(d){return d.name});
-                //         console.log(track);
-                // soundManager.play(track);
+                soundManager.stop(track);
+                track = nd.name; 
+
+                soundManager.play(track);
+
+                nd.name ="";
+
+                $(".buttons").fadeIn(2000);
+                $('#pause').click(function(){
+                $(this).find('img').toggle();
+                        soundManager.togglePause(track);
+                });
+                $('#stop').click(function(){
+                        soundManager.stop(track);
+                });
+            }    
             })
 
 
@@ -364,6 +376,30 @@ $(document).ready(function(){
                     }//close onready
                 })//close soundmanager setup
             }
+        });
+            // var allNodes = [ui.nodeGroup.data(), ui.sky.data()];
+            var allStars = ui.sky.data()
+            $(allStars).each(function(){
+                    var trackId = this.name;
+                    var url = this.url;
+                    var token = this.token;
+                    soundManager.setup({
+                // where to find flash audio SWFs, as needed
+                    url: '/.',
+                    onready: function() {
+                      soundManager.createSound({
+                        id: trackId, // optional: provide your own unique id
+                        url: url + sid + token, multiShot: false,
+                        onload: function() {
+                          if( this.readyState ===3 ) {
+                              soundDuration = this.duration;
+                              animateParentChain(matchedLinks);
+                              //animateParentChain(matchedLinks,soundManager);
+                            }
+                        }
+                      })
+                    }//close onready
+                })//close soundmanager setup
         });
         }
  
