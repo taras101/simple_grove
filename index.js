@@ -175,6 +175,7 @@ $(document).ready(function(){
         var track ="";
 
         function setupMouseEvents(){
+            //for stars
             ui.sky.on('mouseover', function(d)
             {if(d.name != ""){
                 d3.select(this).select("image")
@@ -220,9 +221,7 @@ $(document).ready(function(){
                 });
             }    
             })
-
-
-
+            //for leaves
             ui.nodeGroup.on('mouseover', function(d, i)
                 {if(d.name != ""){
                         d3.select(this).select("image")
