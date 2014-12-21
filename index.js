@@ -97,7 +97,7 @@ $(document).ready(function(){
                             "token":"&secret_token=s-kct07"},
             {"name":"Feb18n1", "x":"19%","y":"30%", "w":15 ,"url":"http://api.soundcloud.com/tracks/182168246",
                             "token":"&secret_token=s-mzQvX"},
-            {"name":"Feb19n1", "x":"22%","y":"80%", "w":22 ,"url":"http://api.soundcloud.com/tracks//182168244",
+            {"name":"Feb19n1", "x":"22%","y":"80%", "w":22 ,"url":"http://api.soundcloud.com/tracks/182168244",
                             "token":"&secret_token=s-dmhWc"},
             {"name":"Feb19n2", "x":"33%","y":"40%", "w":12 ,"url":"http://api.soundcloud.com/tracks/182168243",
                             "token":"&secret_token=s-ccRKS"},

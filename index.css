@@ -9,12 +9,7 @@ body{
 #tree-container{
 
 }
-g.node {
-    font-family: Verdana, Helvetica;
-    font-size: 12px;
-    font-weight: bold;
 
-}
 path.link {
     fill: none;
     stroke:#6E450B;
@@ -65,7 +60,7 @@ path.selected {
 }
 
  .hovers {
-    cursor: cell;
+    cursor: none;
 }
 .grass{
     z-index: 1;
@@ -106,6 +101,16 @@ path.selected {
     background-image: url('grass-dark.png');
     background-size: 400px;
     position: absolute;
+}
+.text{
+    font-family: Verdana, Helvetica;
+    font-size: 5em;
+    font-size: 4vw;
+    font-weight: bold;
+    color:#ff550d;
+    position: absolute;
+    left: 5%;
+    top: 70%;
 }
 .star{
     z-index: 1;
