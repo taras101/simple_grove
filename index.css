@@ -104,13 +104,14 @@ path.selected {
 }
 .text{
     font-family: Verdana, Helvetica;
+    font-family: 'Merienda One', cursive;
     font-size: 5em;
-    font-size: 4vw;
-    font-weight: bold;
+    font-size: 5vw;
     color:#ff550d;
     position: absolute;
     left: 5%;
-    top: 70%;
+    top: 62%;
+    opacity: 0.4;
 }
 .star{
     z-index: 1;
