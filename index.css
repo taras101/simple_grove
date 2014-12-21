@@ -9,6 +9,14 @@ body{
 #tree-container{
 
 }
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+img:hover{
+    cursor: pointer;
+}
 
 path.link {
     fill: none;
@@ -37,6 +45,7 @@ path.link {
 }
 #reset{
     margin-left: 10px;
+    height: 50%
 
     /*position: absolute;
     margin-left: 96%;
@@ -109,7 +118,7 @@ path.selected {
     font-size: 5vw;
     color:#ff550d;
     position: absolute;
-    left: 5%;
+    left: 6%;
     top: 62%;
     opacity: 0.4;
 }
