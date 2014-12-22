@@ -123,7 +123,7 @@ $(document).ready(function(){
                             "token":"&secret_token=s-54bbE"},
             {"name":"Oct1n2", "x":"91%","y":"57%", "w":17 ,"url":"http://api.soundcloud.com/tracks/182168215",
                             "token":"&secret_token=s-WKtCO"},              
-            {"name":"Oct6n3", "x":"94%","y":"74%", "w":23,"url":"http://api.soundcloud.com/tracks/182168213",
+            {"name":"Oct6n3", "x":"94%","y":"71%", "w":23,"url":"http://api.soundcloud.com/tracks/182168213",
                             "token":"&secret_token=s-VdRcI"}]
             var sky = d3.select(".box")
                     .selectAll("star")
@@ -158,9 +158,6 @@ $(document).ready(function(){
                         .attr("width", 20)
                         .attr("height", 20)
                         .attr("transform", "translate(-10,-10)");
-                        console.log(nodeGroup);
-
-
 
             sky.append("svg:image")
                     .attr("xlink:href", "star2.png")
@@ -196,18 +193,20 @@ $(document).ready(function(){
             })
             .on('click', function(nd, i)
             {if(nd.name != ""){
-                d3.select(this).select("image")
-                        .attr('href','star2.png')
-                        .attr("height", "60px")
-                        .attr("width", "30px")
-                        .transition()
-                        .attr("transform","rotate(15,15,15)")
-                        .duration(1800);
-                
+                           
                 soundManager.stop(track);
                 track = nd.name; 
+                d3.select(this).select("image")
+                        .transition()
+                        .attr("transform","rotate(25,15,15)")
+                        .duration(9000)
+                        .transition()
+                        .style("opacity", 0.1)
+                        .duration(15000)
+                        .delay(20000)
+                        .remove();
 
-                soundManager.play(track);
+                soundManager.play(track);                 
 
                 nd.name ="";
 
@@ -308,6 +307,11 @@ $(document).ready(function(){
 
         //creats var for knowing length of caterpillar animation
         var nodeVPosition=0;
+        function animateStar(currentStar){
+            // ui.sky.transition()
+            //             .attr("transform","rotate(15,15,15)")
+            //             .duration(300);
+        }
 
         function animateParentChain(links){
             var linkRenderer = d3.svg.diagonal()
@@ -367,6 +371,7 @@ $(document).ready(function(){
                         onload: function() {
                           if( this.readyState ===3 ) {
                               soundDuration = this.duration;
+
                               animateParentChain(matchedLinks);
                               //animateParentChain(matchedLinks,soundManager);
                             }
@@ -390,10 +395,9 @@ $(document).ready(function(){
                         id: trackId, // optional: provide your own unique id
                         url: url + sid + token, multiShot: false,
                         onload: function() {
-                          if( this.readyState ===3 ) {
-                              soundDuration = this.duration;
-                              animateParentChain(matchedLinks);
-                              //animateParentChain(matchedLinks,soundManager);
+                            if( this.readyState ===3 ) {
+                                soundDuration = this.duration; 
+                                animateStar();
                             }
                         }
                       })
