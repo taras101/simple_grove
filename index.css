@@ -134,20 +134,20 @@ path.selected {
     stroke-width: 5px;
 }
 .trunk1{
-    bottom: 6%;
-    left: 7%;
+    bottom: 7%;
+    left: 6.8%;
 }
 .trunk2{
      z-index: 2;
     bottom: 7%;
-    left: 14.7%;
+    left: 14.6%;
     stroke-width: 7px;
 }
 .trunk3{
      z-index: 1;
     bottom: 6%;
-    left: 33.5%;
-    stroke-width: 6px;
+    left: 33.6%;
+    stroke-width: 3px;
 }
 .trunk4{
      z-index: 0;
@@ -167,9 +167,36 @@ path.selected {
 }
 .trunk7{
      z-index: 1;
-    bottom: 3%;
-    left: 83.9%;
+    bottom: 4%;
+    left: 84%;
     stroke-width: 15px;
+}
+@media all and (max-width: 1600px) and (min-width: 1500px) {
+.trunk1{
+    bottom: 6%;
+    left: 7.5%;
+}
+.trunk2{
+    bottom: 7%;
+    left: 14.9%;
+    stroke-width: 7px;
+}
+.trunk3{
+    bottom: 6%;
+    left: 33.8%;
+    stroke-width: 3px;
+}
+.trunk5{
+     z-index: 2;
+    bottom: 3%;
+    left: 60.2%;
+    stroke-width: 10px;
+}
+
+.trunk7{
+    bottom: 3%;
+    left: 83.6%;
+    }
 }
 @media all and (max-width: 1500px) and (min-width: 1280px) {
     .trunk1{
