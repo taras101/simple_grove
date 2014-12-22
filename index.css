@@ -9,12 +9,15 @@ body{
 #tree-container{
 
 }
-g.node {
-    font-family: Verdana, Helvetica;
-    font-size: 12px;
-    font-weight: bold;
-
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
+img:hover{
+    cursor: pointer;
+}
+
 path.link {
     fill: none;
     stroke:#6E450B;
@@ -23,12 +26,14 @@ path.link {
 .oneTree{
 	padding-top: 15px;
     margin-left: 30px;
-    z-index: -4;
+    z-index: 1;
+    position: relative;
 }
 .controls{
     position: absolute;
     margin-left: 94%;
-    margin-top: 2%;
+    margin-top: 2%; 
+    z-index: 2;
     /*border: 5px solid red;*/
     /*display: block;*/
 }
@@ -40,6 +45,7 @@ path.link {
 }
 #reset{
     margin-left: 10px;
+    height: 50%
 
     /*position: absolute;
     margin-left: 96%;
@@ -63,31 +69,211 @@ path.selected {
 }
 
  .hovers {
-    cursor: cell;
+    cursor: none;
 }
 .grass{
-    z-index: 2;
-    height:130px;
+    z-index: 1;
+    height:15.5%;
     width: 100%;
-    bottom: 30px;
+    bottom:-10px;
     background-image: url('grass-sm1.png');
     background-size: 400px;
     position: absolute;
 }
 .grass1{
-    z-index: -1;
-    height:130px;
+    z-index: 2;
+    height:13%;
     width: 100%;
+    left: 1px;
     bottom: -9px;
     background-image: url('grass-sm2.png');
     background-size: 400px;
     position: absolute;
 }
 .grass2{
-    z-index: -2;
-    height:120px;
+    z-index: 0;
+    height:14%;
     width: 100%;
-    bottom: 0px;
-    background:lightgreen;
+    bottom: -10px;
+    background: linear-gradient(#EE9603 1%,rgb(2, 69, 0)99%);
+    background: -webkit-linear-gradient(#EE9603 1%,rgb(2, 69, 0)99%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#EE9603 1%,rgb(2, 69, 0)99%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#EE9603 1%,rgb(2, 69, 0)99%); /* For Firefox 3.6 to 15 */
     position: absolute;
 }
+.grass3{
+    z-index: 1;
+    height:16%;
+    width: 100%;
+    left: 2px;
+    bottom: -10px;
+    background-image: url('grass-dark.png');
+    background-size: 400px;
+    position: absolute;
+}
+.text{
+    font-family: Verdana, Helvetica;
+    font-family: 'Merienda One', cursive;
+    font-size: 5em;
+    font-size: 5vw;
+    color:#ff550d;
+    position: absolute;
+    left: 6%;
+    top: 62%;
+    opacity: 0.4;
+}
+.star{
+    z-index: 1;
+/*    bottom: 77%;
+    left: 19%;*/
+    position: absolute;
+}
+.trunk{
+    position: absolute;
+    stroke:#6E450B;
+    stroke-width: 5px;
+}
+.trunk1{
+    bottom: 7%;
+    left: 6.8%;
+}
+.trunk2{
+     z-index: 2;
+    bottom: 7%;
+    left: 14.6%;
+    stroke-width: 7px;
+}
+.trunk3{
+     z-index: 1;
+    bottom: 6%;
+    left: 33.6%;
+    stroke-width: 3px;
+}
+.trunk4{
+     z-index: 0;
+    bottom: 6%;
+    left: 49.3%;
+}
+.trunk5{
+     z-index: 2;
+    bottom: 6%;
+    left: 60.2%;
+    stroke-width: 10px;
+}
+.trunk6{
+     z-index: 0;
+    bottom: 8%;
+    left: 67.6%;
+}
+.trunk7{
+     z-index: 1;
+    bottom: 4%;
+    left: 84%;
+    stroke-width: 15px;
+}
+@media all and (max-width: 1600px) and (min-width: 1500px) {
+.trunk1{
+    bottom: 6%;
+    left: 7.5%;
+}
+.trunk2{
+    bottom: 7%;
+    left: 14.9%;
+    stroke-width: 7px;
+}
+.trunk3{
+    bottom: 6%;
+    left: 33.8%;
+    stroke-width: 3px;
+}
+.trunk5{
+     z-index: 2;
+    bottom: 3%;
+    left: 60.2%;
+    stroke-width: 10px;
+}
+
+.trunk7{
+    bottom: 3%;
+    left: 83.6%;
+    }
+}
+@media all and (max-width: 1500px) and (min-width: 1280px) {
+    .trunk1{
+        bottom: 6%;
+        left: 8%;
+    }
+    .trunk2{      
+        bottom: 7%;
+        left: 15.2%;
+    }
+    .trunk3{
+        bottom: 6%;
+        left: 33.8%;
+    }
+    .trunk4{
+        bottom: 6%;
+        left: 49.3%;
+    }
+    .trunk5{
+        bottom: 6%;
+        left: 60.2%;
+    }
+    .trunk6{
+        bottom: 4%;
+        left: 66.8%;
+    }
+    .trunk7{
+        bottom: 1%;
+        left: 83.5%;
+    }
+
+}
+@media all and (max-width: 1280px) and (min-width: 1130px) {
+    .trunk {
+        bottom:1%;
+    }
+    .trunk1{
+        bottom: 4%;
+        left: 8%;
+    }
+    .trunk2{      
+        bottom: 7%;
+        left: 15.5%;
+    }
+    .trunk3{
+        bottom: 6%;
+        left: 34%;
+    }
+    .trunk7{
+        bottom: 3%;
+        left: 83%;
+    }
+
+}
+@media all and (max-width: 1130px) and (min-width: 910px) {
+    .trunk1{
+        left: 8.7%;
+    }
+    .trunk2{      
+        left: 15.8%;
+    }
+    .trunk{      
+        left: 34.2%;
+    }
+    .trunk5{
+        left: 59.9%;
+    }
+     .trunk7{
+        left: 82.4%;
+    }
+}
+@media all and (max-width: 910px) {
+    .trunk{
+        visibility: hidden; 
+    }
+
+
+
+
+

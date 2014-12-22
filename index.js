@@ -7,7 +7,6 @@ $(document).ready(function(){
     d3.json("treeData.json", function(json) {
     treeData = json[0];
     
-        console.log(treeData);
         var screenHeight = window.innerHeight;
         function visit(parent, visitFn, childrenFn)
         {
@@ -26,23 +25,9 @@ $(document).ready(function(){
 
         function buildTree(containerName, customOptions)
         {
-            // build the options object
-            var options = $.extend({
-                nodeRadius: 4, fontSize: 12
-            }, customOptions);
-
             // Calculate total nodes, max label length
             var totalNodes = 0;
             var maxLabelLength = 0;
-            visit(treeData, function(d)
-            {
-                totalNodes++;
-                maxLabelLength = Math.max(d.name.length, maxLabelLength);
-            }, function(d)
-            {
-                return d.contents && d.contents.length > 0 ? d.contents : null;
-            });
-      
 
             // size of the diagram
             var size = { width:$(containerName).outerWidth() , height: screenHeight-30 };
@@ -103,26 +88,83 @@ $(document).ready(function(){
                     var transpointy = -d.y + d.value;
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
+            var jsonStars=[
+            {"name":"Feb15n3", "x":"5%","y":"79%", "w":18 ,"url":"http://api.soundcloud.com/tracks/182168255",
+                            "token":"&secret_token=s-iazn9"},
+            {"name":"Feb15n5", "x":"13%","y":"75%", "w":29 ,"url":"http://api.soundcloud.com/tracks/182168253",
+                            "token":"&secret_token=s-FeqfI"},
+            {"name":"Feb15n11", "x":"16%","y":"94%", "w":20 ,"url":"http://api.soundcloud.com/tracks/182168250",
+                            "token":"&secret_token=s-kct07"},
+            {"name":"Feb18n1", "x":"19%","y":"30%", "w":15 ,"url":"http://api.soundcloud.com/tracks/182168246",
+                            "token":"&secret_token=s-mzQvX"},
+            {"name":"Feb19n1", "x":"22%","y":"80%", "w":22 ,"url":"http://api.soundcloud.com/tracks/182168244",
+                            "token":"&secret_token=s-dmhWc"},
+            {"name":"Feb19n2", "x":"33%","y":"40%", "w":12 ,"url":"http://api.soundcloud.com/tracks/182168243",
+                            "token":"&secret_token=s-ccRKS"},
+            {"name":"Feb19n9", "x":"38%","y":"78%", "w":20 ,"url":"http://api.soundcloud.com/tracks/182168241",
+                            "token":"&secret_token=s-p4xMs"},
+            {"name":"Feb23n1", "x":"42%","y":"24%", "w":14 ,"url":"http://api.soundcloud.com/tracks/182168239",
+                            "token":"&secret_token=s-RhGqw"},  
+            {"name":"Feb23n2", "x":"45%","y":"59%", "w":28 ,"url":"http://api.soundcloud.com/tracks/182168238",
+                            "token":"&secret_token=s-w8ds8"},
+            {"name":"Jan25n3", "x":"51%","y":"39%", "w":20 ,"url":"http://api.soundcloud.com/tracks/182168236",
+                            "token":"&secret_token=s-JQbnz"},
+            {"name":"Mar10n3", "x":"60%","y":"34%", "w":16 ,"url":"http://api.soundcloud.com/tracks/182168234",
+                            "token":"&secret_token=s-9JPtN"},
+            {"name":"Mar16n4", "x":"62%","y":"78%", "w":30 ,"url":"http://api.soundcloud.com/tracks/182168233",
+                            "token":"&secret_token=s-Qa0hf"},
+            {"name":"Mar17n4", "x":"67%","y":"59%", "w":17 ,"url":"http://api.soundcloud.com/tracks/182168228",
+                            "token":"&secret_token=s-OhfZl"},
+            {"name":"Mar20n4", "x":"72%","y":"72%", "w":20 ,"url":"http://api.soundcloud.com/tracks/182168226",
+                            "token":"&secret_token=s-SXQ2i"},
+            {"name":"Mar20n5", "x":"77%","y":"43%", "w":14 ,"url":"http://api.soundcloud.com/tracks/182168225",
+                            "token":"&secret_token=s-EBncF"},
+            {"name":"Mar23n1", "x":"85%","y":"85%", "w":20 ,"url":"http://api.soundcloud.com/tracks/182168218",
+                            "token":"&secret_token=s-54bbE"},
+            {"name":"Oct1n2", "x":"91%","y":"57%", "w":17 ,"url":"http://api.soundcloud.com/tracks/182168215",
+                            "token":"&secret_token=s-WKtCO"},              
+            {"name":"Oct6n3", "x":"94%","y":"71%", "w":23,"url":"http://api.soundcloud.com/tracks/182168213",
+                            "token":"&secret_token=s-VdRcI"}]
+            var sky = d3.select(".box")
+                    .selectAll("star")
+                    .data(jsonStars)
+                    .enter()
+                    .append("svg")
+                    .attr("class","star")
+                    .style("position", "absolute")
+                    .style("bottom", function(d){return d.y})
+                    .style("left", function(d){return d.x})
+                    .attr("width",30)
+                    .attr("height",50);
+              
 
             // Cache the UI elements
             ui = {
                 svgRoot: svgRoot,
                 nodeGroup: nodeGroup,
                 linkGroup: linkGroup,
-                animGroup: animGroup
+                animGroup: animGroup,
+                sky: sky
             };
+
 
             // Attach the hover and click handlers
             setupMouseEvents();
             smSetup();
 
-                nodeGroup.append("svg:image")
-                    .attr("id", "leaf")
-                    .attr("xlink:href", "svg-leave3.svg")
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("transform", "translate(-10,-10)");
-                
+            nodeGroup.append("svg:image")
+                        .attr("id", "leaf")
+                        .attr("xlink:href", "svg-leave3.svg")
+                        .attr("width", 20)
+                        .attr("height", 20)
+                        .attr("transform", "translate(-10,-10)");
+
+            sky.append("svg:image")
+                    .attr("xlink:href", "star2.png")
+                    .attr("width",function(d){return d.w})
+                    .attr("height",50);
+
+        
         }// close build tree
 
         var dur = 0;
@@ -130,6 +172,55 @@ $(document).ready(function(){
         var track ="";
 
         function setupMouseEvents(){
+            //for stars
+            ui.sky.on('mouseover', function(d)
+            {if(d.name != ""){
+                d3.select(this).select("image")
+                .attr('href','star2yellow.png')
+                .attr("height", "60px")
+                .attr("width", "30px")
+                .classed("hovers", true);
+                }
+            })
+            .on("mouseout", function(d)
+            {if(d.name != ""){
+                d3.select(this).select("image")
+                .attr('href','star2.png')
+                .attr("width",function(d){return d.w})
+                .attr("height",50)
+                .classed("hovers", false);
+                }
+            })
+            .on('click', function(nd, i)
+            {if(nd.name != ""){
+                           
+                soundManager.stop(track);
+                track = nd.name; 
+                d3.select(this).select("image")
+                        .transition()
+                        .attr("transform","rotate(25,15,15)")
+                        .duration(9000)
+                        .transition()
+                        .style("opacity", 0.1)
+                        .duration(15000)
+                        .delay(20000)
+                        .remove();
+
+                soundManager.play(track);                 
+
+                nd.name ="";
+
+                $(".buttons").fadeIn(2000);
+                $('#pause').click(function(){
+                $(this).find('img').toggle();
+                        soundManager.togglePause(track);
+                });
+                $('#stop').click(function(){
+                        soundManager.stop(track);
+                });
+            }    
+            })
+            //for leaves
             ui.nodeGroup.on('mouseover', function(d, i)
                 {if(d.name != ""){
                         d3.select(this).select("image")
@@ -137,7 +228,7 @@ $(document).ready(function(){
                         .attr("height", "24px")
                         .attr("width", "24px")
                         .classed("hovers", true);
-                        }
+                    }
                 })
                 .on('mouseout', function(d, i)
                 {if(d.name != ""){
@@ -216,6 +307,11 @@ $(document).ready(function(){
 
         //creats var for knowing length of caterpillar animation
         var nodeVPosition=0;
+        function animateStar(currentStar){
+            // ui.sky.transition()
+            //             .attr("transform","rotate(15,15,15)")
+            //             .duration(300);
+        }
 
         function animateParentChain(links){
             var linkRenderer = d3.svg.diagonal()
@@ -258,6 +354,7 @@ $(document).ready(function(){
         var sid = "/stream?client_id=d99a29c1a7bd281b1ef4a833d3ab6dad";
         //setup soundManager
         function smSetup(){
+            // var allNodes = [ui.nodeGroup.data(), ui.sky.data()];
             var allNodes = ui.nodeGroup.data();
             $(allNodes).each(function(){
                 if(this.name != ""){
@@ -274,6 +371,7 @@ $(document).ready(function(){
                         onload: function() {
                           if( this.readyState ===3 ) {
                               soundDuration = this.duration;
+
                               animateParentChain(matchedLinks);
                               //animateParentChain(matchedLinks,soundManager);
                             }
@@ -283,11 +381,35 @@ $(document).ready(function(){
                 })//close soundmanager setup
             }
         });
+            // var allNodes = [ui.nodeGroup.data(), ui.sky.data()];
+            var allStars = ui.sky.data()
+            $(allStars).each(function(){
+                    var trackId = this.name;
+                    var url = this.url;
+                    var token = this.token;
+                    soundManager.setup({
+                // where to find flash audio SWFs, as needed
+                    url: '/.',
+                    onready: function() {
+                      soundManager.createSound({
+                        id: trackId, // optional: provide your own unique id
+                        url: url + sid + token, multiShot: false,
+                        onload: function() {
+                            if( this.readyState ===3 ) {
+                                soundDuration = this.duration; 
+                                animateStar();
+                            }
+                        }
+                      })
+                    }//close onready
+                })//close soundmanager setup
+        });
         }
-        
+ 
 
         $(function(){
             buildTree("#tree-container");
         });
     });
+    
 });
