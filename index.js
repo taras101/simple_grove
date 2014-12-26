@@ -344,7 +344,7 @@ $(document).ready(function(){
                 .attr("y", 0)
                 .attr("width", overlayBox.width)
                 .attr("height", 50)
-                .transition().duration(soundDuration)
+                .transition().duration(soundDuration + soundDuration* (2/100))
                 .ease("linear")
                 .attr("y", overlayBox.y -(115 + nodeVPosition))
                 .attr("height", 50);
