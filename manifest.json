@@ -1,7 +1,4 @@
 {
-  "short_name": "Grove",
-  "name": "Casey Sokol's Grove",
-  "start_url": "home.html",
   "display": "fullscreen",
   "orientation": "landscape"
 }
