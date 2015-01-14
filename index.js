@@ -4,9 +4,12 @@ $(document).ready(function(){
 
     var treeData;
     
+    //get data
+
     d3.json("treeData.json", function(json) {
     treeData = json[0];
-    
+        
+        // determine screen size
         var screenHeight = window.innerHeight;
         function visit(parent, visitFn, childrenFn)
         {
@@ -25,11 +28,7 @@ $(document).ready(function(){
 
         function buildTree(containerName, customOptions)
         {
-            // Calculate total nodes, max label length
-            var totalNodes = 0;
-            var maxLabelLength = 0;
-
-            // size of the diagram
+            // size of the tree
             var size = { width:$(containerName).outerWidth() , height: screenHeight-30 };
             var tree = d3.layout.tree()
                 .sort(null)
@@ -88,6 +87,7 @@ $(document).ready(function(){
                     var transpointy = -d.y + d.value;
                     return "translate(" + transpointx + "," + transpointy + ")";
                 });
+            //data for stars    
             var jsonStars=[
             {"name":"Feb15n3", "x":"5%","y":"79%", "w":18 ,"url":"http://api.soundcloud.com/tracks/182168255",
                             "token":"&secret_token=s-iazn9"},
@@ -305,13 +305,8 @@ $(document).ready(function(){
         $('#reset').click(function(){location.reload();
         });
 
-        //creats var for knowing length of caterpillar animation
+        //create var for knowing length of caterpillar animation
         var nodeVPosition=0;
-        function animateStar(currentStar){
-            // ui.sky.transition()
-            //             .attr("transform","rotate(15,15,15)")
-            //             .duration(300);
-        }
 
         function animateParentChain(links){
             var linkRenderer = d3.svg.diagonal()
@@ -405,7 +400,6 @@ $(document).ready(function(){
                 })//close soundmanager setup
         });
         }
- 
 
         $(function(){
             buildTree("#tree-container");
